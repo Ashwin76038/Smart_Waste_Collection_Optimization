@@ -1,0 +1,2077 @@
+{
+  "compatibilityLevel": 1606,
+  "model": {
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      },
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"dim_bin\",\"dim_city\",\"dim_date\",\"dim_scenario\",\"dim_zone\",\"fact_bin_day\",\"fact_city_day\",\"fact_collection_attempt\",\"fact_counterfactual\",\"fact_dispatch_snapshot\",\"fact_forecast_score\",\"fact_route_scenario\",\"fact_truck_route\",\"fact_zone_day\",\"KPI Measures\"]"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\",\"DaxQueryView_Desktop\"]"
+      }
+    ],
+    "culture": "en-US",
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "relationships": [
+      {
+        "name": "2220ddbfdfc2572bb3fc",
+        "fromColumn": "city_id",
+        "fromTable": "dim_bin",
+        "toColumn": "city_id",
+        "toTable": "dim_city"
+      },
+      {
+        "name": "b02103ddfd66586a80e1",
+        "fromColumn": "city_id",
+        "fromTable": "dim_zone",
+        "toColumn": "city_id",
+        "toTable": "dim_city"
+      },
+      {
+        "name": "29bc2da34ee65d8abd91",
+        "fromColumn": "city_id",
+        "fromTable": "dim_scenario",
+        "toColumn": "city_id",
+        "toTable": "dim_city"
+      },
+      {
+        "name": "5908c4dfb95d57328b4f",
+        "fromColumn": "city_id",
+        "fromTable": "fact_city_day",
+        "toColumn": "city_id",
+        "toTable": "dim_city"
+      },
+      {
+        "name": "648cd0e7693a5a67bc4e",
+        "fromColumn": "city_id",
+        "fromTable": "fact_forecast_score",
+        "toColumn": "city_id",
+        "toTable": "dim_city"
+      },
+      {
+        "name": "a4399d2e58e45b90b60b",
+        "fromColumn": "service_date",
+        "fromTable": "fact_city_day",
+        "toColumn": "service_date",
+        "toTable": "dim_date"
+      },
+      {
+        "name": "69643317ac955dfbaaf4",
+        "fromColumn": "service_date",
+        "fromTable": "fact_bin_day",
+        "toColumn": "service_date",
+        "toTable": "dim_date"
+      },
+      {
+        "name": "2e8e191133145d57aa63",
+        "fromColumn": "service_date",
+        "fromTable": "fact_zone_day",
+        "toColumn": "service_date",
+        "toTable": "dim_date"
+      },
+      {
+        "name": "114320351b095c338801",
+        "fromColumn": "service_date",
+        "fromTable": "fact_collection_attempt",
+        "toColumn": "service_date",
+        "toTable": "dim_date"
+      },
+      {
+        "name": "ea5812f07c9e5237baaf",
+        "fromColumn": "bin_key",
+        "fromTable": "fact_bin_day",
+        "toColumn": "bin_key",
+        "toTable": "dim_bin"
+      },
+      {
+        "name": "02b1a624790053a5bd3c",
+        "fromColumn": "bin_key",
+        "fromTable": "fact_collection_attempt",
+        "toColumn": "bin_key",
+        "toTable": "dim_bin"
+      },
+      {
+        "name": "75a4a4ef76645519888f",
+        "fromColumn": "bin_key",
+        "fromTable": "fact_dispatch_snapshot",
+        "toColumn": "bin_key",
+        "toTable": "dim_bin"
+      },
+      {
+        "name": "21881ba8e9b6508bb691",
+        "fromColumn": "zone_key",
+        "fromTable": "fact_zone_day",
+        "toColumn": "zone_key",
+        "toTable": "dim_zone"
+      },
+      {
+        "name": "33829f9f2d3b5c42ba10",
+        "fromColumn": "scenario_key",
+        "fromTable": "fact_route_scenario",
+        "toColumn": "scenario_key",
+        "toTable": "dim_scenario"
+      },
+      {
+        "name": "bed8a10c94375addab7d",
+        "fromColumn": "scenario_key",
+        "fromTable": "fact_truck_route",
+        "toColumn": "scenario_key",
+        "toTable": "dim_scenario"
+      },
+      {
+        "name": "142cbd10a24e5abcb163",
+        "fromColumn": "scenario_key",
+        "fromTable": "fact_counterfactual",
+        "toColumn": "scenario_key",
+        "toTable": "dim_scenario"
+      }
+    ],
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "dim_bin",
+        "columns": [
+          {
+            "name": "bin_key",
+            "dataType": "string",
+            "lineageTag": "08fff25d-c4b4-4023-b3da-b53e1414d57a",
+            "sourceColumn": "bin_key",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "city_id",
+            "dataType": "string",
+            "lineageTag": "03a4dff8-55f9-4ed7-bff9-5587f4b3eb29",
+            "sourceColumn": "city_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "city_name",
+            "dataType": "string",
+            "lineageTag": "88e1de58-4703-43e1-8a92-f40a6ef17136",
+            "sourceColumn": "city_name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "zone_key",
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "1a9a6f98-60b5-43c7-9a19-2f55f12b56b2",
+            "sourceColumn": "zone_key",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "zone_id",
+            "dataType": "string",
+            "lineageTag": "9c10b566-0ac2-4863-9b8c-930981f4890e",
+            "sourceColumn": "zone_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ward_label",
+            "dataType": "string",
+            "lineageTag": "e8188c59-81f1-4f39-8c0e-27fdc305db15",
+            "sourceColumn": "ward_label",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "capacity_l",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "850884ff-58de-48bb-b978-ae0d530180be",
+            "sourceColumn": "capacity_l",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "latitude",
+            "dataCategory": "Latitude",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "70f25769-8c14-4fbb-9716-c595ad8b71f0",
+            "sourceColumn": "latitude",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "longitude",
+            "dataCategory": "Longitude",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "46bc34b9-342c-47ec-8af9-95190602cf5c",
+            "sourceColumn": "longitude",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "coordinate_origin",
+            "dataType": "string",
+            "lineageTag": "2ab033e5-6bd3-4616-bd36-d00ed1daa966",
+            "sourceColumn": "coordinate_origin",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "data_origin",
+            "dataType": "string",
+            "lineageTag": "fb625c2c-8073-4994-af6b-ba3c130ca211",
+            "sourceColumn": "data_origin",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "source_id",
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "36c970a5-042a-417f-9ccc-1ed28b077256",
+            "sourceColumn": "source_id",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "2133284a-e96d-4297-bcab-df9704e2228f",
+        "partitions": [
+          {
+            "name": "dim_bin",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(\"C:\\Users\\Admin\\Documents\\Smart_Waste_Collection_Optimization\\12_powerbi\\phase5_model\\dim_bin.csv\"), [Delimiter=\",\", Columns=12, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Headers, {{\"bin_key\", type text}, {\"city_id\", type text}, {\"city_name\", type text}, {\"zone_key\", type text}, {\"zone_id\", type text}, {\"ward_label\", type text}, {\"capacity_l\", Int64.Type}, {\"latitude\", type number}, {\"longitude\", type number}, {\"coordinate_origin\", type text}, {\"data_origin\", type text}, {\"source_id\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "dim_city",
+        "columns": [
+          {
+            "name": "city_id",
+            "dataType": "string",
+            "lineageTag": "8e5067ff-7608-485d-9de7-fd681ba444ce",
+            "sourceColumn": "city_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "city_name",
+            "dataType": "string",
+            "lineageTag": "1bdcb017-dabe-463f-8f38-9bf6a365429d",
+            "sourceColumn": "city_name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "district",
+            "dataType": "string",
+            "lineageTag": "9a4d4180-7c66-4419-bba0-102716d76e7c",
+            "sourceColumn": "district",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "state",
+            "dataType": "string",
+            "lineageTag": "97d500e3-05ab-4ebb-a8c8-21aa216e62a0",
+            "sourceColumn": "state",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "latitude",
+            "dataCategory": "Latitude",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "2dba3f38-d338-4740-8dbd-c06813bcb4c9",
+            "sourceColumn": "latitude",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "longitude",
+            "dataCategory": "Longitude",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "4eb570b4-7363-431d-aecd-bfcfc4b5d2eb",
+            "sourceColumn": "longitude",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "population_source",
+            "dataType": "string",
+            "lineageTag": "cdeccde1-0a2b-414e-a538-871ee7d9dcbc",
+            "sourceColumn": "population_source",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "operational_data_origin",
+            "dataType": "string",
+            "lineageTag": "16c3ca7c-4279-441f-a45a-47f38d8fea3d",
+            "sourceColumn": "operational_data_origin",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "4f98825d-12c5-4bda-933a-3ed391aa8f33",
+        "partitions": [
+          {
+            "name": "dim_city",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(\"C:\\Users\\Admin\\Documents\\Smart_Waste_Collection_Optimization\\12_powerbi\\phase5_model\\dim_city.csv\"), [Delimiter=\",\", Columns=8, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Headers, {{\"city_id\", type text}, {\"city_name\", type text}, {\"district\", type text}, {\"state\", type text}, {\"latitude\", type number}, {\"longitude\", type number}, {\"population_source\", type text}, {\"operational_data_origin\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "dim_date",
+        "columns": [
+          {
+            "name": "service_date",
+            "annotations": [
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "yyyy-MM-dd",
+            "isKey": true,
+            "lineageTag": "0e6e9e73-a1b6-4611-bbdd-0629bc8bd538",
+            "sourceColumn": "service_date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "calendar_year",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "3b0c704f-cd0d-430f-bb5d-25ead63baa79",
+            "sourceColumn": "calendar_year",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "month_number",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "51984ec6-ade8-4de8-9011-288323e805e3",
+            "sourceColumn": "month_number",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "month_name",
+            "dataType": "string",
+            "lineageTag": "3ccc071e-cedd-4920-9955-a802fe7182e9",
+            "sortByColumn": "month_number",
+            "sourceColumn": "month_name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "year_month_sort",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "9feb8ebc-da3c-468a-960a-8010a0f20d7c",
+            "sourceColumn": "year_month_sort",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "weekday_sunday_zero",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "824c2a3d-8023-4364-b230-b60171f188d7",
+            "sourceColumn": "weekday_sunday_zero",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "weekend",
+            "dataType": "boolean",
+            "lineageTag": "15fa5aa2-05e2-4faf-9914-18c5c6b90645",
+            "sourceColumn": "weekend",
+            "summarizeBy": "none"
+          }
+        ],
+        "dataCategory": "Time",
+        "lineageTag": "e410ac7d-dcb9-46c1-a35e-a1d28501241e",
+        "partitions": [
+          {
+            "name": "dim_date",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(\"C:\\Users\\Admin\\Documents\\Smart_Waste_Collection_Optimization\\12_powerbi\\phase5_model\\dim_date.csv\"), [Delimiter=\",\", Columns=7, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Headers, {{\"service_date\", type date}, {\"calendar_year\", Int64.Type}, {\"month_number\", Int64.Type}, {\"month_name\", type text}, {\"year_month_sort\", Int64.Type}, {\"weekday_sunday_zero\", Int64.Type}, {\"weekend\", type logical}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "dim_scenario",
+        "columns": [
+          {
+            "name": "scenario_key",
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "36ea51c9-6f9b-484d-91aa-4a3e6b3a907e",
+            "sourceColumn": "scenario_key",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "city_id",
+            "dataType": "string",
+            "lineageTag": "27beb132-441c-4698-bffc-dea34983c9f5",
+            "sourceColumn": "city_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "scenario",
+            "dataType": "string",
+            "lineageTag": "de59567d-fb8c-42f8-a566-c3fd5febf82e",
+            "sourceColumn": "scenario",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "vehicles_available",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "0adab5ae-1c13-4651-b09f-6dbdc666906b",
+            "sourceColumn": "vehicles_available",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "trigger_pct",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "5f58184b-b825-487a-bb35-920daab660ad",
+            "sourceColumn": "trigger_pct",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "demand_multiplier",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "516f72ba-364d-463e-8040-c00c212acdee",
+            "sourceColumn": "demand_multiplier",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "fuel_price_multiplier",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "afc69cee-0858-4821-b3aa-9e13215054a4",
+            "sourceColumn": "fuel_price_multiplier",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "status",
+            "dataType": "string",
+            "lineageTag": "9f70f820-06ba-490a-a3b3-e6537bdc82a4",
+            "sourceColumn": "status",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "price_scope",
+            "dataType": "string",
+            "lineageTag": "52eaeec9-f5b1-49ab-8bd7-df9dbc4e9c5d",
+            "sourceColumn": "price_scope",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "base_scenario",
+            "dataType": "boolean",
+            "lineageTag": "8d8cb150-618d-4d2c-8da3-7334b621c34b",
+            "sourceColumn": "base_scenario",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "eb6c878a-d012-45cb-819d-7bf6d5927e30",
+        "partitions": [
+          {
+            "name": "dim_scenario",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(\"C:\\Users\\Admin\\Documents\\Smart_Waste_Collection_Optimization\\12_powerbi\\phase5_model\\dim_scenario.csv\"), [Delimiter=\",\", Columns=10, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Headers, {{\"scenario_key\", type text}, {\"city_id\", type text}, {\"scenario\", type text}, {\"vehicles_available\", Int64.Type}, {\"trigger_pct\", type number}, {\"demand_multiplier\", type number}, {\"fuel_price_multiplier\", type number}, {\"status\", type text}, {\"price_scope\", type text}, {\"base_scenario\", type logical}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "dim_zone",
+        "columns": [
+          {
+            "name": "zone_key",
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "fd14fe24-3551-4649-839f-5664fc1decf2",
+            "sourceColumn": "zone_key",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "city_id",
+            "dataType": "string",
+            "lineageTag": "9a54652f-0b6f-4a58-b48b-7df8649467ee",
+            "sourceColumn": "city_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "city_name",
+            "dataType": "string",
+            "lineageTag": "ba87b032-26f2-49a7-941e-19273578b214",
+            "sourceColumn": "city_name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "zone_id",
+            "dataType": "string",
+            "lineageTag": "158ceded-c813-4a71-8b4b-91bd2a651162",
+            "sourceColumn": "zone_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ward_label",
+            "dataType": "string",
+            "lineageTag": "196b26e8-8cb6-4bac-aacc-51d4ff73ffc8",
+            "sourceColumn": "ward_label",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "admin_zone_name",
+            "dataType": "string",
+            "lineageTag": "e3d6c85e-1495-4891-8ecc-f8f23989c372",
+            "sourceColumn": "admin_zone_name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "boundary_version",
+            "dataType": "string",
+            "lineageTag": "5ed65218-832b-4ba6-8a44-c79db45b9696",
+            "sourceColumn": "boundary_version",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "source_id",
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "34473bc7-b888-4e51-86ae-be4c4b0be39a",
+            "sourceColumn": "source_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "data_origin",
+            "dataType": "string",
+            "lineageTag": "8be4e340-7338-4512-88d1-01d6474bfd57",
+            "sourceColumn": "data_origin",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "map_latitude",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "6c9410e0-074a-4374-8378-f3b7affdff6a",
+            "sourceColumn": "map_latitude",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "map_longitude",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "f13862e7-c21c-4fea-9b28-cd12d1bfb80f",
+            "sourceColumn": "map_longitude",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "2185a643-abc2-4a24-a96a-376ffa7f4c2c",
+        "partitions": [
+          {
+            "name": "dim_zone",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(\"C:\\Users\\Admin\\Documents\\Smart_Waste_Collection_Optimization\\12_powerbi\\phase5_model\\dim_zone.csv\"), [Delimiter=\",\", Columns=11, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Headers, {{\"zone_key\", type text}, {\"city_id\", type text}, {\"city_name\", type text}, {\"zone_id\", type text}, {\"ward_label\", type text}, {\"admin_zone_name\", type text}, {\"boundary_version\", type text}, {\"source_id\", type text}, {\"data_origin\", type text}, {\"map_latitude\", type number}, {\"map_longitude\", type number}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "fact_bin_day",
+        "columns": [
+          {
+            "name": "bin_key",
+            "dataType": "string",
+            "lineageTag": "400b6961-edc5-4fa0-ba67-dcaea3304fd5",
+            "sourceColumn": "bin_key",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "service_date",
+            "annotations": [
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "yyyy-MM-dd",
+            "lineageTag": "6f77a215-09eb-4573-86a7-3cc001290c21",
+            "sourceColumn": "service_date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "scheduled_readings",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "3bf0a163-53f9-4ff5-a6d1-8386bb5a28a9",
+            "sourceColumn": "scheduled_readings",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "received_readings",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "e9cf2e89-7930-4cfb-87ca-00b1357f59ac",
+            "sourceColumn": "received_readings",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "fill_sum_pct",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "79964cd7-a787-4ab3-8646-7b7ef21a725b",
+            "sourceColumn": "fill_sum_pct",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "max_observed_fill_pct",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "99305b38-81c7-4215-9d8e-789bd0f0a6a6",
+            "sourceColumn": "max_observed_fill_pct",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "mean_fill_band",
+            "dataType": "string",
+            "lineageTag": "653eec30-2eba-43b7-9275-47cdd911a904",
+            "sortByColumn": "mean_fill_band_sort",
+            "sourceColumn": "mean_fill_band",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "mean_fill_band_sort",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "isHidden": true,
+            "lineageTag": "274ff5db-ccf9-43d7-97df-853924a81e0b",
+            "sourceColumn": "mean_fill_band_sort",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "generated_l",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "1f165228-8284-4f74-a5e1-718c6d21f698",
+            "sourceColumn": "generated_l",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "overflow_l",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "8041d678-469e-4af8-ad1d-cd65d09848ec",
+            "sourceColumn": "overflow_l",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "overflow_day_count",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "23d55c47-e61b-4aa4-964d-1425a7c2bc6f",
+            "sourceColumn": "overflow_day_count",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "collected_kg",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "c0bb02b0-2a2e-49de-9d9d-2644f2c7ef22",
+            "sourceColumn": "collected_kg",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "successful_collections",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "394a568a-6499-4fcd-bb7a-7072d00b613c",
+            "sourceColumn": "successful_collections",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "missed_collections",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "900b1d2c-8a1e-4372-858e-2758a0da143c",
+            "sourceColumn": "missed_collections",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "data_origin",
+            "dataType": "string",
+            "lineageTag": "f8c88481-8929-446d-b59c-d7606acbfbde",
+            "sourceColumn": "data_origin",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "da80e96e-11bb-4dc9-ad55-ecd527b3f15f",
+        "partitions": [
+          {
+            "name": "fact_bin_day",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(\"C:\\Users\\Admin\\Documents\\Smart_Waste_Collection_Optimization\\12_powerbi\\phase5_model\\fact_bin_day.csv\"), [Delimiter=\",\", Columns=15, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Headers, {{\"bin_key\", type text}, {\"service_date\", type date}, {\"scheduled_readings\", Int64.Type}, {\"received_readings\", Int64.Type}, {\"fill_sum_pct\", type number}, {\"max_observed_fill_pct\", type number}, {\"mean_fill_band\", type text}, {\"mean_fill_band_sort\", Int64.Type}, {\"generated_l\", type number}, {\"overflow_l\", type number}, {\"overflow_day_count\", Int64.Type}, {\"collected_kg\", type number}, {\"successful_collections\", Int64.Type}, {\"missed_collections\", Int64.Type}, {\"data_origin\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "fact_city_day",
+        "columns": [
+          {
+            "name": "city_id",
+            "dataType": "string",
+            "lineageTag": "ab66677d-2dee-4a56-8b7c-cc0ead6d5373",
+            "sourceColumn": "city_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "service_date",
+            "annotations": [
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "yyyy-MM-dd",
+            "lineageTag": "7c543cbe-1c6e-4238-8ed6-5b5596fcce87",
+            "sourceColumn": "service_date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "bins",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "6eff2e96-3e12-4d71-8332-abdd77ec0b2c",
+            "sourceColumn": "bins",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "generated_l",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "10f7ebd3-3d56-46a7-b3b7-cc84a3ba3c8f",
+            "sourceColumn": "generated_l",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "overflow_l",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "9e244e63-c5c8-4923-9a9b-36502abafdc8",
+            "sourceColumn": "overflow_l",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "successful_collections",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "12a4a741-3173-4c52-951e-a0ed24a4f24d",
+            "sourceColumn": "successful_collections",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "missed_collections",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "3a0b901a-d6b6-4254-a9e6-87f7c611bfeb",
+            "sourceColumn": "missed_collections",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "collected_kg",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "24c17805-c49c-40f0-bc50-79765734795e",
+            "sourceColumn": "collected_kg",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "scheduled_readings",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "422237a2-d6af-439f-9f2b-bd4c78e22717",
+            "sourceColumn": "scheduled_readings",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "received_readings",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "d1d58f3a-2fd0-4de4-9c05-77b1828008b8",
+            "sourceColumn": "received_readings",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "fill_sum_pct",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "6a951f71-23d1-4a8e-9892-adc02a7a7216",
+            "sourceColumn": "fill_sum_pct",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "overflow_slots",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "87709c86-a6c2-4887-add0-55d21236f607",
+            "sourceColumn": "overflow_slots",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "data_origin",
+            "dataType": "string",
+            "lineageTag": "7d5ccf67-7417-4c53-b5f7-f21bae54941a",
+            "sourceColumn": "data_origin",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "8b424fe0-043e-4819-a906-6e7ff0bcc169",
+        "partitions": [
+          {
+            "name": "fact_city_day",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(\"C:\\Users\\Admin\\Documents\\Smart_Waste_Collection_Optimization\\12_powerbi\\phase5_model\\fact_city_day.csv\"), [Delimiter=\",\", Columns=13, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Headers, {{\"city_id\", type text}, {\"service_date\", type date}, {\"bins\", Int64.Type}, {\"generated_l\", type number}, {\"overflow_l\", type number}, {\"successful_collections\", Int64.Type}, {\"missed_collections\", Int64.Type}, {\"collected_kg\", type number}, {\"scheduled_readings\", Int64.Type}, {\"received_readings\", Int64.Type}, {\"fill_sum_pct\", type number}, {\"overflow_slots\", Int64.Type}, {\"data_origin\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "fact_collection_attempt",
+        "columns": [
+          {
+            "name": "collection_key",
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "5310cfd3-a8b3-4f6d-89e1-b76b15914892",
+            "sourceColumn": "collection_key",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "bin_key",
+            "dataType": "string",
+            "lineageTag": "ebf78e5b-0b08-436f-a0b3-16a2b60fb091",
+            "sourceColumn": "bin_key",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "service_date",
+            "annotations": [
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "yyyy-MM-dd",
+            "lineageTag": "3cbd42e1-9b49-4447-b319-6f7cae80e172",
+            "sourceColumn": "service_date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "attempted_at_utc",
+            "dataType": "dateTime",
+            "formatString": "yyyy-MM-dd",
+            "lineageTag": "dbd078a5-9c78-4a3d-a1f9-2bf07b748f3c",
+            "sourceColumn": "attempted_at_utc",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "collection_status",
+            "dataType": "string",
+            "lineageTag": "1c70ae73-5de6-47c8-b76b-296b850041bf",
+            "sourceColumn": "collection_status",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "collected_kg",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "1f9f09b3-e311-4f30-8622-dcf77a86c4fc",
+            "sourceColumn": "collected_kg",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "pre_service_fill_pct",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "65b8ce2b-91de-40f1-93b2-49816ea04672",
+            "sourceColumn": "pre_service_fill_pct",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "successful_attempt_count",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "1f7bf36e-00f5-456e-aa78-14cbc2aca8c2",
+            "sourceColumn": "successful_attempt_count",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "early_success_count",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "978912b5-c619-4a71-909a-38e9114506b6",
+            "sourceColumn": "early_success_count",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "late_risk_attempt_count",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "083192ed-568d-4854-ab3d-0f900a19c0ed",
+            "sourceColumn": "late_risk_attempt_count",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "data_origin",
+            "dataType": "string",
+            "lineageTag": "d81c5195-e5f4-4632-a475-8336d8bf8b8f",
+            "sourceColumn": "data_origin",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "c260ee56-70a4-471c-a231-12ef6a34f992",
+        "partitions": [
+          {
+            "name": "fact_collection_attempt",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(\"C:\\Users\\Admin\\Documents\\Smart_Waste_Collection_Optimization\\12_powerbi\\phase5_model\\fact_collection_attempt.csv\"), [Delimiter=\",\", Columns=11, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Headers, {{\"collection_key\", type text}, {\"bin_key\", type text}, {\"service_date\", type date}, {\"attempted_at_utc\", type datetime}, {\"collection_status\", type text}, {\"collected_kg\", type number}, {\"pre_service_fill_pct\", type number}, {\"successful_attempt_count\", Int64.Type}, {\"early_success_count\", Int64.Type}, {\"late_risk_attempt_count\", Int64.Type}, {\"data_origin\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "fact_counterfactual",
+        "columns": [
+          {
+            "name": "scenario_key",
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "45e9031b-ecba-4f76-b755-eee4df7177f0",
+            "sourceColumn": "scenario_key",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "baseline_overflow_l",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "634d3614-e3b9-41b5-81a1-6407d7ded73f",
+            "sourceColumn": "baseline_overflow_l",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "optimized_overflow_l",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "5987e068-d197-4312-92d0-2cd5798e7830",
+            "sourceColumn": "optimized_overflow_l",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "overflow_l_avoided_modelled",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "49868901-7b68-422d-b568-f9d27a65ee55",
+            "sourceColumn": "overflow_l_avoided_modelled",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "scope",
+            "dataType": "string",
+            "lineageTag": "0c2a82e3-edc4-4a46-86f7-7c065f0d97d6",
+            "sourceColumn": "scope",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "data_origin",
+            "dataType": "string",
+            "lineageTag": "617a2570-ffde-43f4-b88d-7abcff7782bd",
+            "sourceColumn": "data_origin",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "0766f734-0daa-475e-9306-c14887bdacd6",
+        "partitions": [
+          {
+            "name": "fact_counterfactual",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(\"C:\\Users\\Admin\\Documents\\Smart_Waste_Collection_Optimization\\12_powerbi\\phase5_model\\fact_counterfactual.csv\"), [Delimiter=\",\", Columns=6, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Headers, {{\"scenario_key\", type text}, {\"baseline_overflow_l\", type number}, {\"optimized_overflow_l\", type number}, {\"overflow_l_avoided_modelled\", type number}, {\"scope\", type text}, {\"data_origin\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "fact_dispatch_snapshot",
+        "columns": [
+          {
+            "name": "bin_key",
+            "dataType": "string",
+            "lineageTag": "8759e67a-5574-42d3-996c-d5e6626cdf44",
+            "sourceColumn": "bin_key",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "issue_date",
+            "annotations": [
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "yyyy-MM-dd",
+            "lineageTag": "f822d969-1b2c-4929-ba13-8313fa66f4b7",
+            "sourceColumn": "issue_date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "target_date",
+            "annotations": [
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "yyyy-MM-dd",
+            "lineageTag": "4545a26f-5339-46d9-bb97-0d8894e2b4b1",
+            "sourceColumn": "target_date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "current_fill_pct",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "fac44fba-72f8-498d-819d-8aa0624fec7b",
+            "sourceColumn": "current_fill_pct",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "prediction_pct",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "e1f4d22e-c638-4438-88ce-99d6faf7114d",
+            "sourceColumn": "prediction_pct",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "upper90_pct",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "54859f50-7478-4f1a-a856-0898098e7aac",
+            "sourceColumn": "upper90_pct",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "required",
+            "dataType": "boolean",
+            "lineageTag": "f1f0b817-61b6-4372-9854-51cffb5f37ae",
+            "sourceColumn": "required",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "forecast_trigger",
+            "dataType": "boolean",
+            "lineageTag": "16f5c048-b8b6-4e66-946e-8ef17843ce1c",
+            "sourceColumn": "forecast_trigger",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "network_accessible",
+            "dataType": "boolean",
+            "lineageTag": "e58d1ba1-afc8-4d98-927d-350acbc7907d",
+            "sourceColumn": "network_accessible",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "in_routing_pilot",
+            "dataType": "boolean",
+            "lineageTag": "9147b686-658f-4bbc-837b-6ca045741789",
+            "sourceColumn": "in_routing_pilot",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "dispatch_status",
+            "dataType": "string",
+            "lineageTag": "1f10dee4-6c6f-4a8b-9dc1-19a582f5b1cb",
+            "sourceColumn": "dispatch_status",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "priority_rank",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "c06dccac-d85d-498c-a494-b31b746f7ca8",
+            "sourceColumn": "priority_rank",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "tier",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "5505737e-f50c-4163-ab46-37434c98d71d",
+            "sourceColumn": "tier",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "reasons",
+            "dataType": "string",
+            "lineageTag": "cb1f226c-bf9a-47ad-ac79-a599bb1da7bf",
+            "sourceColumn": "reasons",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "trigger_pct",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "5ac1904a-0c8e-491e-a0d3-277fc604a8df",
+            "sourceColumn": "trigger_pct",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "data_origin",
+            "dataType": "string",
+            "lineageTag": "a9103b69-94ce-4cdb-952c-006560f14dbd",
+            "sourceColumn": "data_origin",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "6687220d-e019-4e1e-809e-b1ae360e6179",
+        "partitions": [
+          {
+            "name": "fact_dispatch_snapshot",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(\"C:\\Users\\Admin\\Documents\\Smart_Waste_Collection_Optimization\\12_powerbi\\phase5_model\\fact_dispatch_snapshot.csv\"), [Delimiter=\",\", Columns=16, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Headers, {{\"bin_key\", type text}, {\"issue_date\", type date}, {\"target_date\", type date}, {\"current_fill_pct\", type number}, {\"prediction_pct\", type number}, {\"upper90_pct\", type number}, {\"required\", type logical}, {\"forecast_trigger\", type logical}, {\"network_accessible\", type logical}, {\"in_routing_pilot\", type logical}, {\"dispatch_status\", type text}, {\"priority_rank\", Int64.Type}, {\"tier\", Int64.Type}, {\"reasons\", type text}, {\"trigger_pct\", type number}, {\"data_origin\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "fact_forecast_score",
+        "columns": [
+          {
+            "name": "city_id",
+            "dataType": "string",
+            "lineageTag": "50b0a89f-57f4-4703-b5e3-820569db130c",
+            "sourceColumn": "city_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "split",
+            "dataType": "string",
+            "lineageTag": "bbf277c1-15c6-4168-83ee-114163d73abf",
+            "sourceColumn": "split",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "evaluation_group",
+            "dataType": "string",
+            "lineageTag": "8f262027-57f5-42c1-acd0-7cc91dfd33a5",
+            "sourceColumn": "evaluation_group",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "model",
+            "dataType": "string",
+            "lineageTag": "bcbcf767-a380-43d9-b54f-71718129c8b7",
+            "sourceColumn": "model",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "n",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "d1f690a6-4889-4e3d-8f51-4f98f52cfbf2",
+            "sourceColumn": "n",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "mae_pct_points",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "f7cc4159-b21a-4e6e-8abe-28c53d9af3c5",
+            "sourceColumn": "mae_pct_points",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "rmse_pct_points",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "26f2a97a-8333-48f0-b370-a5361babd581",
+            "sourceColumn": "rmse_pct_points",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "wape_pct",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "65ecdb07-3b21-4fd5-b0be-184bf1036cbf",
+            "sourceColumn": "wape_pct",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "near_full_recall",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "160d419e-349f-4f0c-b0a3-6d54125bede8",
+            "sourceColumn": "near_full_recall",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "6c0ef7d9-a8ac-4489-9dd6-e3e94f04627f",
+        "partitions": [
+          {
+            "name": "fact_forecast_score",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(\"C:\\Users\\Admin\\Documents\\Smart_Waste_Collection_Optimization\\12_powerbi\\phase5_model\\fact_forecast_score.csv\"), [Delimiter=\",\", Columns=9, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Headers, {{\"city_id\", type text}, {\"split\", type text}, {\"evaluation_group\", type text}, {\"model\", type text}, {\"n\", Int64.Type}, {\"mae_pct_points\", type number}, {\"rmse_pct_points\", type number}, {\"wape_pct\", type number}, {\"near_full_recall\", type number}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "fact_route_scenario",
+        "columns": [
+          {
+            "name": "scenario_key",
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "1824db1f-8e06-44b9-ae4c-e40dbbc5f207",
+            "sourceColumn": "scenario_key",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "required_bins",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "11e13804-120a-4fa2-b1de-8595de4fdfa7",
+            "sourceColumn": "required_bins",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "bins_serviced",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "43e85591-1728-475a-9167-52928db66865",
+            "sourceColumn": "bins_serviced",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "baseline_complete",
+            "dataType": "boolean",
+            "lineageTag": "94f9866e-fd5c-431a-a18d-e3bcb378f44e",
+            "sourceColumn": "baseline_complete",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "baseline_km",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "393625be-7362-4c16-9b42-e863af3dadf7",
+            "sourceColumn": "baseline_km",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "optimized_km",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "41260f4e-b145-4c61-961c-fbd0e4718103",
+            "sourceColumn": "optimized_km",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "km_saved",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "0306ba8e-588d-453c-b16d-8bc1050fe79b",
+            "sourceColumn": "km_saved",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "distance_reduction_pct",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "b8e4f3ef-c701-4c91-af82-0990e58f285b",
+            "sourceColumn": "distance_reduction_pct",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "travel_hours_saved",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "96a54718-2e48-4b40-91ae-2067572de832",
+            "sourceColumn": "travel_hours_saved",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "vehicle_hours_saved",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "9cd360de-b474-463f-8958-008995de3ea4",
+            "sourceColumn": "vehicle_hours_saved",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "fuel_l_saved_assumed",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "045f6946-ce11-4459-b90c-19a4abef3d33",
+            "sourceColumn": "fuel_l_saved_assumed",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "fuel_cost_inr_saved_historical_proxy",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "624caebd-3ae6-44f1-87f7-ace2721a312c",
+            "sourceColumn": "fuel_cost_inr_saved_historical_proxy",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "tailpipe_co2_kg_saved_proxy",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "7b6ea104-a7d3-4e7a-a76a-1f1c757cbcf8",
+            "sourceColumn": "tailpipe_co2_kg_saved_proxy",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "full_capacity_l_required",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "33332f32-6069-49c1-ac14-322e160e56ce",
+            "sourceColumn": "full_capacity_l_required",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "distance_origin",
+            "dataType": "string",
+            "lineageTag": "83ec3e7e-d7d3-4665-bb17-c73e5653f4cd",
+            "sourceColumn": "distance_origin",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "optimality",
+            "dataType": "string",
+            "lineageTag": "64363b1d-325f-4608-81d5-8ec7840166ef",
+            "sourceColumn": "optimality",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "reason",
+            "dataType": "string",
+            "lineageTag": "3db5304c-ee6c-4469-9dd3-d2c2e12df28e",
+            "sourceColumn": "reason",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "data_origin",
+            "dataType": "string",
+            "lineageTag": "03e92794-30ad-41b2-b538-0ceea4fd7669",
+            "sourceColumn": "data_origin",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "8178f0f3-0687-4de4-9e7a-1d67dcb842ee",
+        "partitions": [
+          {
+            "name": "fact_route_scenario",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(\"C:\\Users\\Admin\\Documents\\Smart_Waste_Collection_Optimization\\12_powerbi\\phase5_model\\fact_route_scenario.csv\"), [Delimiter=\",\", Columns=18, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Headers, {{\"scenario_key\", type text}, {\"required_bins\", Int64.Type}, {\"bins_serviced\", Int64.Type}, {\"baseline_complete\", type logical}, {\"baseline_km\", type number}, {\"optimized_km\", type number}, {\"km_saved\", type number}, {\"distance_reduction_pct\", type number}, {\"travel_hours_saved\", type number}, {\"vehicle_hours_saved\", type number}, {\"fuel_l_saved_assumed\", type number}, {\"fuel_cost_inr_saved_historical_proxy\", type number}, {\"tailpipe_co2_kg_saved_proxy\", type number}, {\"full_capacity_l_required\", Int64.Type}, {\"distance_origin\", type text}, {\"optimality\", type text}, {\"reason\", type text}, {\"data_origin\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "fact_truck_route",
+        "columns": [
+          {
+            "name": "route_key",
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "297c2255-f96e-42a7-95a5-ac3258b90f30",
+            "sourceColumn": "route_key",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "scenario_key",
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "12624d20-d6fb-4c1c-b7f7-2f1279682578",
+            "sourceColumn": "scenario_key",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "method",
+            "dataType": "string",
+            "lineageTag": "c32c8f24-2cc9-4d0f-a50f-f3a95221356b",
+            "sourceColumn": "method",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "vehicle",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "ab8f1b06-0368-4e8b-b71a-fa2ee10f0e0b",
+            "sourceColumn": "vehicle",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "bins",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "9e487151-c9ab-40ba-901b-fe02760a6b53",
+            "sourceColumn": "bins",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "distance_km",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "b61f7fca-d23a-45fb-b1d7-2dcacc1dbbb3",
+            "sourceColumn": "distance_km",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "travel_minutes",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "f847c6a0-8989-4b0a-9161-324690cfc1da",
+            "sourceColumn": "travel_minutes",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "load_l",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "28d31558-256d-4e7c-b4ae-f4e9c24222df",
+            "sourceColumn": "load_l",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "route_minutes",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "f1618c7f-5d67-4294-bca8-d9225cb02d96",
+            "sourceColumn": "route_minutes",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "load_kg_assumed",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "416621c0-48a7-47af-bdef-ad3d10094dce",
+            "sourceColumn": "load_kg_assumed",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "volume_utilization_pct",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "398dfb4e-c4d7-4c0e-9100-90d971f64968",
+            "sourceColumn": "volume_utilization_pct",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "payload_utilization_pct",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "459ff3b1-b35d-4624-a397-e95e57f9e6de",
+            "sourceColumn": "payload_utilization_pct",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "data_origin",
+            "dataType": "string",
+            "lineageTag": "e2e3438f-b2f8-4347-90bb-7c0e3735e1b6",
+            "sourceColumn": "data_origin",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "f79c474c-e9fc-4426-987d-fbb5bc8a0ab8",
+        "partitions": [
+          {
+            "name": "fact_truck_route",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(\"C:\\Users\\Admin\\Documents\\Smart_Waste_Collection_Optimization\\12_powerbi\\phase5_model\\fact_truck_route.csv\"), [Delimiter=\",\", Columns=13, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Headers, {{\"route_key\", type text}, {\"scenario_key\", type text}, {\"method\", type text}, {\"vehicle\", Int64.Type}, {\"bins\", Int64.Type}, {\"distance_km\", type number}, {\"travel_minutes\", type number}, {\"load_l\", type number}, {\"route_minutes\", type number}, {\"load_kg_assumed\", type number}, {\"volume_utilization_pct\", type number}, {\"payload_utilization_pct\", type number}, {\"data_origin\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "fact_zone_day",
+        "columns": [
+          {
+            "name": "zone_key",
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "d8739198-0d27-4dc6-ad44-e5b3c411ec67",
+            "sourceColumn": "zone_key",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "service_date",
+            "annotations": [
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "yyyy-MM-dd",
+            "lineageTag": "3a0d189a-46d5-4ab6-98c0-b285336224f7",
+            "sourceColumn": "service_date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "bins",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "dc290f7c-b0a6-4ddb-9db6-5dee1ac2c814",
+            "sourceColumn": "bins",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "scheduled_readings",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "c3f3271b-5195-4620-a32c-85618d88611f",
+            "sourceColumn": "scheduled_readings",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "received_readings",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "cef6bf53-2f31-455e-9b71-6054dedf0a6c",
+            "sourceColumn": "received_readings",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "generated_l",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "2b9fbac8-9703-41e5-b461-a4262bc2bb90",
+            "sourceColumn": "generated_l",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "overflow_l",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "0ab531bb-0d64-4ebe-9b7d-46b6191b9cf3",
+            "sourceColumn": "overflow_l",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "collected_kg",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "1e3f805d-995c-46eb-a9c8-bdc2ed969a15",
+            "sourceColumn": "collected_kg",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "successful_collections",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "d9fa75b6-2f5d-4cd3-9fbd-bad38fe0dacb",
+            "sourceColumn": "successful_collections",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "missed_collections",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "9d131844-2af9-4b45-b752-609a6543d6e0",
+            "sourceColumn": "missed_collections",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "data_origin",
+            "dataType": "string",
+            "lineageTag": "7590697e-1177-412c-94ca-ee19ef9384dd",
+            "sourceColumn": "data_origin",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "b78d89d9-ce1a-42ff-bd8b-226a0626d6c8",
+        "partitions": [
+          {
+            "name": "fact_zone_day",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(\"C:\\Users\\Admin\\Documents\\Smart_Waste_Collection_Optimization\\12_powerbi\\phase5_model\\fact_zone_day.csv\"), [Delimiter=\",\", Columns=11, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Headers, {{\"zone_key\", type text}, {\"service_date\", type date}, {\"bins\", Int64.Type}, {\"scheduled_readings\", Int64.Type}, {\"received_readings\", Int64.Type}, {\"generated_l\", type number}, {\"overflow_l\", type number}, {\"collected_kg\", type number}, {\"successful_collections\", Int64.Type}, {\"missed_collections\", Int64.Type}, {\"data_origin\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "KPI Measures",
+        "columns": [
+          {
+            "name": "_",
+            "dataType": "int64",
+            "isHidden": true,
+            "lineageTag": "04c7be49-3a0c-466b-9c14-54854e36c1cd",
+            "sourceColumn": "_"
+          }
+        ],
+        "lineageTag": "c6f6979f-06c5-496a-9fe3-f18a743bf81f",
+        "measures": [
+          {
+            "name": "Bin Count",
+            "description": "Synthetic operational scenario. See PHASE5_MEASURES.dax for scope and denominator.",
+            "displayFolder": "Operations",
+            "expression": "DISTINCTCOUNT ( dim_bin[bin_key] )",
+            "formatString": "#,0",
+            "lineageTag": "e2aa06f2-e6a1-490b-8e4a-08b534903d0f"
+          },
+          {
+            "name": "Total Waste Collected (t)",
+            "description": "Synthetic operational scenario. See PHASE5_MEASURES.dax for scope and denominator.",
+            "displayFolder": "Operations",
+            "expression": "DIVIDE ( SUM ( fact_collection_attempt[collected_kg] ), 1000 )",
+            "formatString": "#,0.00",
+            "lineageTag": "70fa4d6f-7694-4e92-a4f7-e25d1af69546"
+          },
+          {
+            "name": "Simulated Waste Generated (t)",
+            "description": "Synthetic operational scenario. See PHASE5_MEASURES.dax for scope and denominator.",
+            "displayFolder": "Operations",
+            "expression": "DIVIDE ( SUM ( fact_city_day[generated_l] ) * 0.12, 1000 )",
+            "formatString": "#,0.00",
+            "lineageTag": "780a8e23-f7a3-42e4-b683-29a7eb8d8968"
+          },
+          {
+            "name": "Generated L per Bin-Day",
+            "description": "Synthetic operational scenario. See PHASE5_MEASURES.dax for scope and denominator.",
+            "displayFolder": "Operations",
+            "expression": "DIVIDE ( SUM ( fact_city_day[generated_l] ), SUM ( fact_city_day[bins] ) )",
+            "formatString": "#,0.00",
+            "lineageTag": "bb8d717e-ea57-4e82-a1a2-234f762740b7"
+          },
+          {
+            "name": "Bin Generated L per Bin-Day",
+            "description": "Synthetic operational scenario. See PHASE5_MEASURES.dax for scope and denominator.",
+            "displayFolder": "Operations",
+            "expression": "DIVIDE ( SUM ( fact_bin_day[generated_l] ), COUNTROWS ( fact_bin_day ) )",
+            "formatString": "#,0.00",
+            "lineageTag": "9c518f78-d51f-49fb-8043-7ae03709fccf"
+          },
+          {
+            "name": "Overflow L per Bin-Day",
+            "description": "Synthetic operational scenario. See PHASE5_MEASURES.dax for scope and denominator.",
+            "displayFolder": "Operations",
+            "expression": "DIVIDE ( SUM ( fact_bin_day[overflow_l] ), COUNTROWS ( fact_bin_day ) )",
+            "formatString": "#,0.00",
+            "lineageTag": "1c217f5b-5dc5-45b0-992d-13b40f987c34"
+          },
+          {
+            "name": "Bin-Day Count",
+            "description": "Synthetic operational scenario. See PHASE5_MEASURES.dax for scope and denominator.",
+            "displayFolder": "Operations",
+            "expression": "COUNTROWS ( fact_bin_day )",
+            "formatString": "#,0",
+            "lineageTag": "20bb9797-b520-4931-b892-0b5499ce48a7"
+          },
+          {
+            "name": "Average Bin Fill %",
+            "description": "Synthetic operational scenario. See PHASE5_MEASURES.dax for scope and denominator.",
+            "displayFolder": "Operations",
+            "expression": "DIVIDE ( SUM ( fact_bin_day[fill_sum_pct] ), SUM ( fact_bin_day[received_readings] ) )",
+            "formatString": "#,0.00",
+            "lineageTag": "78c5ed69-dde6-45e0-a7de-d4ef2c2a254b"
+          },
+          {
+            "name": "Overflow Slot %",
+            "description": "Synthetic operational scenario. See PHASE5_MEASURES.dax for scope and denominator.",
+            "displayFolder": "Operations",
+            "expression": "100 * DIVIDE ( SUM ( fact_city_day[overflow_slots] ), SUM ( fact_city_day[scheduled_readings] ) )",
+            "formatString": "#,0.00",
+            "lineageTag": "7d4d334b-1192-4c1d-ab5f-3183a90e1f94"
+          },
+          {
+            "name": "Overflow Bin-Days",
+            "description": "Synthetic operational scenario. See PHASE5_MEASURES.dax for scope and denominator.",
+            "displayFolder": "Operations",
+            "expression": "SUM ( fact_bin_day[overflow_day_count] )",
+            "formatString": "#,0",
+            "lineageTag": "3844e19a-b91d-493b-95de-62f4f3d05629"
+          },
+          {
+            "name": "Overflow Bin-Day %",
+            "description": "Synthetic operational scenario. See PHASE5_MEASURES.dax for scope and denominator.",
+            "displayFolder": "Operations",
+            "expression": "100 * DIVIDE ( [Overflow Bin-Days], COUNTROWS ( fact_bin_day ) )",
+            "formatString": "#,0.00",
+            "lineageTag": "521ef9a1-2054-4ca9-96c7-3e2bed3a35ac"
+          },
+          {
+            "name": "Collection Attempts",
+            "description": "Synthetic operational scenario. See PHASE5_MEASURES.dax for scope and denominator.",
+            "displayFolder": "Operations",
+            "expression": "COUNTROWS ( fact_collection_attempt )",
+            "formatString": "#,0",
+            "lineageTag": "e36adecd-690b-4efc-a687-519d575aec58"
+          },
+          {
+            "name": "Collections Completed",
+            "description": "Synthetic operational scenario. See PHASE5_MEASURES.dax for scope and denominator.",
+            "displayFolder": "Operations",
+            "expression": "SUM ( fact_collection_attempt[successful_attempt_count] )",
+            "formatString": "#,0",
+            "lineageTag": "7988d806-a298-4e53-a07c-7de22b71cf61"
+          },
+          {
+            "name": "Collection Completion %",
+            "description": "Synthetic operational scenario. See PHASE5_MEASURES.dax for scope and denominator.",
+            "displayFolder": "Operations",
+            "expression": "100 * DIVIDE ( [Collections Completed], [Collection Attempts] )",
+            "formatString": "#,0.00",
+            "lineageTag": "bed8949d-8f76-4653-b94b-4bc2032d7e03"
+          },
+          {
+            "name": "Collections per Bin-Day",
+            "description": "Synthetic operational scenario. See PHASE5_MEASURES.dax for scope and denominator.",
+            "displayFolder": "Operations",
+            "expression": "DIVIDE ( SUM ( fact_city_day[successful_collections] ), SUM ( fact_city_day[bins] ) )",
+            "formatString": "#,0.00",
+            "lineageTag": "5d1641e6-3bfc-41cc-9baf-ae9ca195b6c5"
+          },
+          {
+            "name": "Early Collection % (simulated <35%)",
+            "description": "Synthetic operational scenario. See PHASE5_MEASURES.dax for scope and denominator.",
+            "displayFolder": "Operations",
+            "expression": "100 * DIVIDE ( SUM ( fact_collection_attempt[early_success_count] ), [Collections Completed] )",
+            "formatString": "#,0.00",
+            "lineageTag": "75aa3f2d-76d8-430c-9555-884f8738ecad"
+          },
+          {
+            "name": "Late Risk Attempt %",
+            "description": "Synthetic operational scenario. See PHASE5_MEASURES.dax for scope and denominator.",
+            "displayFolder": "Operations",
+            "expression": "100 * DIVIDE ( SUM ( fact_collection_attempt[late_risk_attempt_count] ), [Collection Attempts] )",
+            "formatString": "#,0.00",
+            "lineageTag": "210f13a5-4d87-4019-be61-0cd7f6d5450a"
+          },
+          {
+            "name": "Bins Requiring Collection",
+            "description": "Synthetic operational scenario. See PHASE5_MEASURES.dax for scope and denominator.",
+            "displayFolder": "Operations",
+            "expression": "CALCULATE ( COUNTROWS ( fact_dispatch_snapshot ), fact_dispatch_snapshot[required] = TRUE () )",
+            "formatString": "#,0",
+            "lineageTag": "a5cc2329-81c1-42ea-9fe6-3cdd97f86ea5"
+          },
+          {
+            "name": "High Priority Bins",
+            "description": "Synthetic operational scenario. See PHASE5_MEASURES.dax for scope and denominator.",
+            "displayFolder": "Operations",
+            "expression": "CALCULATE ( COUNTROWS ( fact_dispatch_snapshot ), fact_dispatch_snapshot[required] = TRUE (), fact_dispatch_snapshot[tier] = 1 )",
+            "formatString": "#,0",
+            "lineageTag": "b2f7e469-7325-43ec-b8df-ae2906508a48"
+          },
+          {
+            "name": "Forecast-Triggered Bins",
+            "description": "Synthetic operational scenario. See PHASE5_MEASURES.dax for scope and denominator.",
+            "displayFolder": "Operations",
+            "expression": "CALCULATE ( COUNTROWS ( fact_dispatch_snapshot ), fact_dispatch_snapshot[forecast_trigger] = TRUE () )",
+            "formatString": "#,0",
+            "lineageTag": "3d218dfb-8ce4-439f-a967-7af032c6af1a"
+          },
+          {
+            "name": "Access Review Bins",
+            "description": "Synthetic operational scenario. See PHASE5_MEASURES.dax for scope and denominator.",
+            "displayFolder": "Operations",
+            "expression": "CALCULATE ( COUNTROWS ( fact_dispatch_snapshot ), fact_dispatch_snapshot[network_accessible] = FALSE () )",
+            "formatString": "#,0",
+            "lineageTag": "14c9da98-0698-467d-8292-94d8e4c4251f"
+          },
+          {
+            "name": "Baseline Route Km",
+            "description": "Synthetic operational scenario. See PHASE5_MEASURES.dax for scope and denominator.",
+            "displayFolder": "Route pilot",
+            "expression": [
+              "IF (",
+              "    HASONEVALUE ( dim_city[city_id] ) && HASONEVALUE ( dim_scenario[scenario_key] ),",
+              "    CALCULATE ( SUM ( fact_route_scenario[baseline_km] ), dim_scenario[status] = \"feasible\" )",
+              ")"
+            ],
+            "formatString": "#,0.00",
+            "lineageTag": "3f8b4933-1906-4690-868e-5248bfc54049"
+          },
+          {
+            "name": "Optimized Route Km",
+            "description": "Synthetic operational scenario. See PHASE5_MEASURES.dax for scope and denominator.",
+            "displayFolder": "Route pilot",
+            "expression": [
+              "IF (",
+              "    HASONEVALUE ( dim_city[city_id] ) && HASONEVALUE ( dim_scenario[scenario_key] ),",
+              "    CALCULATE ( SUM ( fact_route_scenario[optimized_km] ), dim_scenario[status] = \"feasible\" )",
+              ")"
+            ],
+            "formatString": "#,0.00",
+            "lineageTag": "0e9099b7-748c-4270-b81e-3997dcf6a24a"
+          },
+          {
+            "name": "Distance Saved Km",
+            "description": "Synthetic operational scenario. See PHASE5_MEASURES.dax for scope and denominator.",
+            "displayFolder": "Route pilot",
+            "expression": [
+              "IF ( NOT ISBLANK ( [Baseline Route Km] ) && NOT ISBLANK ( [Optimized Route Km] ),",
+              "     [Baseline Route Km] - [Optimized Route Km] )"
+            ],
+            "formatString": "#,0.00",
+            "lineageTag": "98b559e8-8805-4f28-9486-b0b0074d57c7"
+          },
+          {
+            "name": "Distance Reduction %",
+            "description": "Synthetic operational scenario. See PHASE5_MEASURES.dax for scope and denominator.",
+            "displayFolder": "Route pilot",
+            "expression": "100 * DIVIDE ( [Distance Saved Km], [Baseline Route Km] )",
+            "formatString": "#,0.00",
+            "lineageTag": "884d1bcb-5761-4d5a-8a8a-ca7f077dec7e"
+          },
+          {
+            "name": "Fuel Saved L (assumed)",
+            "description": "Synthetic operational scenario. See PHASE5_MEASURES.dax for scope and denominator.",
+            "displayFolder": "Route pilot",
+            "expression": "IF ( NOT ISBLANK ( [Distance Saved Km] ), SUM ( fact_route_scenario[fuel_l_saved_assumed] ) )",
+            "formatString": "#,0.00",
+            "lineageTag": "998c5658-3b25-4774-9c3a-1bad27f7a7a5"
+          },
+          {
+            "name": "Fuel Cost Saved INR (proxy)",
+            "description": "Synthetic operational scenario. See PHASE5_MEASURES.dax for scope and denominator.",
+            "displayFolder": "Route pilot",
+            "expression": "IF ( NOT ISBLANK ( [Distance Saved Km] ), SUM ( fact_route_scenario[fuel_cost_inr_saved_historical_proxy] ) )",
+            "formatString": "#,0.00",
+            "lineageTag": "e5856e54-ce79-4c87-8029-2923420b57b9"
+          },
+          {
+            "name": "Travel Minutes Saved",
+            "description": "Synthetic operational scenario. See PHASE5_MEASURES.dax for scope and denominator.",
+            "displayFolder": "Route pilot",
+            "expression": "IF ( NOT ISBLANK ( [Distance Saved Km] ), 60 * SUM ( fact_route_scenario[travel_hours_saved] ) )",
+            "formatString": "#,0.00",
+            "lineageTag": "a302f1af-5cd2-4253-a777-3b2436f954d1"
+          },
+          {
+            "name": "Pilot Bins Serviced",
+            "description": "Synthetic operational scenario. See PHASE5_MEASURES.dax for scope and denominator.",
+            "displayFolder": "Route pilot",
+            "expression": "IF ( NOT ISBLANK ( [Distance Saved Km] ), SUM ( fact_route_scenario[bins_serviced] ) )",
+            "formatString": "#,0",
+            "lineageTag": "4a6fec07-2dda-4340-972b-f1471b6f3ebb"
+          },
+          {
+            "name": "Reserved Truck Capacity %",
+            "description": "Synthetic operational scenario. See PHASE5_MEASURES.dax for scope and denominator.",
+            "displayFolder": "Route pilot",
+            "expression": [
+              "IF (",
+              "    HASONEVALUE ( dim_city[city_id] ) && HASONEVALUE ( dim_scenario[scenario_key] ),",
+              "    100 * DIVIDE (",
+              "        CALCULATE ( SUM ( fact_truck_route[load_l] ), fact_truck_route[method] = \"optimized\" ),",
+              "        12000 * CALCULATE ( COUNTROWS ( fact_truck_route ), fact_truck_route[method] = \"optimized\" )",
+              "    )",
+              ")"
+            ],
+            "formatString": "#,0.00",
+            "lineageTag": "80e28c6b-d23b-4d79-b045-fd8cf874f98e"
+          },
+          {
+            "name": "Modeled Spill Avoided L (24h)",
+            "description": "Synthetic operational scenario. See PHASE5_MEASURES.dax for scope and denominator.",
+            "displayFolder": "Route pilot",
+            "expression": [
+              "IF (",
+              "    HASONEVALUE ( dim_city[city_id] ) && HASONEVALUE ( dim_scenario[scenario_key] ),",
+              "    SUM ( fact_counterfactual[overflow_l_avoided_modelled] )",
+              ")"
+            ],
+            "formatString": "#,0.00",
+            "lineageTag": "4bc3849d-394c-460e-ad7b-7f90bfd1b18b"
+          },
+          {
+            "name": "Forecast MAE (pp)",
+            "description": "Synthetic operational scenario. See PHASE5_MEASURES.dax for scope and denominator.",
+            "displayFolder": "Operations",
+            "expression": [
+              "IF (",
+              "    HASONEVALUE ( dim_city[city_id] ) && HASONEVALUE ( fact_forecast_score[model] ) &&",
+              "    HASONEVALUE ( fact_forecast_score[split] ) && HASONEVALUE ( fact_forecast_score[evaluation_group] ),",
+              "    MAX ( fact_forecast_score[mae_pct_points] )",
+              ")"
+            ],
+            "formatString": "#,0.00",
+            "lineageTag": "d8a12878-5f5b-4ca7-abbd-3c484fd21d5e"
+          },
+          {
+            "name": "Forecast Near-Full Recall %",
+            "description": "Synthetic operational scenario. See PHASE5_MEASURES.dax for scope and denominator.",
+            "displayFolder": "Operations",
+            "expression": [
+              "IF (",
+              "    HASONEVALUE ( dim_city[city_id] ) && HASONEVALUE ( fact_forecast_score[model] ) &&",
+              "    HASONEVALUE ( fact_forecast_score[split] ) && HASONEVALUE ( fact_forecast_score[evaluation_group] ),",
+              "    100 * MAX ( fact_forecast_score[near_full_recall] )",
+              ")"
+            ],
+            "formatString": "#,0.00",
+            "lineageTag": "83e0462b-4c41-451d-8ca5-6959a4825666"
+          },
+          {
+            "name": "Route Distance Km",
+            "expression": "SUM ( fact_truck_route[distance_km] )",
+            "formatString": "#,0.00",
+            "lineageTag": "2e137be2-cd34-4efe-b7d1-6d8a64eab2d3"
+          },
+          {
+            "name": "Generated Litres",
+            "expression": "SUM ( fact_bin_day[generated_l] )",
+            "formatString": "#,0.00",
+            "lineageTag": "fdeac3d4-ff5c-40d5-9ff5-da498fa73e7a"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "KPI Measures",
+            "mode": "import",
+            "source": {
+              "expression": "#table(type table [_ = Int64.Type], {{0}})",
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

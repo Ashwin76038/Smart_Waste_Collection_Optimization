@@ -1,0 +1,940 @@
+{
+  "generated_at_utc": "2026-09-23T16:17:38.572983+00:00",
+  "profiles": {
+    "dim_zone_ward": {
+      "rows": 200,
+      "columns": 11,
+      "dtypes": {
+        "zone_id": "VARCHAR",
+        "source_objectid": "BIGINT",
+        "area_m2_source": "DOUBLE",
+        "min_lon": "DOUBLE",
+        "min_lat": "DOUBLE",
+        "max_lon": "DOUBLE",
+        "max_lat": "DOUBLE",
+        "geometry_wkb": "BLOB",
+        "data_origin": "VARCHAR",
+        "source_id": "VARCHAR",
+        "boundary_version": "VARCHAR"
+      },
+      "missing_pct": {
+        "zone_id": 0.0,
+        "source_objectid": 0.0,
+        "area_m2_source": 0.0,
+        "min_lon": 0.0,
+        "min_lat": 0.0,
+        "max_lon": 0.0,
+        "max_lat": 0.0,
+        "geometry_wkb": 0.0,
+        "data_origin": 0.0,
+        "source_id": 0.0,
+        "boundary_version": 0.0
+      },
+      "duplicate_ids_or_rows": 0,
+      "impossible_values": {},
+      "numeric_and_geographic_range": {
+        "min_lon": {
+          "min": 80.13409479088227,
+          "max": 80.31630837104628
+        },
+        "max_lon": {
+          "min": 80.15993345193931,
+          "max": 80.33149353038425
+        },
+        "min_lat": {
+          "min": 12.852092938839165,
+          "max": 13.219580008192521
+        },
+        "max_lat": {
+          "min": 12.87956422967805,
+          "max": 13.235049055200307
+        }
+      },
+      "timestamp_range": null,
+      "categorical_cardinality": {},
+      "stored_bytes": 891257,
+      "estimated_in_memory_bytes_from_1000_row_sample": 1307660
+    },
+    "census_chennai_2011_native": {
+      "rows": 162,
+      "columns": 97,
+      "dtypes": {
+        "State": "VARCHAR",
+        "District": "VARCHAR",
+        "Subdistt": "VARCHAR",
+        "Town/Village": "VARCHAR",
+        "Ward": "VARCHAR",
+        "EB": "VARCHAR",
+        "Level": "VARCHAR",
+        "Name": "VARCHAR",
+        "TRU": "VARCHAR",
+        "No_HH": "BIGINT",
+        "TOT_P": "BIGINT",
+        "TOT_M": "BIGINT",
+        "TOT_F": "BIGINT",
+        "P_06": "BIGINT",
+        "M_06": "BIGINT",
+        "F_06": "BIGINT",
+        "P_SC": "BIGINT",
+        "M_SC": "BIGINT",
+        "F_SC": "BIGINT",
+        "P_ST": "BIGINT",
+        "M_ST": "BIGINT",
+        "F_ST": "BIGINT",
+        "P_LIT": "BIGINT",
+        "M_LIT": "BIGINT",
+        "F_LIT": "BIGINT",
+        "P_ILL": "BIGINT",
+        "M_ILL": "BIGINT",
+        "F_ILL": "BIGINT",
+        "TOT_WORK_P": "BIGINT",
+        "TOT_WORK_M": "BIGINT",
+        "TOT_WORK_F": "BIGINT",
+        "MAINWORK_P": "BIGINT",
+        "MAINWORK_M": "BIGINT",
+        "MAINWORK_F": "BIGINT",
+        "MAIN_CL_P": "BIGINT",
+        "MAIN_CL_M": "BIGINT",
+        "MAIN_CL_F": "BIGINT",
+        "MAIN_AL_P": "BIGINT",
+        "MAIN_AL_M": "BIGINT",
+        "MAIN_AL_F": "BIGINT",
+        "MAIN_HH_P": "BIGINT",
+        "MAIN_HH_M": "BIGINT",
+        "MAIN_HH_F": "BIGINT",
+        "MAIN_OT_P": "BIGINT",
+        "MAIN_OT_M": "BIGINT",
+        "MAIN_OT_F": "BIGINT",
+        "MARGWORK_P": "BIGINT",
+        "MARGWORK_M": "BIGINT",
+        "MARGWORK_F": "BIGINT",
+        "MARG_CL_P": "BIGINT",
+        "MARG_CL_M": "BIGINT",
+        "MARG_CL_F": "BIGINT",
+        "MARG_AL_P": "BIGINT",
+        "MARG_AL_M": "BIGINT",
+        "MARG_AL_F": "BIGINT",
+        "MARG_HH_P": "BIGINT",
+        "MARG_HH_M": "BIGINT",
+        "MARG_HH_F": "BIGINT",
+        "MARG_OT_P": "BIGINT",
+        "MARG_OT_M": "BIGINT",
+        "MARG_OT_F": "BIGINT",
+        "MARGWORK_3_6_P": "BIGINT",
+        "MARGWORK_3_6_M": "BIGINT",
+        "MARGWORK_3_6_F": "BIGINT",
+        "MARG_CL_3_6_P": "BIGINT",
+        "MARG_CL_3_6_M": "BIGINT",
+        "MARG_CL_3_6_F": "BIGINT",
+        "MARG_AL_3_6_P": "BIGINT",
+        "MARG_AL_3_6_M": "BIGINT",
+        "MARG_AL_3_6_F": "BIGINT",
+        "MARG_HH_3_6_P": "BIGINT",
+        "MARG_HH_3_6_M": "BIGINT",
+        "MARG_HH_3_6_F": "BIGINT",
+        "MARG_OT_3_6_P": "BIGINT",
+        "MARG_OT_3_6_M": "BIGINT",
+        "MARG_OT_3_6_F": "BIGINT",
+        "MARGWORK_0_3_P": "BIGINT",
+        "MARGWORK_0_3_M": "BIGINT",
+        "MARGWORK_0_3_F": "BIGINT",
+        "MARG_CL_0_3_P": "BIGINT",
+        "MARG_CL_0_3_M": "BIGINT",
+        "MARG_CL_0_3_F": "BIGINT",
+        "MARG_AL_0_3_P": "BIGINT",
+        "MARG_AL_0_3_M": "BIGINT",
+        "MARG_AL_0_3_F": "BIGINT",
+        "MARG_HH_0_3_P": "BIGINT",
+        "MARG_HH_0_3_M": "BIGINT",
+        "MARG_HH_0_3_F": "BIGINT",
+        "MARG_OT_0_3_P": "BIGINT",
+        "MARG_OT_0_3_M": "BIGINT",
+        "MARG_OT_0_3_F": "BIGINT",
+        "NON_WORK_P": "BIGINT",
+        "NON_WORK_M": "BIGINT",
+        "NON_WORK_F": "BIGINT",
+        "data_origin": "VARCHAR",
+        "source_id": "VARCHAR",
+        "census_year": "BIGINT"
+      },
+      "missing_pct": {
+        "State": 0.0,
+        "District": 0.0,
+        "Subdistt": 0.0,
+        "Town/Village": 0.0,
+        "Ward": 0.0,
+        "EB": 0.0,
+        "Level": 0.0,
+        "Name": 0.0,
+        "TRU": 0.0,
+        "No_HH": 0.0,
+        "TOT_P": 0.0,
+        "TOT_M": 0.0,
+        "TOT_F": 0.0,
+        "P_06": 0.0,
+        "M_06": 0.0,
+        "F_06": 0.0,
+        "P_SC": 0.0,
+        "M_SC": 0.0,
+        "F_SC": 0.0,
+        "P_ST": 0.0,
+        "M_ST": 0.0,
+        "F_ST": 0.0,
+        "P_LIT": 0.0,
+        "M_LIT": 0.0,
+        "F_LIT": 0.0,
+        "P_ILL": 0.0,
+        "M_ILL": 0.0,
+        "F_ILL": 0.0,
+        "TOT_WORK_P": 0.0,
+        "TOT_WORK_M": 0.0,
+        "TOT_WORK_F": 0.0,
+        "MAINWORK_P": 0.0,
+        "MAINWORK_M": 0.0,
+        "MAINWORK_F": 0.0,
+        "MAIN_CL_P": 0.0,
+        "MAIN_CL_M": 0.0,
+        "MAIN_CL_F": 0.0,
+        "MAIN_AL_P": 0.0,
+        "MAIN_AL_M": 0.0,
+        "MAIN_AL_F": 0.0,
+        "MAIN_HH_P": 0.0,
+        "MAIN_HH_M": 0.0,
+        "MAIN_HH_F": 0.0,
+        "MAIN_OT_P": 0.0,
+        "MAIN_OT_M": 0.0,
+        "MAIN_OT_F": 0.0,
+        "MARGWORK_P": 0.0,
+        "MARGWORK_M": 0.0,
+        "MARGWORK_F": 0.0,
+        "MARG_CL_P": 0.0,
+        "MARG_CL_M": 0.0,
+        "MARG_CL_F": 0.0,
+        "MARG_AL_P": 0.0,
+        "MARG_AL_M": 0.0,
+        "MARG_AL_F": 0.0,
+        "MARG_HH_P": 0.0,
+        "MARG_HH_M": 0.0,
+        "MARG_HH_F": 0.0,
+        "MARG_OT_P": 0.0,
+        "MARG_OT_M": 0.0,
+        "MARG_OT_F": 0.0,
+        "MARGWORK_3_6_P": 0.0,
+        "MARGWORK_3_6_M": 0.0,
+        "MARGWORK_3_6_F": 0.0,
+        "MARG_CL_3_6_P": 0.0,
+        "MARG_CL_3_6_M": 0.0,
+        "MARG_CL_3_6_F": 0.0,
+        "MARG_AL_3_6_P": 0.0,
+        "MARG_AL_3_6_M": 0.0,
+        "MARG_AL_3_6_F": 0.0,
+        "MARG_HH_3_6_P": 0.0,
+        "MARG_HH_3_6_M": 0.0,
+        "MARG_HH_3_6_F": 0.0,
+        "MARG_OT_3_6_P": 0.0,
+        "MARG_OT_3_6_M": 0.0,
+        "MARG_OT_3_6_F": 0.0,
+        "MARGWORK_0_3_P": 0.0,
+        "MARGWORK_0_3_M": 0.0,
+        "MARGWORK_0_3_F": 0.0,
+        "MARG_CL_0_3_P": 0.0,
+        "MARG_CL_0_3_M": 0.0,
+        "MARG_CL_0_3_F": 0.0,
+        "MARG_AL_0_3_P": 0.0,
+        "MARG_AL_0_3_M": 0.0,
+        "MARG_AL_0_3_F": 0.0,
+        "MARG_HH_0_3_P": 0.0,
+        "MARG_HH_0_3_M": 0.0,
+        "MARG_HH_0_3_F": 0.0,
+        "MARG_OT_0_3_P": 0.0,
+        "MARG_OT_0_3_M": 0.0,
+        "MARG_OT_0_3_F": 0.0,
+        "NON_WORK_P": 0.0,
+        "NON_WORK_M": 0.0,
+        "NON_WORK_F": 0.0,
+        "data_origin": 0.0,
+        "source_id": 0.0,
+        "census_year": 0.0
+      },
+      "duplicate_ids_or_rows": 0,
+      "impossible_values": {},
+      "numeric_and_geographic_range": {},
+      "timestamp_range": null,
+      "categorical_cardinality": {},
+      "stored_bytes": 91726,
+      "estimated_in_memory_bytes_from_1000_row_sample": 225582
+    },
+    "weather_chennai_grid_2025": {
+      "rows": 365,
+      "columns": 7,
+      "dtypes": {
+        "date": "DATE",
+        "temperature_c": "DOUBLE",
+        "rainfall_mm": "DOUBLE",
+        "data_origin": "VARCHAR",
+        "source_id": "VARCHAR",
+        "latitude": "DOUBLE",
+        "longitude": "DOUBLE"
+      },
+      "missing_pct": {
+        "date": 0.0,
+        "temperature_c": 0.0,
+        "rainfall_mm": 0.0,
+        "data_origin": 0.0,
+        "source_id": 0.0,
+        "latitude": 0.0,
+        "longitude": 0.0
+      },
+      "duplicate_ids_or_rows": 0,
+      "impossible_values": {},
+      "numeric_and_geographic_range": {
+        "temperature_c": {
+          "min": 22.57,
+          "max": 32.04
+        },
+        "rainfall_mm": {
+          "min": 0.0,
+          "max": 97.64
+        }
+      },
+      "timestamp_range": {
+        "min": "2025-01-01",
+        "max": "2025-12-31"
+      },
+      "categorical_cardinality": {},
+      "stored_bytes": 8492,
+      "estimated_in_memory_bytes_from_1000_row_sample": 59258
+    },
+    "osm_road_nodes_chennai": {
+      "rows": 157785,
+      "columns": 6,
+      "dtypes": {
+        "osm_node_id": "BIGINT",
+        "longitude": "DOUBLE",
+        "latitude": "DOUBLE",
+        "zone_id": "VARCHAR",
+        "data_origin": "VARCHAR",
+        "source_id": "VARCHAR"
+      },
+      "missing_pct": {
+        "osm_node_id": 0.0,
+        "longitude": 0.0,
+        "latitude": 0.0,
+        "zone_id": 0.0,
+        "data_origin": 0.0,
+        "source_id": 0.0
+      },
+      "duplicate_ids_or_rows": 0,
+      "impossible_values": {},
+      "numeric_and_geographic_range": {
+        "latitude": {
+          "min": 12.900046,
+          "max": 13.2320637
+        },
+        "longitude": {
+          "min": 80.1500018,
+          "max": 80.3308684
+        }
+      },
+      "timestamp_range": null,
+      "categorical_cardinality": {},
+      "stored_bytes": 3429983,
+      "estimated_in_memory_bytes_from_1000_row_sample": 32366121
+    },
+    "osm_road_segments_chennai": {
+      "rows": 179568,
+      "columns": 8,
+      "dtypes": {
+        "osm_way_id": "BIGINT",
+        "from_node": "BIGINT",
+        "to_node": "BIGINT",
+        "highway": "VARCHAR",
+        "oneway_tag": "VARCHAR",
+        "segment_length_m": "DOUBLE",
+        "data_origin": "VARCHAR",
+        "source_id": "VARCHAR"
+      },
+      "missing_pct": {
+        "osm_way_id": 0.0,
+        "from_node": 0.0,
+        "to_node": 0.0,
+        "highway": 0.0,
+        "oneway_tag": 0.0,
+        "segment_length_m": 0.0,
+        "data_origin": 0.0,
+        "source_id": 0.0
+      },
+      "duplicate_ids_or_rows": 0,
+      "impossible_values": {},
+      "numeric_and_geographic_range": {
+        "segment_length_m": {
+          "min": 0.05664318011801842,
+          "max": 800.546741773595
+        }
+      },
+      "timestamp_range": null,
+      "categorical_cardinality": {},
+      "stored_bytes": 3452120,
+      "estimated_in_memory_bytes_from_1000_row_sample": 49917210
+    },
+    "osm_poi_nodes_chennai": {
+      "rows": 1507,
+      "columns": 7,
+      "dtypes": {
+        "osm_node_id": "BIGINT",
+        "longitude": "DOUBLE",
+        "latitude": "DOUBLE",
+        "poi_type": "VARCHAR",
+        "tag_key": "VARCHAR",
+        "data_origin": "VARCHAR",
+        "source_id": "VARCHAR"
+      },
+      "missing_pct": {
+        "osm_node_id": 0.0,
+        "longitude": 0.0,
+        "latitude": 0.0,
+        "poi_type": 0.0,
+        "tag_key": 0.0,
+        "data_origin": 0.0,
+        "source_id": 0.0
+      },
+      "duplicate_ids_or_rows": 0,
+      "impossible_values": {},
+      "numeric_and_geographic_range": {},
+      "timestamp_range": null,
+      "categorical_cardinality": {
+        "poi_type": 8
+      },
+      "stored_bytes": 37270,
+      "estimated_in_memory_bytes_from_1000_row_sample": 413794
+    },
+    "dim_bin": {
+      "rows": 1000,
+      "columns": 11,
+      "dtypes": {
+        "bin_id": "INTEGER",
+        "zone_id": "VARCHAR",
+        "latitude": "DOUBLE",
+        "longitude": "DOUBLE",
+        "osm_node_id": "BIGINT",
+        "capacity_l": "SMALLINT",
+        "demand_factor": "DOUBLE",
+        "coordinate_origin": "VARCHAR",
+        "data_origin": "VARCHAR",
+        "source_id": "VARCHAR",
+        "scenario": "VARCHAR"
+      },
+      "missing_pct": {
+        "bin_id": 0.0,
+        "zone_id": 0.0,
+        "latitude": 0.0,
+        "longitude": 0.0,
+        "osm_node_id": 0.0,
+        "capacity_l": 0.0,
+        "demand_factor": 0.0,
+        "coordinate_origin": 0.0,
+        "data_origin": 0.0,
+        "source_id": 0.0,
+        "scenario": 0.0
+      },
+      "duplicate_ids_or_rows": 0,
+      "impossible_values": {},
+      "numeric_and_geographic_range": {
+        "latitude": {
+          "min": 12.9003822,
+          "max": 13.2308345
+        },
+        "longitude": {
+          "min": 80.150006,
+          "max": 80.3295878
+        },
+        "capacity_l": {
+          "min": 240,
+          "max": 1100
+        }
+      },
+      "timestamp_range": null,
+      "categorical_cardinality": {
+        "zone_id": 199,
+        "capacity_l": 3,
+        "data_origin": 1
+      },
+      "stored_bytes": 42174,
+      "estimated_in_memory_bytes_from_1000_row_sample": 383128
+    },
+    "fact_bin_readings": {
+      "rows": 4380000,
+      "columns": 14,
+      "dtypes": {
+        "reading_id": "BIGINT",
+        "bin_id": "INTEGER",
+        "timestamp_utc": "TIMESTAMP_NS",
+        "service_date_local": "TIMESTAMP_NS",
+        "zone_id": "VARCHAR",
+        "fill_level_pct": "FLOAT",
+        "weight_kg": "FLOAT",
+        "temperature_c": "FLOAT",
+        "battery_pct": "FLOAT",
+        "sensor_status": "VARCHAR",
+        "collection_status": "VARCHAR",
+        "data_origin": "VARCHAR",
+        "month": "VARCHAR",
+        "year": "BIGINT"
+      },
+      "missing_pct": {
+        "reading_id": 0.0,
+        "bin_id": 0.0,
+        "timestamp_utc": 0.0,
+        "service_date_local": 0.0,
+        "zone_id": 0.0,
+        "fill_level_pct": 1.491,
+        "weight_kg": 1.491,
+        "temperature_c": 1.491,
+        "battery_pct": 0.0,
+        "sensor_status": 0.0,
+        "collection_status": 0.0,
+        "data_origin": 0.0,
+        "month": 0.0,
+        "year": 0.0
+      },
+      "duplicate_ids_or_rows": 0,
+      "impossible_values": {},
+      "numeric_and_geographic_range": {
+        "fill_level_pct": {
+          "min": 0.0,
+          "max": 100.0
+        },
+        "weight_kg": {
+          "min": 0.0,
+          "max": 133.68800354003906
+        },
+        "battery_pct": {
+          "min": 66.87999725341797,
+          "max": 100.0
+        }
+      },
+      "timestamp_range": {
+        "min": "2025-12-31 18:30:00",
+        "max": "2026-12-31 16:30:00"
+      },
+      "categorical_cardinality": {
+        "zone_id": 199,
+        "sensor_status": 3,
+        "collection_status": 4,
+        "data_origin": 1
+      },
+      "stored_bytes": 45450809,
+      "estimated_in_memory_bytes_from_1000_row_sample": 1564597320
+    },
+    "simulation_truth": {
+      "rows": 4380000,
+      "columns": 12,
+      "dtypes": {
+        "reading_id": "BIGINT",
+        "bin_id": "INTEGER",
+        "timestamp_utc": "TIMESTAMP_NS",
+        "service_date_local": "TIMESTAMP_NS",
+        "arrivals_l_true": "FLOAT",
+        "inventory_l_true": "FLOAT",
+        "overflow_l_true": "FLOAT",
+        "removed_l_true": "FLOAT",
+        "capacity_l": "SMALLINT",
+        "data_origin": "VARCHAR",
+        "month": "VARCHAR",
+        "year": "BIGINT"
+      },
+      "missing_pct": {
+        "reading_id": 0.0,
+        "bin_id": 0.0,
+        "timestamp_utc": 0.0,
+        "service_date_local": 0.0,
+        "arrivals_l_true": 0.0,
+        "inventory_l_true": 0.0,
+        "overflow_l_true": 0.0,
+        "removed_l_true": 0.0,
+        "capacity_l": 0.0,
+        "data_origin": 0.0,
+        "month": 0.0,
+        "year": 0.0
+      },
+      "duplicate_ids_or_rows": 0,
+      "impossible_values": {},
+      "numeric_and_geographic_range": {},
+      "timestamp_range": null,
+      "categorical_cardinality": {},
+      "stored_bytes": 56383332,
+      "estimated_in_memory_bytes_from_1000_row_sample": 784580640
+    },
+    "interim_readings": {
+      "rows": 4380000,
+      "columns": 19,
+      "dtypes": {
+        "reading_id": "BIGINT",
+        "bin_id": "INTEGER",
+        "timestamp_utc": "TIMESTAMP_NS",
+        "service_date_local": "TIMESTAMP_NS",
+        "zone_id": "VARCHAR",
+        "fill_level_pct": "FLOAT",
+        "weight_kg": "FLOAT",
+        "temperature_c": "FLOAT",
+        "battery_pct": "FLOAT",
+        "sensor_status": "VARCHAR",
+        "collection_status": "VARCHAR",
+        "arrivals_l_true": "FLOAT",
+        "inventory_l_true": "FLOAT",
+        "overflow_l_true": "FLOAT",
+        "removed_l_true": "FLOAT",
+        "capacity_l": "SMALLINT",
+        "data_origin": "VARCHAR",
+        "month": "VARCHAR",
+        "year": "BIGINT"
+      },
+      "missing_pct": {
+        "reading_id": 0.0,
+        "bin_id": 0.0,
+        "timestamp_utc": 0.0,
+        "service_date_local": 0.0,
+        "zone_id": 0.0,
+        "fill_level_pct": 1.491,
+        "weight_kg": 1.491,
+        "temperature_c": 1.491,
+        "battery_pct": 0.0,
+        "sensor_status": 0.0,
+        "collection_status": 0.0,
+        "arrivals_l_true": 0.0,
+        "inventory_l_true": 0.0,
+        "overflow_l_true": 0.0,
+        "removed_l_true": 0.0,
+        "capacity_l": 0.0,
+        "data_origin": 0.0,
+        "month": 0.0,
+        "year": 0.0
+      },
+      "duplicate_ids_or_rows": 0,
+      "impossible_values": {},
+      "numeric_and_geographic_range": {},
+      "timestamp_range": null,
+      "categorical_cardinality": {},
+      "stored_bytes": 93726968,
+      "estimated_in_memory_bytes_from_1000_row_sample": 1643437320
+    },
+    "collection_events": {
+      "rows": 218959,
+      "columns": 9,
+      "dtypes": {
+        "collection_id": "BIGINT",
+        "bin_id": "INTEGER",
+        "zone_id": "VARCHAR",
+        "service_date_local": "DATE",
+        "attempted_at_utc": "TIMESTAMP_NS",
+        "collection_status": "VARCHAR",
+        "collected_kg": "FLOAT",
+        "residual_kg": "FLOAT",
+        "data_origin": "VARCHAR"
+      },
+      "missing_pct": {
+        "collection_id": 0.0,
+        "bin_id": 0.0,
+        "zone_id": 0.0,
+        "service_date_local": 0.0,
+        "attempted_at_utc": 0.0,
+        "collection_status": 0.0,
+        "collected_kg": 0.0,
+        "residual_kg": 0.0,
+        "data_origin": 0.0
+      },
+      "duplicate_ids_or_rows": 0,
+      "impossible_values": {},
+      "numeric_and_geographic_range": {},
+      "timestamp_range": {
+        "min": "2026-01-02 00:30:00",
+        "max": "2026-12-31 00:30:00"
+      },
+      "categorical_cardinality": {
+        "zone_id": 199,
+        "collection_status": 3
+      },
+      "stored_bytes": null,
+      "estimated_in_memory_bytes_from_1000_row_sample": 49908201
+    },
+    "bin_daily_metrics": {
+      "rows": 365000,
+      "columns": 14,
+      "dtypes": {
+        "bin_id": "INTEGER",
+        "service_date_local": "DATE",
+        "zone_id": "VARCHAR",
+        "scheduled_readings": "BIGINT",
+        "received_readings": "BIGINT",
+        "missing_readings": "BIGINT",
+        "mean_observed_fill_pct": "DOUBLE",
+        "max_observed_fill_pct": "FLOAT",
+        "arrivals_l_simulated": "DOUBLE",
+        "overflow_l_simulated": "DOUBLE",
+        "collected_kg_simulated": "DOUBLE",
+        "successful_collections": "BIGINT",
+        "missed_collections": "BIGINT",
+        "data_origin": "VARCHAR"
+      },
+      "missing_pct": {
+        "bin_id": 0.0,
+        "service_date_local": 0.0,
+        "zone_id": 0.0,
+        "scheduled_readings": 0.0,
+        "received_readings": 0.0,
+        "missing_readings": 0.0,
+        "mean_observed_fill_pct": 0.0,
+        "max_observed_fill_pct": 0.0,
+        "arrivals_l_simulated": 0.0,
+        "overflow_l_simulated": 0.0,
+        "collected_kg_simulated": 0.0,
+        "successful_collections": 0.0,
+        "missed_collections": 0.0,
+        "data_origin": 0.0
+      },
+      "duplicate_ids_or_rows": 0,
+      "impossible_values": {},
+      "numeric_and_geographic_range": {},
+      "timestamp_range": {
+        "min": "2026-01-01",
+        "max": "2026-12-31"
+      },
+      "categorical_cardinality": {},
+      "stored_bytes": null,
+      "estimated_in_memory_bytes_from_1000_row_sample": 78156720
+    },
+    "zone_daily_metrics": {
+      "rows": 72635,
+      "columns": 12,
+      "dtypes": {
+        "zone_id": "VARCHAR",
+        "service_date_local": "DATE",
+        "bins": "BIGINT",
+        "scheduled_readings": "HUGEINT",
+        "received_readings": "HUGEINT",
+        "missing_readings": "HUGEINT",
+        "arrivals_l_simulated": "DOUBLE",
+        "overflow_l_simulated": "DOUBLE",
+        "collected_kg_simulated": "DOUBLE",
+        "successful_collections": "HUGEINT",
+        "missed_collections": "HUGEINT",
+        "data_origin": "VARCHAR"
+      },
+      "missing_pct": {
+        "zone_id": 0.0,
+        "service_date_local": 0.0,
+        "bins": 0.0,
+        "scheduled_readings": 0.0,
+        "received_readings": 0.0,
+        "missing_readings": 0.0,
+        "arrivals_l_simulated": 0.0,
+        "overflow_l_simulated": 0.0,
+        "collected_kg_simulated": 0.0,
+        "successful_collections": 0.0,
+        "missed_collections": 0.0,
+        "data_origin": 0.0
+      },
+      "duplicate_ids_or_rows": 0,
+      "impossible_values": {},
+      "numeric_and_geographic_range": {},
+      "timestamp_range": {
+        "min": "2026-01-01",
+        "max": "2026-12-31"
+      },
+      "categorical_cardinality": {},
+      "stored_bytes": null,
+      "estimated_in_memory_bytes_from_1000_row_sample": 14972107
+    },
+    "route_daily_metrics": {
+      "rows": 18200,
+      "columns": 10,
+      "dtypes": {
+        "service_date_local": "DATE",
+        "vehicle_id": "INTEGER",
+        "route_id": "VARCHAR",
+        "service_attempts": "BIGINT",
+        "successful_stops": "BIGINT",
+        "missed_stops": "BIGINT",
+        "collected_kg_simulated": "DOUBLE",
+        "distance_km_assumed": "DECIMAL(23,2)",
+        "distance_origin": "VARCHAR",
+        "data_origin": "VARCHAR"
+      },
+      "missing_pct": {
+        "service_date_local": 0.0,
+        "vehicle_id": 0.0,
+        "route_id": 0.0,
+        "service_attempts": 0.0,
+        "successful_stops": 0.0,
+        "missed_stops": 0.0,
+        "collected_kg_simulated": 0.0,
+        "distance_km_assumed": 0.0,
+        "distance_origin": 0.0,
+        "data_origin": 0.0
+      },
+      "duplicate_ids_or_rows": 0,
+      "impossible_values": {},
+      "numeric_and_geographic_range": {
+        "distance_km_assumed": {
+          "min": "6.05",
+          "max": "12.35"
+        }
+      },
+      "timestamp_range": null,
+      "categorical_cardinality": {
+        "vehicle_id": 50,
+        "distance_origin": 1
+      },
+      "stored_bytes": null,
+      "estimated_in_memory_bytes_from_1000_row_sample": 4640272
+    },
+    "vehicle_daily_metrics": {
+      "rows": 18200,
+      "columns": 9,
+      "dtypes": {
+        "service_date_local": "DATE",
+        "vehicle_id": "INTEGER",
+        "routes": "BIGINT",
+        "service_attempts": "HUGEINT",
+        "successful_stops": "HUGEINT",
+        "collected_kg_simulated": "DOUBLE",
+        "distance_km_assumed": "DECIMAL(38,2)",
+        "diesel_l_assumed": "DOUBLE",
+        "data_origin": "VARCHAR"
+      },
+      "missing_pct": {
+        "service_date_local": 0.0,
+        "vehicle_id": 0.0,
+        "routes": 0.0,
+        "service_attempts": 0.0,
+        "successful_stops": 0.0,
+        "collected_kg_simulated": 0.0,
+        "distance_km_assumed": 0.0,
+        "diesel_l_assumed": 0.0,
+        "data_origin": 0.0
+      },
+      "duplicate_ids_or_rows": 0,
+      "impossible_values": {},
+      "numeric_and_geographic_range": {
+        "diesel_l_assumed": {
+          "min": 1.3444444444444443,
+          "max": 2.7444444444444445
+        }
+      },
+      "timestamp_range": null,
+      "categorical_cardinality": {},
+      "stored_bytes": null,
+      "estimated_in_memory_bytes_from_1000_row_sample": 2295530
+    }
+  },
+  "critical_checks": {
+    "reading_id_duplicates": 0,
+    "reading_zone_mismatch": 0,
+    "reading_orphan_bin": 0,
+    "bin_orphan_ward": 0,
+    "invalid_fill": 0,
+    "invalid_bin_coordinates": 0,
+    "negative_route_distance": 0,
+    "invalid_collection_status": 0
+  },
+  "issues": [],
+  "raw_assets": [
+    {
+      "file": "03_data\\raw\\S01\\2026-09-23\\gcc_swm.html",
+      "bytes": 59907,
+      "kind": ".html"
+    },
+    {
+      "file": "03_data\\raw\\S02\\2026-09-23\\tnpcb_index.html",
+      "bytes": 64973,
+      "kind": ".html"
+    },
+    {
+      "file": "03_data\\raw\\S02\\2026-09-23\\tnpcb_swm_2023_24.pdf",
+      "bytes": 9609690,
+      "kind": ".pdf"
+    },
+    {
+      "file": "03_data\\raw\\S02\\2026-09-23\\tnpcb_swm_2024_25.pdf",
+      "bytes": 2121341,
+      "kind": ".pdf"
+    },
+    {
+      "file": "03_data\\raw\\S03\\2026-09-23\\cpcb_swm_2021_22.pdf",
+      "bytes": 4721886,
+      "kind": ".pdf"
+    },
+    {
+      "file": "03_data\\raw\\S04\\2026-09-23\\smartcities_catalog.html",
+      "bytes": 1023027,
+      "kind": ".html"
+    },
+    {
+      "file": "03_data\\raw\\S05\\2026-09-23\\census_chennai_ward_2011.xlsx",
+      "bytes": 102837,
+      "kind": ".xlsx"
+    },
+    {
+      "file": "03_data\\raw\\S06\\2026-09-23\\census_handbook_chennai_2011.pdf",
+      "bytes": 4530956,
+      "kind": ".pdf"
+    },
+    {
+      "file": "03_data\\raw\\S07\\2026-09-23\\gcc_boundary_service.json",
+      "bytes": 3267,
+      "kind": ".json"
+    },
+    {
+      "file": "03_data\\raw\\S08\\2026-09-23\\gcc_ward_boundaries.geojson",
+      "bytes": 3091630,
+      "kind": ".geojson"
+    },
+    {
+      "file": "03_data\\raw\\S09\\2026-09-23\\southern_zone_2026_09_22.osm.pbf",
+      "bytes": 557611244,
+      "kind": ".pbf"
+    },
+    {
+      "file": "03_data\\raw\\S11\\2026-09-23\\gcc_resolution_2024_06_24.pdf",
+      "bytes": 1527912,
+      "kind": ".pdf"
+    },
+    {
+      "file": "03_data\\raw\\S12\\2026-09-23\\gcc_department_expenditure_2025_26.pdf",
+      "bytes": 1515796,
+      "kind": ".pdf"
+    },
+    {
+      "file": "03_data\\raw\\S13\\2026-09-23\\ppac_diesel_price_page.html",
+      "bytes": 242490,
+      "kind": ".html"
+    },
+    {
+      "file": "03_data\\raw\\S14\\2026-09-23\\nasa_power_chennai_daily_2025.json",
+      "bytes": 12505,
+      "kind": ".json"
+    },
+    {
+      "file": "03_data\\raw\\S18\\2026-09-23\\tn_dma_swm.html",
+      "bytes": 61052,
+      "kind": ".html"
+    },
+    {
+      "file": "03_data\\raw\\S19\\2026-09-23\\gcc_tender_2026_02_12.pdf",
+      "bytes": 14394031,
+      "kind": ".pdf"
+    },
+    {
+      "file": "03_data\\raw\\S20\\2026-09-23\\gcc_swm_rules.html",
+      "bytes": 36292,
+      "kind": ".html"
+    }
+  ],
+  "model_calibration_warning": "Synthetic overflow occurs in 501,938 of 4,380,000 scheduled bin-slots (11.46%). This is a calibration warning, not observed Chennai overflow; inspect duration/volume and sensitivity before policy or savings claims.",
+  "notes": [
+    "Official PDFs/HTML are unstructured source snapshots; their byte counts are recorded, not fictional row counts.",
+    "2011 census geography is not mapped to current wards.",
+    "Synthetic route distance is an explicit planning assumption, not an observed road measurement.",
+    "Estimated memory is extrapolated from a sample, not a measured full-load peak."
+  ]
+}

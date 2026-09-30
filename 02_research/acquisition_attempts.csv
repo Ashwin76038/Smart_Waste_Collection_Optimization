@@ -1,0 +1,29 @@
+﻿source_id,resource_url,attempted_at_utc,status,detail
+S01,https://chennaicorporation.gov.in/gcc/department/solid-waste-management/,2026-09-23T15:51:56.522157+00:00,downloaded,59907 bytes; text/html;charset=UTF-8
+S02,https://tnpcb.gov.in/municipalSolidWaste.php,2026-09-23T15:51:56.902806+00:00,downloaded,64973 bytes; text/html; charset=UTF-8
+S02,https://tnpcb.gov.in/PDF/Waste_Mngt/Solid-wste/AnnualRptSWM24_25.pdf,2026-09-23T15:51:58.681724+00:00,downloaded,2121341 bytes; application/pdf
+S02,https://tnpcb.gov.in/PDF/Waste_Mngt/Solid-wste/AnnualRptSWM23_24.pdf,2026-09-23T15:52:02.699641+00:00,downloaded,9609690 bytes; application/pdf
+S03,https://cpcb.nic.in/uploads/MSW/MSW_AnnualReport_2021-22.pdf,2026-09-23T15:52:04.906697+00:00,downloaded,4721886 bytes; application/pdf
+S04,https://tn.data.gov.in/catalog/solid-waste-management-chennai-7,2026-09-23T15:52:06.670895+00:00,downloaded,1023027 bytes; text/html; charset=utf-8
+S05,https://censusindia.gov.in/nada/index.php/catalog/6794/download/9871/DDW_PCA3302_2011_MDDS%20with%20UI.xlsx,2026-09-23T15:52:06.931472+00:00,downloaded,102837 bytes; application/octet-stream
+S06,https://censusindia.gov.in/nada/index.php/catalog/45344/download/49473/DH_2011_3302_PART_B_DCHB_CHENNAI.pdf,2026-09-23T15:52:07.577233+00:00,failed,ValueError: PDF magic mismatch application/octet-stream
+S07,https://gisgcc.chennaicorporation.gov.in/server/rest/services/GCCPublic/GCC_AdminBoundary/MapServer?f=pjson,2026-09-23T15:52:07.903117+00:00,downloaded,3267 bytes; text/plain;charset=UTF-8
+S08,https://gisgcc.chennaicorporation.gov.in/server/rest/services/GCCPublic/GCC_AdminBoundary/MapServer/4/query?where=1%3D1&outFields=*&returnGeometry=true&f=geojson&outSR=4326&resultRecordCount=2000,2026-09-23T15:52:12.124316+00:00,downloaded,3091630 bytes; application/geo+json;charset=UTF-8
+S11,https://chennaicorporation.gov.in/council/resolution/Council%20Resolution%2024.06.2024.pdf,2026-09-23T15:52:13.468996+00:00,downloaded,1527912 bytes; application/pdf
+S12,https://portal.chennaicorporation.gov.in/gcc/Budget_2025-2026/DEPARTMENT%20EXPENDITURE.pdf,2026-09-23T15:52:13.614995+00:00,failed,HTTPError: 404 Client Error: Not Found for url: https://portal.chennaicorporation.gov.in/gcc/Budget_2025-2026/DEPARTMENT%20EXPENDITURE.pdf
+S13,https://ppac.gov.in/retail-selling-price-rsp-of-petrol-diesel-and-domestic-lpg/rsp-of-petrol-and-diesel-in-metro-cities-since-16-6-2017,2026-09-23T15:52:14.552132+00:00,downloaded,242490 bytes; text/html; charset=UTF-8
+S14,"https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M,PRECTOTCORR&community=RE&longitude=80.2707&latitude=13.0827&start=20250101&end=20251231&format=JSON",2026-09-23T15:52:15.900342+00:00,downloaded,12505 bytes; application/json
+S16,https://mohua.gov.in/upload/uploadfiles/files/Part2.pdf,2026-09-23T15:52:16.775351+00:00,failed,HTTPError: 404 Client Error: Not Found for url: https://www.mohua.gov.in/upload/uploadfiles/files/Part2.pdf
+S17,https://www.mohua.gov.in/upload/uploadfiles/files/chap3.pdf,2026-09-23T15:52:17.081336+00:00,failed,HTTPError: 404 Client Error: Not Found for url: https://www.mohua.gov.in/upload/uploadfiles/files/chap3.pdf
+S18,https://www.tnurbantree.tn.gov.in/sanitation-solid-waste/,2026-09-23T15:52:52.679066+00:00,downloaded,61052 bytes; text/html; charset=UTF-8
+S19,https://www.chennaicorporation.gov.in/tender-bulletin/tenderBulletin/2026/20260212.pdf,2026-09-23T15:52:59.399776+00:00,downloaded,14394031 bytes; application/pdf
+S20,https://chennaicorporation.gov.in/gcc/rules-and-procedure/solid-waste-management/,2026-09-23T15:52:59.565133+00:00,downloaded,36292 bytes; text/html;charset=UTF-8
+S06,https://censusindia.gov.in/nada/index.php/catalog/45344/download/49473/DH_2011_3302_PART_B_DCHB_CHENNAI.pdf,2026-09-23T15:53:08.882177+00:00,failed,ValueError: PDF magic mismatch application/octet-stream
+S12,https://portal.chennaicorporation.gov.in/gcc/Budget_2025-2026/DEPARTMENT%20EXPENDITURE.pdf,2026-09-23T15:53:09.075747+00:00,failed,HTTPError: 404 Client Error: Not Found for url: https://portal.chennaicorporation.gov.in/gcc/Budget_2025-2026/DEPARTMENT%20EXPENDITURE.pdf
+S16,https://mohua.gov.in/upload/uploadfiles/files/Part2.pdf,2026-09-23T15:53:09.950583+00:00,failed,HTTPError: 404 Client Error: Not Found for url: https://www.mohua.gov.in/upload/uploadfiles/files/Part2.pdf
+S17,https://www.mohua.gov.in/upload/uploadfiles/files/chap3.pdf,2026-09-23T15:53:10.150220+00:00,failed,HTTPError: 404 Client Error: Not Found for url: https://www.mohua.gov.in/upload/uploadfiles/files/chap3.pdf
+S09,https://download.geofabrik.de/asia/india/southern-zone-260922.osm.pbf,2026-09-23T15:59:07.275860+00:00,downloaded,557611244 bytes; application/octet-stream
+S06,https://censusindia.gov.in/nada/index.php/catalog/45344/download/49474/DH_2011_3302_PART_B_DCHB_CHENNAI.pdf,2026-09-23T16:02:07.177911+00:00,downloaded,4530956 bytes; application/octet-stream
+S12,https://chennaicorporation.gov.in/gcc/Budget_2025-2026/DEPARTMENT%20EXPENDITURE.pdf,2026-09-23T16:02:08.105427+00:00,downloaded,1515796 bytes; application/pdf
+S16,https://mohua.gov.in/upload/uploadfiles/files/Part2.pdf,2026-09-23T16:02:08.761425+00:00,failed,HTTPError: 404 Client Error: Not Found for url: https://www.mohua.gov.in/upload/uploadfiles/files/Part2.pdf
+S17,https://www.mohua.gov.in/upload/uploadfiles/files/chap3.pdf,2026-09-23T16:02:08.916424+00:00,failed,HTTPError: 404 Client Error: Not Found for url: https://www.mohua.gov.in/upload/uploadfiles/files/chap3.pdf

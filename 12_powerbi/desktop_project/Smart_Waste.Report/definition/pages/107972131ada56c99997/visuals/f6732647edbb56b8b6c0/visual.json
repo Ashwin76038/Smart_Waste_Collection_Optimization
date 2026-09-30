@@ -1,0 +1,213 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "f6732647edbb56b8b6c0",
+  "position": {
+    "x": 475,
+    "y": 294,
+    "z": 17000,
+    "width": 781,
+    "height": 218,
+    "tabOrder": 17000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Truck routes · reserved capacity, not measured payload'"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Segoe UI'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#162B36'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "objects": {
+      "grid": [
+        {
+          "properties": {
+            "textSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_truck_route"
+                    }
+                  },
+                  "Property": "method"
+                }
+              },
+              "queryRef": "fact_truck_route.method",
+              "nativeQueryRef": "method"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_truck_route"
+                    }
+                  },
+                  "Property": "vehicle"
+                }
+              },
+              "queryRef": "fact_truck_route.vehicle",
+              "nativeQueryRef": "vehicle"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_truck_route"
+                    }
+                  },
+                  "Property": "bins"
+                }
+              },
+              "queryRef": "fact_truck_route.bins",
+              "nativeQueryRef": "bins"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_truck_route"
+                    }
+                  },
+                  "Property": "distance_km"
+                }
+              },
+              "queryRef": "fact_truck_route.distance_km",
+              "nativeQueryRef": "distance_km"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_truck_route"
+                    }
+                  },
+                  "Property": "volume_utilization_pct"
+                }
+              },
+              "queryRef": "fact_truck_route.volume_utilization_pct",
+              "nativeQueryRef": "volume_utilization_pct"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_truck_route"
+                    }
+                  },
+                  "Property": "route_minutes"
+                }
+              },
+              "queryRef": "fact_truck_route.route_minutes",
+              "nativeQueryRef": "route_minutes"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "rows": 6169,
+  "scheduled_readings": 372000,
+  "received_readings": 366450,
+  "collected_kg_simulated": 1363652.1961743084,
+  "data_origin": "synthetic",
+  "scope": "January 2026; all January zone-day rows"
+}

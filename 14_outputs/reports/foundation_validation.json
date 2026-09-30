@@ -1,0 +1,140 @@
+{
+  "checked_at_utc": "2026-09-30T14:18:19.396059+00:00",
+  "scope": "Foundation structure, provenance metadata and design consistency only",
+  "passed": true,
+  "checks": [
+    {
+      "check": "required_structure",
+      "passed": true,
+      "detail": {
+        "missing": []
+      }
+    },
+    {
+      "check": "catalog_schema",
+      "passed": true,
+      "detail": {
+        "rows": 30
+      }
+    },
+    {
+      "check": "catalog_unique_sources",
+      "passed": true,
+      "detail": {
+        "source_ids": [
+          "S01",
+          "S02",
+          "S03",
+          "S04",
+          "S05",
+          "S06",
+          "S07",
+          "S08",
+          "S09",
+          "S10",
+          "S11",
+          "S12",
+          "S13",
+          "S14",
+          "S15",
+          "S16",
+          "S17",
+          "S18",
+          "S19",
+          "S20",
+          "S21",
+          "S22",
+          "S23",
+          "S24",
+          "S25",
+          "S26",
+          "S27",
+          "S28",
+          "S29",
+          "S30"
+        ]
+      }
+    },
+    {
+      "check": "catalog_metadata_complete",
+      "passed": true,
+      "detail": {
+        "invalid": [],
+        "scope": "Metadata integrity only; does not test downloads"
+      }
+    },
+    {
+      "check": "catalog_acquisition_links",
+      "passed": true,
+      "detail": {
+        "linked_files": 26,
+        "phase": "final_audit"
+      }
+    },
+    {
+      "check": "roadmap_23_complete_workstreams",
+      "passed": true,
+      "detail": {
+        "workstreams": 23,
+        "missing_fields": []
+      }
+    },
+    {
+      "check": "model_keys_grains_units_relationships",
+      "passed": true,
+      "detail": {
+        "tables": 23,
+        "errors": []
+      }
+    },
+    {
+      "check": "dictionary_matches_contract",
+      "passed": true,
+      "detail": {
+        "fields": 234,
+        "missing": [],
+        "extra": []
+      }
+    },
+    {
+      "check": "scale_design_arithmetic",
+      "passed": true,
+      "detail": {
+        "scheduled_rows": 4380000,
+        "generated_rows": 0
+      }
+    },
+    {
+      "check": "phase_and_billing_guardrails",
+      "passed": true,
+      "detail": "Billing disabled; generation follows phase status; Tamil Nadu scope"
+    },
+    {
+      "check": "phase_data_consistency",
+      "passed": true,
+      "detail": {
+        "data_files": 130,
+        "phase": "final_audit"
+      }
+    },
+    {
+      "check": "state_handoff_sections",
+      "passed": true,
+      "detail": "All requested state headings present"
+    },
+    {
+      "check": "local_document_links",
+      "passed": true,
+      "detail": {
+        "broken": []
+      }
+    }
+  ],
+  "not_tested": [
+    "Dataset downloads and values",
+    "Analytical dependencies",
+    "Forecasts and statistical results",
+    "Routing feasibility",
+    "Cloud account and Power BI runtime"
+  ]
+}

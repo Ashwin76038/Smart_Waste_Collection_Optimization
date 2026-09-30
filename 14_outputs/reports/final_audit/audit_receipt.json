@@ -1,0 +1,43 @@
+{
+  "checked_at_utc": "2026-09-30T14:18:21.353558+00:00",
+  "passed": true,
+  "city_readings": {
+    "CBE": 2190000,
+    "CHN": 4380000
+  },
+  "canonical_counts": {
+    "bin_daily_metrics": 547500,
+    "city_daily_metrics": 730,
+    "collection_diagnostics": 322675,
+    "collection_events": 322675,
+    "collection_priority": 1500,
+    "dim_bin": 1500,
+    "dim_city": 2,
+    "dim_date": 730,
+    "dim_location": 1500,
+    "dim_vehicle": 106,
+    "dim_zone": 300,
+    "dim_zone_ward": 300,
+    "fact_bin_readings": 6570000,
+    "fact_collections": 322675,
+    "fact_routes": 72,
+    "fact_vehicle_operations": 72,
+    "fact_weather": 730,
+    "forecast_evaluation": 30,
+    "overflow_comparison": 8,
+    "route_daily_metrics": 36393,
+    "route_scenarios": 18,
+    "route_stops": 1028,
+    "simulation_truth": 6570000,
+    "vehicle_daily_metrics": 36393,
+    "zone_daily_metrics": 109135
+  },
+  "raw_assets_hash_verified": 26,
+  "source_ids": 24,
+  "pbix_sha256": "50dbc63014dc744e6b0f9b1b6b2aa1be8c021a1b65ecf5e270d2f93e66becbc5",
+  "pbix_pages": 5,
+  "python_files_syntax_checked": 38,
+  "partition_pruning": "CBE January reads one file",
+  "cloud_execution": false,
+  "scope": "Existing pipeline outputs, canonical observations, raw hashes and saved PBIX integrity; no fresh full regeneration or fresh Desktop interaction."
+}

@@ -1,0 +1,29 @@
+{
+  "verified_on": "2026-09-30",
+  "pbix": "12_powerbi\\Smart_Waste_Chennai_Coimbatore.pbix",
+  "bytes": 34130852,
+  "sha256": "50dbc63014dc744e6b0f9b1b6b2aa1be8c021a1b65ecf5e270d2f93e66becbc5",
+  "zip_integrity": "passed",
+  "embedded_data_model": true,
+  "pages": [
+    "Executive Overview",
+    "Waste & Bin Analysis",
+    "Geographic Intelligence",
+    "Route Optimization",
+    "Forecasting & Planning"
+  ],
+  "import_tables": 14,
+  "relationships": 16,
+  "measures": 35,
+  "desktop_dax_checks": 52,
+  "desktop_dax_passed": 52,
+  "maximum_absolute_difference": 0,
+  "evidence": "Desktop DAX query executed and observed on 2026-09-28; exact query embedded in PBIX and saved as DESKTOP_RECONCILIATION.dax.",
+  "visual_review": "All five pages rendered and inspected across 2026-09-28/29. Chennai map and base-route cards verified.",
+  "limits": [
+    "Not every city/scenario/filter combination manually exercised",
+    "100% zoom and narrow-window acceptance not claimed",
+    "No service publication or scheduled refresh",
+    "No final portfolio audit"
+  ]
+}

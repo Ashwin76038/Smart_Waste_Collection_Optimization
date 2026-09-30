@@ -1,0 +1,7 @@
+# Direct versions used in the existing Python 3.10 Windows execution environment.
+# Full clean-environment replay remains unverified; see docs/REPRODUCTION.md.
+-r requirements-phase3.txt
+-r requirements-phase4.txt
+jsonschema
+referencing
+pypdf

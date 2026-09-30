@@ -1,0 +1,202 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 1961.7885278927877,
+            "y": 677.84502598089148
+          },
+          "nodeIndex": "KPI Measures",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1358.515400529549,
+            "y": 303.75473489555452
+          },
+          "nodeIndex": "dim_bin",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 915.98954048833446,
+            "y": 681.60189320220161
+          },
+          "nodeIndex": "dim_city",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1440.8265731501431,
+            "y": 1007.3931711481995
+          },
+          "nodeIndex": "dim_date",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 513.17670846458736,
+            "y": 537.23634479821953
+          },
+          "nodeIndex": "dim_scenario",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1039.9217429119167,
+            "y": 1007.2398246488231
+          },
+          "nodeIndex": "dim_zone",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1643.4918787471588,
+            "y": 303.91979729117293
+          },
+          "nodeIndex": "fact_bin_day",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1326.901208379805,
+            "y": 654.18717556788977
+          },
+          "nodeIndex": "fact_city_day",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1727.7885278927874,
+            "y": 657.537297996008
+          },
+          "nodeIndex": "fact_collection_attempt",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 288.95150598216037,
+            "y": 180.20278056278767
+          },
+          "nodeIndex": "fact_counterfactual",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1553.435874725858,
+            "y": -50
+          },
+          "nodeIndex": "fact_dispatch_snapshot",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 800.34443176347884,
+            "y": 332.02147575602953
+          },
+          "nodeIndex": "fact_forecast_score",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 50,
+            "y": 456.49675024892031
+          },
+          "nodeIndex": "fact_route_scenario",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 226.14579625323336,
+            "y": 810.19132070485352
+          },
+          "nodeIndex": "fact_truck_route",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1474.1552394811122,
+            "y": 1305.690051961783
+          },
+          "nodeIndex": "fact_zone_day",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

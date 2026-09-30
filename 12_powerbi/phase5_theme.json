@@ -1,0 +1,21 @@
+{
+  "name": "Smart Waste | Tamil Nadu",
+  "dataColors": ["#147D78", "#D97706", "#3273B5", "#B54743", "#7357A6", "#657786"],
+  "background": "#F7FAF9",
+  "foreground": "#162B36",
+  "tableAccent": "#147D78",
+  "good": "#16836D",
+  "neutral": "#647B88",
+  "bad": "#B54743",
+  "maximum": "#B54743",
+  "center": "#D97706",
+  "minimum": "#147D78",
+  "visualStyles": {
+    "*": {
+      "*": {
+        "title": [{"show": true, "fontFamily": "Segoe UI", "fontSize": 12, "fontColor": {"solid": {"color": "#162B36"}}}],
+        "background": [{"show": true, "color": {"solid": {"color": "#FFFFFF"}}, "transparency": 0}]
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+numpy==2.2.6
+pandas==2.3.3
+pyarrow==23.0.0
+duckdb==1.5.0
+requests==2.34.2
+openpyxl==3.1.5
+osmium==4.3.1
+shapely==2.1.2
+pytest==9.1.1
+psutil==7.2.2

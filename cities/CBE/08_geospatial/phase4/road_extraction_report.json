@@ -1,0 +1,23 @@
+{
+  "source_id": "S09",
+  "source_pbf": "03_data\\raw\\S09\\2026-09-23\\southern_zone_2026_09_22.osm.pbf",
+  "nodes": 258080,
+  "directed_edges": 561940,
+  "before_restriction_and_duplicate_filter": 562372,
+  "landuse_way_polygons": 475,
+  "excluded_way_reasons": {
+    "access": 2714,
+    "motor_vehicle": 52,
+    "hgv": 4
+  },
+  "turn_restriction_handling": "remove applicable via nodes; via-way restrictions remove member ways conservatively",
+  "turn_restrictions_in_regional_source": 1225,
+  "bbox": [
+    76.78,
+    10.84,
+    77.18,
+    11.22
+  ],
+  "seconds": 179.38443970000662,
+  "truck_safety": "not field verified; missing tags remain unknown; city regulations and time-dependent traffic not modelled"
+}

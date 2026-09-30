@@ -1,0 +1,254 @@
+{
+  "created_at_utc": "2026-09-24T12:03:52.295642+00:00",
+  "python": "3.10.11",
+  "versions": {
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "duckdb": "1.5.0",
+    "scipy": "1.15.3",
+    "scikit-learn": "1.7.2",
+    "joblib": "1.5.3",
+    "matplotlib": "3.10.8",
+    "folium": "0.20.0",
+    "networkx": "3.4.2",
+    "shapely": "2.1.2",
+    "pyproj": "3.7.1",
+    "osmium": "4.3.1",
+    "ortools": "9.15.6755",
+    "pytest": "9.1.1"
+  },
+  "config": {
+    "scenario_id": "phase4_chennai_20260923",
+    "issue_date_local": "2026-09-23",
+    "issue_hour_local": 8,
+    "forecast_target_hour_local": 4,
+    "pilot_bin_count": 60,
+    "pilot_center_lat": 13.0827,
+    "pilot_center_lon": 80.2707,
+    "graph_bbox_lon_lat": [
+      80.1,
+      12.86,
+      80.42,
+      13.31
+    ],
+    "max_snap_m": 100,
+    "truck_gross_tonnes_assumed": 12,
+    "truck_height_m_assumed": 3.5,
+    "truck_width_m_assumed": 2.5,
+    "truck_payload_kg_assumed": 5000,
+    "truck_volume_l_assumed": 12000,
+    "service_minutes_per_bin_assumed": 4,
+    "unload_minutes_at_depot_assumed": 15,
+    "shift_minutes_assumed": 480,
+    "density_kg_per_l_assumed": 0.12,
+    "fuel_economy_km_per_l_assumed": 4.5,
+    "diesel_price_inr_per_l_historical_proxy": 92.39,
+    "diesel_price_effective_date": "2026-03-01",
+    "diesel_price_source_id": "S23",
+    "co2_kg_per_l_proxy": 2.689,
+    "co2_source_id": "S24",
+    "base_trigger_pct": 80,
+    "max_service_gap_hours_assumed": 48,
+    "stale_sensor_hours_assumed": 6,
+    "solver_seconds": 5,
+    "seed": 20260923,
+    "data_origin": "assumption",
+    "depot_status": "hypothetical co-located depot and receiving site at nearest eligible road node; not verified municipal facility",
+    "currency_scope": "historical retail diesel proxy only; no invented labour wage or procurement cost"
+  },
+  "artifacts": [
+    {
+      "path": "08_geospatial/phase4/bin_spatial_features.csv",
+      "bytes": 234121,
+      "sha256": "5e48ddeac5cb506e6d97a39ae0e3f4d802e37742eb6a1067918ee19a817eaba6"
+    },
+    {
+      "path": "08_geospatial/phase4/bin_spatial_features.parquet",
+      "bytes": 98628,
+      "sha256": "72582e0501fca2678a523f7c33379d615eb59f1129d07d4c1cac1d29d2b0a4a0"
+    },
+    {
+      "path": "08_geospatial/phase4/directed_edges.parquet",
+      "bytes": 16567350,
+      "sha256": "284402eb063f03cad9406117459525c46ffdc239184fa4d93764867827bf6dda"
+    },
+    {
+      "path": "08_geospatial/phase4/geospatial_summary.json",
+      "bytes": 1233,
+      "sha256": "336cd90b11212a9c29a69586cb43322a4337d5e4a864a38275783fb240cd940e"
+    },
+    {
+      "path": "08_geospatial/phase4/landuse_ways.geojson",
+      "bytes": 2831678,
+      "sha256": "67c281ce87b7da497a78cc676b8214d91447bc7731a7e9ca2405f43d7c510234"
+    },
+    {
+      "path": "08_geospatial/phase4/matrix_locations.csv",
+      "bytes": 3112,
+      "sha256": "62991fb3d7f827e06f19b8d90b7ba1de81553bfffc4623bf93c161ee557dade5"
+    },
+    {
+      "path": "08_geospatial/phase4/matrix_paths.json",
+      "bytes": 6755833,
+      "sha256": "05a6ca25f484a485635538b6c463b4e85451e2f002bff05a2309af2e03b7ff78"
+    },
+    {
+      "path": "08_geospatial/phase4/pilot_bins.csv",
+      "bytes": 14148,
+      "sha256": "ec97c0c31759d84e8bb65637cebc833e0c88bbd6175a89fa32e2b7513502605b"
+    },
+    {
+      "path": "08_geospatial/phase4/poi_coverage.csv",
+      "bytes": 238103,
+      "sha256": "5987661bb51a6b9f2df05cd6a13bfceebf9f1cb722636dbad072802517e27e47"
+    },
+    {
+      "path": "08_geospatial/phase4/road_extraction_report.json",
+      "bytes": 807,
+      "sha256": "0d2d5edbf54b65ad948274a6045196acec71546bdfdafb5b8c8abbfcba29296f"
+    },
+    {
+      "path": "08_geospatial/phase4/road_matrix.npz",
+      "bytes": 55017,
+      "sha256": "4ce2033f2cf108449a544a2c82b8994330c14e047ed698ded304910098de3b6a"
+    },
+    {
+      "path": "08_geospatial/phase4/road_nodes.parquet",
+      "bytes": 7070536,
+      "sha256": "7d7ad8a5a0960507636190d574f3f7f0a2af258b1f55dfa60711274b6b2269eb"
+    },
+    {
+      "path": "09_forecasting/phase4/dispatch_forecasts.csv",
+      "bytes": 302912,
+      "sha256": "753d2f047ae19a44125f18e02dbf91cac0ca629d3b07f958bda36a7dbc81e27d"
+    },
+    {
+      "path": "09_forecasting/phase4/dispatch_forecasts.parquet",
+      "bytes": 103115,
+      "sha256": "1c95a4e7e9ee280ba0f5b887222d2c1760b9c45a002ce492a5b7926ff4b2c0b6"
+    },
+    {
+      "path": "09_forecasting/phase4/feature_contract.json",
+      "bytes": 229,
+      "sha256": "5757458027f2197a16d43c720f6f03538e320a365a6abafd80e901552c2a8130"
+    },
+    {
+      "path": "09_forecasting/phase4/forecast_evaluation.csv",
+      "bytes": 1805,
+      "sha256": "01b6f0be34b56363992201d2fe38cb8e15bf5c8558903cd0e36c7499417cc6b0"
+    },
+    {
+      "path": "09_forecasting/phase4/forecast_test_mae.png",
+      "bytes": 48551,
+      "sha256": "e0c453a919a9d5ad553bb69a56a547a15e61e3b89e343a4e9bbe81a6dee4fdb4"
+    },
+    {
+      "path": "09_forecasting/phase4/model_card.json",
+      "bytes": 2016,
+      "sha256": "06235506d16e387db084af60d03958707ee1fdde3e4ce1cb5aedca24333297c1"
+    },
+    {
+      "path": "09_forecasting/phase4/monthly_test_metrics.csv",
+      "bytes": 390,
+      "sha256": "28847dc413a08458e8b2cc2961f6effecc23c8617c254389c8762e1d9d8dc5dd"
+    },
+    {
+      "path": "09_forecasting/phase4/ridge_pipeline.joblib",
+      "bytes": 2561,
+      "sha256": "bb3a5690d358db8701bd57d79d8a8015421d04a542e744c83a4ad86d2a88be17"
+    },
+    {
+      "path": "09_forecasting/phase4/test_predictions.parquet",
+      "bytes": 3335667,
+      "sha256": "4b0b7ba9305cea3678d2aeda8db8ffb1bc6efc46526727fdb3d066e7a816123b"
+    },
+    {
+      "path": "10_optimization/phase4/collection_priority.csv",
+      "bytes": 412366,
+      "sha256": "7a88de7185c43c6039145fa23622b7ad3314419991ae2bc70a2b24939fa880b3"
+    },
+    {
+      "path": "10_optimization/phase4/counterfactual_bin_results.csv",
+      "bytes": 56279,
+      "sha256": "b496ce8c60b96a324f9e24a5f44508b396cf47f57e511349b153787d02dd8cd1"
+    },
+    {
+      "path": "10_optimization/phase4/counterfactual_contract.json",
+      "bytes": 700,
+      "sha256": "7c48ef8d341c1bd0d151a52aaa41d7c7f3817e453c56d807e0eba7dfb9a2ead1"
+    },
+    {
+      "path": "10_optimization/phase4/counterfactual_totals.csv",
+      "bytes": 1040,
+      "sha256": "a77703b2445a8fb3874eb205669fc29a62be1368b6b2ab3a257316b42a85d48e"
+    },
+    {
+      "path": "10_optimization/phase4/fuel_sensitivity.csv",
+      "bytes": 227,
+      "sha256": "0fe3884eb09e4af6b4f29d1f23e36acb2eb480d46bcdc1469cad1631457d2803"
+    },
+    {
+      "path": "10_optimization/phase4/overflow_comparison.csv",
+      "bytes": 678,
+      "sha256": "b042ef1620a68bb369c1b0be0e80b837e2ddc488d372a6a0286a121e78bb8eb4"
+    },
+    {
+      "path": "10_optimization/phase4/priority_sensitivity.csv",
+      "bytes": 1082,
+      "sha256": "0541ea0f4c9f7039c038518b3f227b2711cc5e58f19c6d85c2394b55ae6a2a4b"
+    },
+    {
+      "path": "10_optimization/phase4/route_paths.geojson",
+      "bytes": 306324,
+      "sha256": "5de76f64b14cc7b7193cdae2817bdf8857812fca45307aba919c9a68d684a87a"
+    },
+    {
+      "path": "10_optimization/phase4/route_solutions.json",
+      "bytes": 11844,
+      "sha256": "eb83fddfc45666b8605647ba2b9eed1bd62d87ca2004909e87e6c9b1a013c68e"
+    },
+    {
+      "path": "10_optimization/phase4/route_stops.csv",
+      "bytes": 34640,
+      "sha256": "bf23557abe35dbb7944548446270c006e9530156503c96f757b5c68ed06d22f2"
+    },
+    {
+      "path": "10_optimization/phase4/route_summary.csv",
+      "bytes": 5946,
+      "sha256": "1dae20d2f003fa257422903525d45934e1dc74e0ac5fab08d47802805d77f5d4"
+    },
+    {
+      "path": "10_optimization/phase4/scenario_comparison.csv",
+      "bytes": 3748,
+      "sha256": "9faf88c5616f01133bf947bb0c7f77a912ca23a4d235c4252efb32c46c880485"
+    },
+    {
+      "path": "14_outputs/maps/.gitkeep",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "14_outputs/maps/phase4_geospatial.html",
+      "bytes": 10967896,
+      "sha256": "457d56282c8ec5f37156145a73fa8b7cdedefe9b3e3f7d7accc4de5529192053"
+    },
+    {
+      "path": "14_outputs/maps/phase4_routes.html",
+      "bytes": 201939,
+      "sha256": "572442c50b89149db327d865919a7c5a77a5c7598caffae038ebaaf0217fe80c"
+    },
+    {
+      "path": "14_outputs/charts/phase4/overflow_tradeoff.png",
+      "bytes": 42123,
+      "sha256": "e8172057416d31dbb524d787924b5bf5b0d816811cacb04d67260ec6f82e2e53"
+    },
+    {
+      "path": "14_outputs/charts/phase4/route_comparison.png",
+      "bytes": 44313,
+      "sha256": "c48da57682ee6659b87dcf32dab5943c064c3eb0c30ee78494b60e9c1e016e02"
+    }
+  ],
+  "solver_reproducibility": "5-second wall-clock budget can change solution across hardware; saved routes authoritative for this run",
+  "forecast_reproducibility": "Fixed synthetic source and chronological splits; deterministic ridge; no random split",
+  "raw_sources": "02_research/acquisition_manifest.csv"
+}

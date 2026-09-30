@@ -1,0 +1,15 @@
+{
+  "counts": {
+    "fact_bin_readings": 4380000,
+    "simulation_truth": 4380000,
+    "collection_events": 218959,
+    "bin_daily_metrics": 365000,
+    "zone_daily_metrics": 72635,
+    "route_daily_metrics": 18200,
+    "vehicle_daily_metrics": 18200
+  },
+  "build_seconds": 1.46,
+  "database_bytes": 51392512,
+  "query": "January 2026 filter + selected columns + aggregation; see duckdb_query_plan.txt",
+  "execution": "local DuckDB"
+}

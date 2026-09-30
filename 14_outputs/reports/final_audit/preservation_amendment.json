@@ -1,0 +1,7 @@
+{
+  "path": "14_outputs/tables/phase3_sql/query_manifest.json",
+  "prior_sha256": "beb6ed7afee2747fbb3bea8041d1efc2165e45e1e9b8e80c1cdc8769b12fe786",
+  "sha256": "f21edbf11f55567ba03da02a4403904c66a12a792c1b1b629e72c9486cad745c",
+  "bytes": 6160,
+  "reason": "Final audit reran the 14 source SQL queries; run manifest timestamp refreshed. Original data/output hash checks remain enforced separately; prior preservation receipt retained."
+}

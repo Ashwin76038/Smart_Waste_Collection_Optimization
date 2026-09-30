@@ -1,0 +1,39 @@
+{
+  "created_utc": "2026-09-30T14:09:16.916838+00:00",
+  "rows": {
+    "dim_city": 2,
+    "dim_date": 365,
+    "dim_zone": 300,
+    "dim_bin": 1500,
+    "dim_scenario": 18,
+    "fact_city_day": 730,
+    "fact_bin_day": 547500,
+    "fact_zone_day": 109135,
+    "fact_collection_attempt": 322675,
+    "fact_dispatch_snapshot": 1500,
+    "fact_route_scenario": 18,
+    "fact_truck_route": 72,
+    "fact_forecast_score": 30,
+    "fact_counterfactual": 8
+  },
+  "relationship_checks": 16,
+  "kpi_checks": 52,
+  "all_passed": true,
+  "mass_cross_grain": [
+    {
+      "city_id": "CHN",
+      "attempt_kg": 16150625.303025998,
+      "daily_kg": 16150625.673508286,
+      "difference_kg": -0.37048228830099106
+    },
+    {
+      "city_id": "CBE",
+      "attempt_kg": 7301803.860715301,
+      "daily_kg": 7301804.02697845,
+      "difference_kg": -0.16626314911991358
+    }
+  ],
+  "power_bi_desktop_execution": false,
+  "source_database": "03_data\\processed\\two_city\\two_city.duckdb",
+  "note": "All operational facts are synthetic. SQL is source calculation; Pandas independently aggregates exported model CSVs."
+}

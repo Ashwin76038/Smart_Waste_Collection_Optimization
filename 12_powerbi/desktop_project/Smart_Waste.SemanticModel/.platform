@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Smart_Waste_Chennai_Coimbatore"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "868f31cc-8e67-40b4-9628-2f5dfb846a55"
+  }
+}

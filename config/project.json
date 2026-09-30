@@ -1,0 +1,40 @@
+{
+  "project": "Smart_Waste_Collection_Optimization",
+  "phase": "project_complete_audited_portfolio",
+  "region": "Tamil Nadu",
+  "proposed_pilot": "Chennai and Coimbatore",
+  "timezone": "Asia/Kolkata",
+  "storage_timezone": "UTC",
+  "currency": "INR",
+  "map_crs": "EPSG:4326",
+  "analysis_crs": "EPSG:32644",
+  "data_origins": [
+    "real",
+    "official",
+    "derived",
+    "proxy",
+    "synthetic",
+    "assumption"
+  ],
+  "scenario_design": {
+    "bin_count": 1000,
+    "days": 365,
+    "readings_per_day": 12,
+    "expected_scheduled_rows": 4380000,
+    "seed": 20260923,
+    "date_range": "2026-01-01 to 2026-12-31; hypothetical simulation, not observed history"
+  },
+  "generation_enabled": true,
+  "billing_allowed": false,
+  "cities": [
+    "CHN",
+    "CBE"
+  ],
+  "canonical_database": "03_data/processed/two_city/two_city.duckdb",
+  "combined_scenario": {
+    "bin_count": 1500,
+    "expected_scheduled_rows": 6570000,
+    "note": "scenario_design above remains the preserved Chennai contract; CBE uses config/cities.json"
+  },
+  "phase5_mode": "Actual five-page PBIX delivered; Service not published"
+}

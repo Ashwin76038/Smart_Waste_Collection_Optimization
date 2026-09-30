@@ -1,0 +1,12 @@
+{
+  "S23": {
+    "file": "03_data/raw/S23/2026-09-24/lok_sabha_3336_diesel.pdf",
+    "pages": 3,
+    "verified": "Chennai IOCL 92.39INR/L; AnnexureI page2/II page3; effective2026-03-01"
+  },
+  "S24": {
+    "file": "03_data/raw/S24/2026-09-24/epa_diesel_equivalencies.html",
+    "verified": "Diesel 10180gCO2/USgallon; tailpipe fossil factor"
+  },
+  "date": "2026-09-24"
+}

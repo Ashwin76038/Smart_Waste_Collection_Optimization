@@ -1,0 +1,235 @@
+table,column,logical_type,unit,primary_key,references,nullability
+dim_source,source_id,VARCHAR,identifier/category,yes,,PK required; otherwise see nullability policy
+dim_source,dataset_name,VARCHAR,identifier/category,no,,PK required; otherwise see nullability policy
+dim_source,url,VARCHAR,identifier/category,no,,PK required; otherwise see nullability policy
+dim_source,license,VARCHAR,identifier/category,no,,PK required; otherwise see nullability policy
+dim_city,city_id,VARCHAR,identifier/category,yes,,PK required; otherwise see nullability policy
+dim_city,city_name,VARCHAR,identifier/category,no,,PK required; otherwise see nullability policy
+dim_city,district,VARCHAR,identifier/category,no,,PK required; otherwise see nullability policy
+dim_city,state,VARCHAR,identifier/category,no,,PK required; otherwise see nullability policy
+dim_city,latitude,DOUBLE,degrees north; reference center,no,,PK required; otherwise see nullability policy
+dim_city,longitude,DOUBLE,degrees east; reference center,no,,PK required; otherwise see nullability policy
+dim_city,population_source,VARCHAR,source reference; not current population,no,,PK required; otherwise see nullability policy
+dim_city,data_origin,VARCHAR,provenance category,no,,PK required; otherwise see nullability policy
+dim_city,lineage_id,VARCHAR,lineage identifier,no,,PK required; otherwise see nullability policy
+dim_date,date_key,INTEGER,YYYYMMDD,yes,,PK required; otherwise see nullability policy
+dim_date,calendar_date,DATE,local date,no,,PK required; otherwise see nullability policy
+dim_date,weekday,INTEGER,ISO 1-7,no,,PK required; otherwise see nullability policy
+dim_date,month,INTEGER,1-12,no,,PK required; otherwise see nullability policy
+dim_date,year,INTEGER,year,no,,PK required; otherwise see nullability policy
+dim_date,data_origin,VARCHAR,enum,no,,PK required; otherwise see nullability policy
+dim_date,lineage_id,VARCHAR,manifest identifier,no,,PK required; otherwise see nullability policy
+dim_zone,zone_key,BIGINT,identifier/category,yes,,PK required; otherwise see nullability policy
+dim_zone,zone_code,VARCHAR,identifier/category,no,,PK required; otherwise see nullability policy
+dim_zone,zone_level,VARCHAR,identifier/category,no,,PK required; otherwise see nullability policy
+dim_zone,zone_name,VARCHAR,identifier/category,no,,PK required; otherwise see nullability policy
+dim_zone,boundary_version,VARCHAR,identifier/category,no,,PK required; otherwise see nullability policy
+dim_zone,valid_from,DATE,identifier/category,no,,PK required; otherwise see nullability policy
+dim_zone,valid_to,DATE,identifier/category,no,,PK required; otherwise see nullability policy
+dim_zone,area_km2,DOUBLE,km2,no,,PK required; otherwise see nullability policy
+dim_zone,geometry_wkb,BLOB,source CRS recorded separately,no,,PK required; otherwise see nullability policy
+dim_zone,crs,VARCHAR,identifier/category,no,,PK required; otherwise see nullability policy
+dim_zone,data_origin,VARCHAR,enum,no,,PK required; otherwise see nullability policy
+dim_zone,lineage_id,VARCHAR,manifest identifier,no,,PK required; otherwise see nullability policy
+dim_zone,city_id,VARCHAR,city identifier,no,dim_city.city_id,PK required; otherwise see nullability policy
+dim_location,location_key,BIGINT,identifier/category,yes,,PK required; otherwise see nullability policy
+dim_location,latitude,DOUBLE,degrees north,no,,PK required; otherwise see nullability policy
+dim_location,longitude,DOUBLE,degrees east,no,,PK required; otherwise see nullability policy
+dim_location,zone_key,BIGINT,identifier/category,no,dim_zone.zone_key,PK required; otherwise see nullability policy
+dim_location,location_type,VARCHAR,identifier/category,no,,PK required; otherwise see nullability policy
+dim_location,coordinate_origin,VARCHAR,identifier/category,no,,PK required; otherwise see nullability policy
+dim_location,valid_from,DATE,identifier/category,no,,PK required; otherwise see nullability policy
+dim_location,valid_to,DATE,identifier/category,no,,PK required; otherwise see nullability policy
+dim_location,data_origin,VARCHAR,enum,no,,PK required; otherwise see nullability policy
+dim_location,lineage_id,VARCHAR,manifest identifier,no,,PK required; otherwise see nullability policy
+dim_location,city_id,VARCHAR,city identifier,no,dim_city.city_id,PK required; otherwise see nullability policy
+dim_waste_type,waste_type_key,INTEGER,identifier/category,yes,,PK required; otherwise see nullability policy
+dim_waste_type,waste_type_name,VARCHAR,identifier/category,no,,PK required; otherwise see nullability policy
+dim_waste_type,hazardous_flag,BOOLEAN,identifier/category,no,,PK required; otherwise see nullability policy
+dim_waste_type,data_origin,VARCHAR,enum,no,,PK required; otherwise see nullability policy
+dim_waste_type,lineage_id,VARCHAR,manifest identifier,no,,PK required; otherwise see nullability policy
+dim_bin,bin_key,BIGINT,identifier/category,yes,,PK required; otherwise see nullability policy
+dim_bin,bin_id,VARCHAR,identifier/category,no,,PK required; otherwise see nullability policy
+dim_bin,location_key,BIGINT,identifier/category,no,dim_location.location_key,PK required; otherwise see nullability policy
+dim_bin,waste_type_key,INTEGER,identifier/category,no,dim_waste_type.waste_type_key,PK required; otherwise see nullability policy
+dim_bin,capacity_l,DOUBLE,litres,no,,PK required; otherwise see nullability policy
+dim_bin,capacity_origin,VARCHAR,identifier/category,no,,PK required; otherwise see nullability policy
+dim_bin,valid_from,TIMESTAMP,UTC,no,,PK required; otherwise see nullability policy
+dim_bin,valid_to,TIMESTAMP,UTC,no,,PK required; otherwise see nullability policy
+dim_bin,data_origin,VARCHAR,enum,no,,PK required; otherwise see nullability policy
+dim_bin,lineage_id,VARCHAR,manifest identifier,no,,PK required; otherwise see nullability policy
+dim_bin,city_id,VARCHAR,city identifier,no,dim_city.city_id,PK required; otherwise see nullability policy
+dim_vehicle,vehicle_key,BIGINT,identifier/category,yes,,PK required; otherwise see nullability policy
+dim_vehicle,vehicle_id,VARCHAR,identifier/category,no,,PK required; otherwise see nullability policy
+dim_vehicle,payload_kg,DOUBLE,kg,no,,PK required; otherwise see nullability policy
+dim_vehicle,volume_m3,DOUBLE,m3,no,,PK required; otherwise see nullability policy
+dim_vehicle,energy_type,VARCHAR,identifier/category,no,,PK required; otherwise see nullability policy
+dim_vehicle,access_class,VARCHAR,identifier/category,no,,PK required; otherwise see nullability policy
+dim_vehicle,crew_size,INTEGER,persons,no,,PK required; otherwise see nullability policy
+dim_vehicle,valid_from,DATE,identifier/category,no,,PK required; otherwise see nullability policy
+dim_vehicle,valid_to,DATE,identifier/category,no,,PK required; otherwise see nullability policy
+dim_vehicle,data_origin,VARCHAR,enum,no,,PK required; otherwise see nullability policy
+dim_vehicle,lineage_id,VARCHAR,manifest identifier,no,,PK required; otherwise see nullability policy
+dim_vehicle,city_id,VARCHAR,city identifier,no,dim_city.city_id,PK required; otherwise see nullability policy
+dim_facility,facility_key,BIGINT,identifier/category,yes,,PK required; otherwise see nullability policy
+dim_facility,location_key,BIGINT,identifier/category,no,dim_location.location_key,PK required; otherwise see nullability policy
+dim_facility,facility_name,VARCHAR,identifier/category,no,,PK required; otherwise see nullability policy
+dim_facility,facility_type,VARCHAR,identifier/category,no,,PK required; otherwise see nullability policy
+dim_facility,valid_from,DATE,identifier/category,no,,PK required; otherwise see nullability policy
+dim_facility,valid_to,DATE,identifier/category,no,,PK required; otherwise see nullability policy
+dim_facility,data_origin,VARCHAR,enum,no,,PK required; otherwise see nullability policy
+dim_facility,lineage_id,VARCHAR,manifest identifier,no,,PK required; otherwise see nullability policy
+dim_facility,city_id,VARCHAR,city identifier,no,dim_city.city_id,PK required; otherwise see nullability policy
+dim_scenario,scenario_key,BIGINT,identifier/category,yes,,PK required; otherwise see nullability policy
+dim_scenario,scenario_name,VARCHAR,identifier/category,no,,PK required; otherwise see nullability policy
+dim_scenario,policy_version,VARCHAR,identifier/category,no,,PK required; otherwise see nullability policy
+dim_scenario,config_sha256,VARCHAR,identifier/category,no,,PK required; otherwise see nullability policy
+dim_scenario,data_origin,VARCHAR,enum,no,,PK required; otherwise see nullability policy
+dim_scenario,lineage_id,VARCHAR,manifest identifier,no,,PK required; otherwise see nullability policy
+dim_scenario,city_id,VARCHAR,city identifier,no,dim_city.city_id,PK required; otherwise see nullability policy
+dim_simulation_run,simulation_run_id,BIGINT,identifier/category,yes,,PK required; otherwise see nullability policy
+dim_simulation_run,scenario_key,BIGINT,identifier/category,no,dim_scenario.scenario_key,PK required; otherwise see nullability policy
+dim_simulation_run,demand_seed,BIGINT,identifier/category,no,,PK required; otherwise see nullability policy
+dim_simulation_run,generator_version,VARCHAR,identifier/category,no,,PK required; otherwise see nullability policy
+dim_simulation_run,started_at,TIMESTAMP,UTC,no,,PK required; otherwise see nullability policy
+dim_simulation_run,data_origin,VARCHAR,enum,no,,PK required; otherwise see nullability policy
+dim_simulation_run,lineage_id,VARCHAR,manifest identifier,no,,PK required; otherwise see nullability policy
+dim_simulation_run,city_id,VARCHAR,city identifier,no,dim_city.city_id,PK required; otherwise see nullability policy
+fact_bin_readings,reading_id,VARCHAR,identifier/category,yes,,PK required; otherwise see nullability policy
+fact_bin_readings,simulation_run_id,BIGINT,identifier/category,no,dim_simulation_run.simulation_run_id,PK required; otherwise see nullability policy
+fact_bin_readings,bin_key,BIGINT,identifier/category,no,dim_bin.bin_key,PK required; otherwise see nullability policy
+fact_bin_readings,date_key,INTEGER,identifier/category,no,dim_date.date_key,PK required; otherwise see nullability policy
+fact_bin_readings,timestamp_utc,TIMESTAMP,UTC,no,,PK required; otherwise see nullability policy
+fact_bin_readings,received_at_utc,TIMESTAMP,UTC,no,,PK required; otherwise see nullability policy
+fact_bin_readings,fill_level_pct,DOUBLE,percent,no,,PK required; otherwise see nullability policy
+fact_bin_readings,weight_kg,DOUBLE,kg,no,,PK required; otherwise see nullability policy
+fact_bin_readings,temperature_c,DOUBLE,degrees C,no,,PK required; otherwise see nullability policy
+fact_bin_readings,battery_pct,DOUBLE,percent,no,,PK required; otherwise see nullability policy
+fact_bin_readings,sensor_status,VARCHAR,identifier/category,no,,PK required; otherwise see nullability policy
+fact_bin_readings,collection_status,VARCHAR,identifier/category,no,,PK required; otherwise see nullability policy
+fact_bin_readings,data_origin,VARCHAR,enum,no,,PK required; otherwise see nullability policy
+fact_bin_readings,lineage_id,VARCHAR,manifest identifier,no,,PK required; otherwise see nullability policy
+fact_bin_readings,city_id,VARCHAR,city identifier,no,dim_city.city_id,PK required; otherwise see nullability policy
+fact_routes,route_id,VARCHAR,identifier/category,yes,,PK required; otherwise see nullability policy
+fact_routes,operation_id,VARCHAR,identifier/category,no,fact_vehicle_operations.operation_id,PK required; otherwise see nullability policy
+fact_routes,simulation_run_id,BIGINT,identifier/category,no,dim_simulation_run.simulation_run_id,PK required; otherwise see nullability policy
+fact_routes,vehicle_key,BIGINT,identifier/category,no,dim_vehicle.vehicle_key,PK required; otherwise see nullability policy
+fact_routes,date_key,INTEGER,identifier/category,no,dim_date.date_key,PK required; otherwise see nullability policy
+fact_routes,start_facility_key,BIGINT,identifier/category,no,dim_facility.facility_key,PK required; otherwise see nullability policy
+fact_routes,end_facility_key,BIGINT,identifier/category,no,dim_facility.facility_key,PK required; otherwise see nullability policy
+fact_routes,route_status,VARCHAR,identifier/category,no,,PK required; otherwise see nullability policy
+fact_routes,distance_km,DOUBLE,km,no,,PK required; otherwise see nullability policy
+fact_routes,duration_min,DOUBLE,minutes,no,,PK required; otherwise see nullability policy
+fact_routes,solver_status,VARCHAR,identifier/category,no,,PK required; otherwise see nullability policy
+fact_routes,data_origin,VARCHAR,enum,no,,PK required; otherwise see nullability policy
+fact_routes,lineage_id,VARCHAR,manifest identifier,no,,PK required; otherwise see nullability policy
+fact_routes,city_id,VARCHAR,city identifier,no,dim_city.city_id,PK required; otherwise see nullability policy
+fact_route_stops,stop_id,VARCHAR,identifier/category,yes,,PK required; otherwise see nullability policy
+fact_route_stops,route_id,VARCHAR,identifier/category,no,fact_routes.route_id,PK required; otherwise see nullability policy
+fact_route_stops,stop_sequence,INTEGER,identifier/category,no,,PK required; otherwise see nullability policy
+fact_route_stops,location_key,BIGINT,identifier/category,no,dim_location.location_key,PK required; otherwise see nullability policy
+fact_route_stops,bin_key,BIGINT,identifier/category,no,dim_bin.bin_key,PK required; otherwise see nullability policy
+fact_route_stops,arrival_utc,TIMESTAMP,UTC,no,,PK required; otherwise see nullability policy
+fact_route_stops,departure_utc,TIMESTAMP,UTC,no,,PK required; otherwise see nullability policy
+fact_route_stops,stop_type,VARCHAR,identifier/category,no,,PK required; otherwise see nullability policy
+fact_route_stops,service_status,VARCHAR,identifier/category,no,,PK required; otherwise see nullability policy
+fact_route_stops,data_origin,VARCHAR,enum,no,,PK required; otherwise see nullability policy
+fact_route_stops,lineage_id,VARCHAR,manifest identifier,no,,PK required; otherwise see nullability policy
+fact_route_stops,city_id,VARCHAR,city identifier,no,dim_city.city_id,PK required; otherwise see nullability policy
+fact_route_legs,leg_id,VARCHAR,identifier/category,yes,,PK required; otherwise see nullability policy
+fact_route_legs,route_id,VARCHAR,identifier/category,no,fact_routes.route_id,PK required; otherwise see nullability policy
+fact_route_legs,from_stop_id,VARCHAR,identifier/category,no,fact_route_stops.stop_id,PK required; otherwise see nullability policy
+fact_route_legs,to_stop_id,VARCHAR,identifier/category,no,fact_route_stops.stop_id,PK required; otherwise see nullability policy
+fact_route_legs,distance_km,DOUBLE,km,no,,PK required; otherwise see nullability policy
+fact_route_legs,travel_min,DOUBLE,minutes,no,,PK required; otherwise see nullability policy
+fact_route_legs,path_artifact,VARCHAR,identifier/category,no,,PK required; otherwise see nullability policy
+fact_route_legs,data_origin,VARCHAR,enum,no,,PK required; otherwise see nullability policy
+fact_route_legs,lineage_id,VARCHAR,manifest identifier,no,,PK required; otherwise see nullability policy
+fact_route_legs,city_id,VARCHAR,city identifier,no,dim_city.city_id,PK required; otherwise see nullability policy
+fact_collections,collection_id,VARCHAR,identifier/category,yes,,PK required; otherwise see nullability policy
+fact_collections,stop_id,VARCHAR,identifier/category,no,fact_route_stops.stop_id,PK required; otherwise see nullability policy
+fact_collections,bin_key,BIGINT,identifier/category,no,dim_bin.bin_key,PK required; otherwise see nullability policy
+fact_collections,waste_type_key,INTEGER,identifier/category,no,dim_waste_type.waste_type_key,PK required; otherwise see nullability policy
+fact_collections,collected_at_utc,TIMESTAMP,UTC,no,,PK required; otherwise see nullability policy
+fact_collections,removed_kg,DOUBLE,kg,no,,PK required; otherwise see nullability policy
+fact_collections,residual_kg,DOUBLE,kg,no,,PK required; otherwise see nullability policy
+fact_collections,service_min,DOUBLE,minutes,no,,PK required; otherwise see nullability policy
+fact_collections,attempt_status,VARCHAR,identifier/category,no,,PK required; otherwise see nullability policy
+fact_collections,data_origin,VARCHAR,enum,no,,PK required; otherwise see nullability policy
+fact_collections,lineage_id,VARCHAR,manifest identifier,no,,PK required; otherwise see nullability policy
+fact_collections,city_id,VARCHAR,city identifier,no,dim_city.city_id,PK required; otherwise see nullability policy
+fact_vehicle_operations,operation_id,VARCHAR,identifier/category,yes,,PK required; otherwise see nullability policy
+fact_vehicle_operations,simulation_run_id,BIGINT,identifier/category,no,dim_simulation_run.simulation_run_id,PK required; otherwise see nullability policy
+fact_vehicle_operations,vehicle_key,BIGINT,identifier/category,no,dim_vehicle.vehicle_key,PK required; otherwise see nullability policy
+fact_vehicle_operations,date_key,INTEGER,identifier/category,no,dim_date.date_key,PK required; otherwise see nullability policy
+fact_vehicle_operations,shift_id,VARCHAR,identifier/category,no,,PK required; otherwise see nullability policy
+fact_vehicle_operations,distance_km,DOUBLE,km,no,,PK required; otherwise see nullability policy
+fact_vehicle_operations,fuel_l,DOUBLE,litres,no,,PK required; otherwise see nullability policy
+fact_vehicle_operations,energy_kwh,DOUBLE,kWh,no,,PK required; otherwise see nullability policy
+fact_vehicle_operations,paid_crew_hours,DOUBLE,person-hours,no,,PK required; otherwise see nullability policy
+fact_vehicle_operations,idle_hours,DOUBLE,vehicle-hours,no,,PK required; otherwise see nullability policy
+fact_vehicle_operations,data_origin,VARCHAR,enum,no,,PK required; otherwise see nullability policy
+fact_vehicle_operations,lineage_id,VARCHAR,manifest identifier,no,,PK required; otherwise see nullability policy
+fact_vehicle_operations,city_id,VARCHAR,city identifier,no,dim_city.city_id,PK required; otherwise see nullability policy
+fact_weather,weather_id,VARCHAR,identifier/category,yes,,PK required; otherwise see nullability policy
+fact_weather,location_key,BIGINT,identifier/category,no,dim_location.location_key,PK required; otherwise see nullability policy
+fact_weather,date_key,INTEGER,identifier/category,no,dim_date.date_key,PK required; otherwise see nullability policy
+fact_weather,source_id,VARCHAR,identifier/category,no,dim_source.source_id,PK required; otherwise see nullability policy
+fact_weather,temperature_mean_c,DOUBLE,degrees C,no,,PK required; otherwise see nullability policy
+fact_weather,rainfall_mm,DOUBLE,mm,no,,PK required; otherwise see nullability policy
+fact_weather,coverage_pct,DOUBLE,percent,no,,PK required; otherwise see nullability policy
+fact_weather,data_origin,VARCHAR,enum,no,,PK required; otherwise see nullability policy
+fact_weather,lineage_id,VARCHAR,manifest identifier,no,,PK required; otherwise see nullability policy
+fact_weather,city_id,VARCHAR,city identifier,no,dim_city.city_id,PK required; otherwise see nullability policy
+fact_costs,cost_id,VARCHAR,identifier/category,yes,,PK required; otherwise see nullability policy
+fact_costs,operation_id,VARCHAR,identifier/category,no,fact_vehicle_operations.operation_id,PK required; otherwise see nullability policy
+fact_costs,cost_component,VARCHAR,identifier/category,no,,PK required; otherwise see nullability policy
+fact_costs,valuation_version,VARCHAR,identifier/category,no,,PK required; otherwise see nullability policy
+fact_costs,quantity,DOUBLE,quantity_unit,no,,PK required; otherwise see nullability policy
+fact_costs,quantity_unit,VARCHAR,identifier/category,no,,PK required; otherwise see nullability policy
+fact_costs,unit_rate_inr,"DECIMAL(18,6)",INR per quantity unit,no,,PK required; otherwise see nullability policy
+fact_costs,amount_inr,"DECIMAL(18,2)",INR,no,,PK required; otherwise see nullability policy
+fact_costs,price_date,DATE,identifier/category,no,,PK required; otherwise see nullability policy
+fact_costs,cost_basis,VARCHAR,identifier/category,no,,PK required; otherwise see nullability policy
+fact_costs,data_origin,VARCHAR,enum,no,,PK required; otherwise see nullability policy
+fact_costs,lineage_id,VARCHAR,manifest identifier,no,,PK required; otherwise see nullability policy
+fact_costs,city_id,VARCHAR,city identifier,no,dim_city.city_id,PK required; otherwise see nullability policy
+fact_waste_summary,summary_id,VARCHAR,identifier/category,yes,,PK required; otherwise see nullability policy
+fact_waste_summary,zone_key,BIGINT,identifier/category,no,dim_zone.zone_key,PK required; otherwise see nullability policy
+fact_waste_summary,waste_type_key,INTEGER,identifier/category,no,dim_waste_type.waste_type_key,PK required; otherwise see nullability policy
+fact_waste_summary,source_id,VARCHAR,identifier/category,no,dim_source.source_id,PK required; otherwise see nullability policy
+fact_waste_summary,period_start,DATE,identifier/category,no,,PK required; otherwise see nullability policy
+fact_waste_summary,period_end,DATE,identifier/category,no,,PK required; otherwise see nullability policy
+fact_waste_summary,measure_type,VARCHAR,identifier/category,no,,PK required; otherwise see nullability policy
+fact_waste_summary,mass_kg,DOUBLE,kg,no,,PK required; otherwise see nullability policy
+fact_waste_summary,source_value,DOUBLE,source_unit,no,,PK required; otherwise see nullability policy
+fact_waste_summary,source_unit,VARCHAR,identifier/category,no,,PK required; otherwise see nullability policy
+fact_waste_summary,release_version,VARCHAR,identifier/category,no,,PK required; otherwise see nullability policy
+fact_waste_summary,data_origin,VARCHAR,enum,no,,PK required; otherwise see nullability policy
+fact_waste_summary,lineage_id,VARCHAR,manifest identifier,no,,PK required; otherwise see nullability policy
+fact_waste_summary,city_id,VARCHAR,city identifier,no,dim_city.city_id,PK required; otherwise see nullability policy
+fact_population,population_id,VARCHAR,identifier/category,yes,,PK required; otherwise see nullability policy
+fact_population,zone_key,BIGINT,identifier/category,no,dim_zone.zone_key,PK required; otherwise see nullability policy
+fact_population,source_id,VARCHAR,identifier/category,no,dim_source.source_id,PK required; otherwise see nullability policy
+fact_population,reference_date,DATE,identifier/category,no,,PK required; otherwise see nullability policy
+fact_population,population,BIGINT,persons,no,,PK required; otherwise see nullability policy
+fact_population,households,BIGINT,households,no,,PK required; otherwise see nullability policy
+fact_population,release_version,VARCHAR,identifier/category,no,,PK required; otherwise see nullability policy
+fact_population,data_origin,VARCHAR,enum,no,,PK required; otherwise see nullability policy
+fact_population,lineage_id,VARCHAR,manifest identifier,no,,PK required; otherwise see nullability policy
+fact_population,city_id,VARCHAR,city identifier,no,dim_city.city_id,PK required; otherwise see nullability policy
+bridge_facility_waste,facility_key,BIGINT,identifier/category,yes,dim_facility.facility_key,PK required; otherwise see nullability policy
+bridge_facility_waste,waste_type_key,INTEGER,identifier/category,yes,dim_waste_type.waste_type_key,PK required; otherwise see nullability policy
+bridge_facility_waste,daily_capacity_kg,DOUBLE,kg per day,no,,PK required; otherwise see nullability policy
+bridge_facility_waste,open_local_time,VARCHAR,HH MM,no,,PK required; otherwise see nullability policy
+bridge_facility_waste,close_local_time,VARCHAR,HH MM,no,,PK required; otherwise see nullability policy
+bridge_facility_waste,data_origin,VARCHAR,enum,no,,PK required; otherwise see nullability policy
+bridge_facility_waste,lineage_id,VARCHAR,manifest identifier,no,,PK required; otherwise see nullability policy
+bridge_facility_waste,city_id,VARCHAR,city identifier,no,dim_city.city_id,PK required; otherwise see nullability policy
+bridge_zone_crosswalk,from_zone_key,BIGINT,identifier/category,yes,dim_zone.zone_key,PK required; otherwise see nullability policy
+bridge_zone_crosswalk,to_zone_key,BIGINT,identifier/category,yes,dim_zone.zone_key,PK required; otherwise see nullability policy
+bridge_zone_crosswalk,method,VARCHAR,identifier/category,yes,,PK required; otherwise see nullability policy
+bridge_zone_crosswalk,allocation_weight,DOUBLE,proportion 0-1,no,,PK required; otherwise see nullability policy
+bridge_zone_crosswalk,data_origin,VARCHAR,enum,no,,PK required; otherwise see nullability policy
+bridge_zone_crosswalk,lineage_id,VARCHAR,manifest identifier,no,,PK required; otherwise see nullability policy
+bridge_zone_crosswalk,city_id,VARCHAR,city identifier,no,dim_city.city_id,PK required; otherwise see nullability policy

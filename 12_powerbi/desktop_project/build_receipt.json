@@ -1,0 +1,14 @@
+{
+  "model_tables": 15,
+  "csv_tables": 14,
+  "relationships": 16,
+  "measures": 35,
+  "pages": {
+    "Executive Overview": 18,
+    "Waste & Bin Analysis": 14,
+    "Geographic Intelligence": 13,
+    "Route Optimization": 22,
+    "Forecasting & Planning": 16
+  },
+  "execution_status": "Authored project; Desktop refresh, rendering and PBIX save required."
+}

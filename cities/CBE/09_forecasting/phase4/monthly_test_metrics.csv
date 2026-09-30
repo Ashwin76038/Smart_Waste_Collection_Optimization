@@ -1,0 +1,9 @@
+target_month,group,n,mae_pct_points,city_id,city_name
+2026-09,known_bins,11775,7.745920089777394,CBE,Coimbatore
+2026-09,unseen_bins,2940,7.660372073759136,CBE,Coimbatore
+2026-10,known_bins,12202,7.724553671545296,CBE,Coimbatore
+2026-10,unseen_bins,3056,7.6090277090566545,CBE,Coimbatore
+2026-11,known_bins,11787,7.740410143203939,CBE,Coimbatore
+2026-11,unseen_bins,2961,7.57797549391231,CBE,Coimbatore
+2026-12,known_bins,12175,7.53984898880126,CBE,Coimbatore
+2026-12,unseen_bins,3043,7.408377034409538,CBE,Coimbatore

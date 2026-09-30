@@ -1,0 +1,5 @@
+scenario,baseline_overflow_l,optimized_overflow_l,overflow_l_avoided_modelled,data_origin,scope
+base_3_trucks,104.76719117167976,93.70377236199346,11.063418809686297,synthetic,24h isolated intervention; all60 pilot bins; no other collections
+trigger_70,44.97627647741459,52.32982117184724,-7.353544694432657,synthetic,24h isolated intervention; all60 pilot bins; no other collections
+trigger_90,103.76233704703549,85.96652321264702,17.79581383438847,synthetic,24h isolated intervention; all60 pilot bins; no other collections
+demand_plus20,299.5876955936069,323.58189401933464,-23.994198425727745,synthetic,24h isolated intervention; all60 pilot bins; no other collections

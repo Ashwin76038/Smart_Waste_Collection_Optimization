@@ -1,0 +1,75 @@
+┌─────────────────────────────────────┐
+│┌───────────────────────────────────┐│
+││    Query Profiling Information    ││
+│└───────────────────────────────────┘│
+└─────────────────────────────────────┘
+EXPLAIN ANALYZE SELECT bin_key,avg(fill_level_pct) FROM fact_bin_readings WHERE city_id='CBE' AND year=2026 AND month='01' GROUP BY bin_key
+┌────────────────────────────────────────────────┐
+│┌──────────────────────────────────────────────┐│
+││              Total Time: 0.0132s             ││
+│└──────────────────────────────────────────────┘│
+└────────────────────────────────────────────────┘
+┌───────────────────────────┐
+│           QUERY           │
+└─────────────┬─────────────┘
+┌─────────────┴─────────────┐
+│      EXPLAIN_ANALYZE      │
+│    ────────────────────   │
+│                           │
+│           0 rows          │
+│           0.00s           │
+└─────────────┬─────────────┘
+┌─────────────┴─────────────┐
+│       HASH_GROUP_BY       │
+│    ────────────────────   │
+│         Groups: #0        │
+│    Aggregates: avg(#1)    │
+│                           │
+│                           │
+│                           │
+│          500 rows         │
+│           0.02s           │
+└─────────────┬─────────────┘
+┌─────────────┴─────────────┐
+│         PROJECTION        │
+│    ────────────────────   │
+│          bin_key          │
+│   CAST(fill_level_pct AS  │
+│           DOUBLE)         │
+│                           │
+│                           │
+│                           │
+│        186,000 rows       │
+│           0.00s           │
+└─────────────┬─────────────┘
+┌─────────────┴─────────────┐
+│         TABLE_SCAN        │
+│    ────────────────────   │
+│         Function:         │
+│        READ_PARQUET       │
+│                           │
+│        Projections:       │
+│       fill_level_pct      │
+│          bin_key          │
+│                           │
+│       File Filters:       │
+│ (month = '01')(city_id =  │
+│           'CBE')          │
+│                           │
+│    Scanning Files: 1/24   │
+│    Total Files Read: 1    │
+│                           │
+│        Filename(s):       │
+│  C:\Users\Admin\Documents │
+│\Smart_Waste_Collection_Opt│
+│     imization\03_data     │
+│    \processed\two_city    │
+│ \fact_bin_readings\city_id│
+│  =CBE\year=2026\month=01  │
+│     \part-000.parquet     │
+│                           │
+│                           │
+│                           │
+│        186,000 rows       │
+│           0.00s           │
+└───────────────────────────┘

@@ -1,0 +1,10 @@
+﻿assumption_id,parameter,value,unit,data_origin,rationale,validation_needed
+A01,scenario_bin_count,1000,bins,assumption,Scale design only; not actual Chennai inventory,Confirm pilot and hardware capacity
+A02,scenario_days,365,days,assumption,One-year seasonality demonstration,Freeze simulated date range
+A03,readings_per_day,12,slots/day,assumption,Two-hour scheduled observations,Benchmark and simulate missing messages
+A04,seed,20260923,integer,assumption,"Reproducibility seed, not fitted parameter",Independent replication seeds later
+A05,payload_capacity,,kg,assumption,Not specified without vehicle evidence,Acquire specs or justify sensitivity ranges
+A06,diesel_efficiency,,km/litre,assumption,No fleet telemetry available,Acquire evidence or justify sensitivity ranges
+A07,service_noninferiority_margin,,bin-hours,assumption,Must be chosen before testing,Business justification needed
+A08,max_service_gap,,hours,assumption,Required service guardrail,Confirm stream/operator constraints
+A09,overflow_priority_threshold,,probability,assumption,Tune only on validation data,Holdout must remain untouched

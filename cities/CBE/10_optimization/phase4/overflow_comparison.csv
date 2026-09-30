@@ -1,0 +1,5 @@
+scenario,baseline_overflow_l,optimized_overflow_l,overflow_l_avoided_modelled,city_id,city_name,data_origin
+base_3_trucks,16.542620491844218,10.44316754169563,6.099452950148589,CBE,Coimbatore,synthetic
+demand_plus20,64.22717058675804,59.69444503668228,4.532725550075753,CBE,Coimbatore,synthetic
+trigger_70,53.548821418618445,10.44316754169563,43.105653876922815,CBE,Coimbatore,synthetic
+trigger_90,31.71611101613621,31.71611101613621,0.0,CBE,Coimbatore,synthetic

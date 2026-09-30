@@ -1,0 +1,1589 @@
+{
+  "status": "Target-design contract, extended for two cities; actual populated schema is docs/data_dictionary_two_city.csv and docs/two_city_model.md",
+  "tables": [
+    {
+      "name": "dim_source",
+      "grain": "One catalog source",
+      "primary_key": [
+        "source_id"
+      ],
+      "expected_cardinality": "30 catalog sources; 24 have acquired assets",
+      "columns": [
+        {
+          "name": "source_id",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "dataset_name",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "url",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "license",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        }
+      ],
+      "foreign_keys": {},
+      "unique_constraints": []
+    },
+    {
+      "name": "dim_city",
+      "grain": "One geographic study city",
+      "primary_key": [
+        "city_id"
+      ],
+      "expected_cardinality": "2: CHN Chennai and CBE Coimbatore",
+      "columns": [
+        {
+          "name": "city_id",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "city_name",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "district",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "state",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "latitude",
+          "type": "DOUBLE",
+          "unit": "degrees north; reference center"
+        },
+        {
+          "name": "longitude",
+          "type": "DOUBLE",
+          "unit": "degrees east; reference center"
+        },
+        {
+          "name": "population_source",
+          "type": "VARCHAR",
+          "unit": "source reference; not current population"
+        },
+        {
+          "name": "data_origin",
+          "type": "VARCHAR",
+          "unit": "provenance category"
+        },
+        {
+          "name": "lineage_id",
+          "type": "VARCHAR",
+          "unit": "lineage identifier"
+        }
+      ],
+      "foreign_keys": {},
+      "unique_constraints": []
+    },
+    {
+      "name": "dim_date",
+      "grain": "One Asia/Kolkata calendar day",
+      "primary_key": [
+        "date_key"
+      ],
+      "expected_cardinality": "365 per scenario year plus forecast history",
+      "columns": [
+        {
+          "name": "date_key",
+          "type": "INTEGER",
+          "unit": "YYYYMMDD"
+        },
+        {
+          "name": "calendar_date",
+          "type": "DATE",
+          "unit": "local date"
+        },
+        {
+          "name": "weekday",
+          "type": "INTEGER",
+          "unit": "ISO 1-7"
+        },
+        {
+          "name": "month",
+          "type": "INTEGER",
+          "unit": "1-12"
+        },
+        {
+          "name": "year",
+          "type": "INTEGER",
+          "unit": "year"
+        },
+        {
+          "name": "data_origin",
+          "type": "VARCHAR",
+          "unit": "enum"
+        },
+        {
+          "name": "lineage_id",
+          "type": "VARCHAR",
+          "unit": "manifest identifier"
+        }
+      ],
+      "foreign_keys": {},
+      "unique_constraints": []
+    },
+    {
+      "name": "dim_zone",
+      "grain": "One administrative area and boundary version",
+      "primary_key": [
+        "zone_key"
+      ],
+      "expected_cardinality": "State/city/zone/ward versions; counts unverified",
+      "columns": [
+        {
+          "name": "zone_key",
+          "type": "BIGINT",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "zone_code",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "zone_level",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "zone_name",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "boundary_version",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "valid_from",
+          "type": "DATE",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "valid_to",
+          "type": "DATE",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "area_km2",
+          "type": "DOUBLE",
+          "unit": "km2"
+        },
+        {
+          "name": "geometry_wkb",
+          "type": "BLOB",
+          "unit": "source CRS recorded separately"
+        },
+        {
+          "name": "crs",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "data_origin",
+          "type": "VARCHAR",
+          "unit": "enum"
+        },
+        {
+          "name": "lineage_id",
+          "type": "VARCHAR",
+          "unit": "manifest identifier"
+        },
+        {
+          "name": "city_id",
+          "type": "VARCHAR",
+          "unit": "city identifier"
+        }
+      ],
+      "foreign_keys": {
+        "city_id": "dim_city.city_id"
+      },
+      "unique_constraints": [
+        [
+          "zone_code",
+          "zone_level",
+          "boundary_version"
+        ]
+      ]
+    },
+    {
+      "name": "dim_location",
+      "grain": "One versioned physical or hypothetical point",
+      "primary_key": [
+        "location_key"
+      ],
+      "expected_cardinality": "Bins plus depots/facilities/grid points",
+      "columns": [
+        {
+          "name": "location_key",
+          "type": "BIGINT",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "latitude",
+          "type": "DOUBLE",
+          "unit": "degrees north"
+        },
+        {
+          "name": "longitude",
+          "type": "DOUBLE",
+          "unit": "degrees east"
+        },
+        {
+          "name": "zone_key",
+          "type": "BIGINT",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "location_type",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "coordinate_origin",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "valid_from",
+          "type": "DATE",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "valid_to",
+          "type": "DATE",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "data_origin",
+          "type": "VARCHAR",
+          "unit": "enum"
+        },
+        {
+          "name": "lineage_id",
+          "type": "VARCHAR",
+          "unit": "manifest identifier"
+        },
+        {
+          "name": "city_id",
+          "type": "VARCHAR",
+          "unit": "city identifier"
+        }
+      ],
+      "foreign_keys": {
+        "zone_key": "dim_zone.zone_key",
+        "city_id": "dim_city.city_id"
+      },
+      "unique_constraints": []
+    },
+    {
+      "name": "dim_waste_type",
+      "grain": "One compatible waste stream",
+      "primary_key": [
+        "waste_type_key"
+      ],
+      "expected_cardinality": "Small controlled vocabulary",
+      "columns": [
+        {
+          "name": "waste_type_key",
+          "type": "INTEGER",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "waste_type_name",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "hazardous_flag",
+          "type": "BOOLEAN",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "data_origin",
+          "type": "VARCHAR",
+          "unit": "enum"
+        },
+        {
+          "name": "lineage_id",
+          "type": "VARCHAR",
+          "unit": "manifest identifier"
+        }
+      ],
+      "foreign_keys": {},
+      "unique_constraints": []
+    },
+    {
+      "name": "dim_bin",
+      "grain": "One bin installation version",
+      "primary_key": [
+        "bin_key"
+      ],
+      "expected_cardinality": "1000 scenario bins planned; actual registry unknown",
+      "columns": [
+        {
+          "name": "bin_key",
+          "type": "BIGINT",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "bin_id",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "location_key",
+          "type": "BIGINT",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "waste_type_key",
+          "type": "INTEGER",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "capacity_l",
+          "type": "DOUBLE",
+          "unit": "litres"
+        },
+        {
+          "name": "capacity_origin",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "valid_from",
+          "type": "TIMESTAMP",
+          "unit": "UTC"
+        },
+        {
+          "name": "valid_to",
+          "type": "TIMESTAMP",
+          "unit": "UTC"
+        },
+        {
+          "name": "data_origin",
+          "type": "VARCHAR",
+          "unit": "enum"
+        },
+        {
+          "name": "lineage_id",
+          "type": "VARCHAR",
+          "unit": "manifest identifier"
+        },
+        {
+          "name": "city_id",
+          "type": "VARCHAR",
+          "unit": "city identifier"
+        }
+      ],
+      "foreign_keys": {
+        "location_key": "dim_location.location_key",
+        "waste_type_key": "dim_waste_type.waste_type_key",
+        "city_id": "dim_city.city_id"
+      },
+      "unique_constraints": [
+        [
+          "bin_id",
+          "valid_from"
+        ]
+      ]
+    },
+    {
+      "name": "dim_vehicle",
+      "grain": "One vehicle/specification version",
+      "primary_key": [
+        "vehicle_key"
+      ],
+      "expected_cardinality": "Scenario fleet size TBD",
+      "columns": [
+        {
+          "name": "vehicle_key",
+          "type": "BIGINT",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "vehicle_id",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "payload_kg",
+          "type": "DOUBLE",
+          "unit": "kg"
+        },
+        {
+          "name": "volume_m3",
+          "type": "DOUBLE",
+          "unit": "m3"
+        },
+        {
+          "name": "energy_type",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "access_class",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "crew_size",
+          "type": "INTEGER",
+          "unit": "persons"
+        },
+        {
+          "name": "valid_from",
+          "type": "DATE",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "valid_to",
+          "type": "DATE",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "data_origin",
+          "type": "VARCHAR",
+          "unit": "enum"
+        },
+        {
+          "name": "lineage_id",
+          "type": "VARCHAR",
+          "unit": "manifest identifier"
+        },
+        {
+          "name": "city_id",
+          "type": "VARCHAR",
+          "unit": "city identifier"
+        }
+      ],
+      "foreign_keys": {
+        "city_id": "dim_city.city_id"
+      },
+      "unique_constraints": []
+    },
+    {
+      "name": "dim_facility",
+      "grain": "One receiving site/depot version",
+      "primary_key": [
+        "facility_key"
+      ],
+      "expected_cardinality": "Verified sites plus explicit hypothetical sites",
+      "columns": [
+        {
+          "name": "facility_key",
+          "type": "BIGINT",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "location_key",
+          "type": "BIGINT",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "facility_name",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "facility_type",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "valid_from",
+          "type": "DATE",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "valid_to",
+          "type": "DATE",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "data_origin",
+          "type": "VARCHAR",
+          "unit": "enum"
+        },
+        {
+          "name": "lineage_id",
+          "type": "VARCHAR",
+          "unit": "manifest identifier"
+        },
+        {
+          "name": "city_id",
+          "type": "VARCHAR",
+          "unit": "city identifier"
+        }
+      ],
+      "foreign_keys": {
+        "location_key": "dim_location.location_key",
+        "city_id": "dim_city.city_id"
+      },
+      "unique_constraints": []
+    },
+    {
+      "name": "dim_scenario",
+      "grain": "One frozen policy and assumption set",
+      "primary_key": [
+        "scenario_key"
+      ],
+      "expected_cardinality": "At least fixed/threshold/forecast designs later",
+      "columns": [
+        {
+          "name": "scenario_key",
+          "type": "BIGINT",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "scenario_name",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "policy_version",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "config_sha256",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "data_origin",
+          "type": "VARCHAR",
+          "unit": "enum"
+        },
+        {
+          "name": "lineage_id",
+          "type": "VARCHAR",
+          "unit": "manifest identifier"
+        },
+        {
+          "name": "city_id",
+          "type": "VARCHAR",
+          "unit": "city identifier"
+        }
+      ],
+      "foreign_keys": {
+        "city_id": "dim_city.city_id"
+      },
+      "unique_constraints": []
+    },
+    {
+      "name": "dim_simulation_run",
+      "grain": "One scenario replication",
+      "primary_key": [
+        "simulation_run_id"
+      ],
+      "expected_cardinality": "Seeds x scenarios; no runs now",
+      "columns": [
+        {
+          "name": "simulation_run_id",
+          "type": "BIGINT",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "scenario_key",
+          "type": "BIGINT",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "demand_seed",
+          "type": "BIGINT",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "generator_version",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "started_at",
+          "type": "TIMESTAMP",
+          "unit": "UTC"
+        },
+        {
+          "name": "data_origin",
+          "type": "VARCHAR",
+          "unit": "enum"
+        },
+        {
+          "name": "lineage_id",
+          "type": "VARCHAR",
+          "unit": "manifest identifier"
+        },
+        {
+          "name": "city_id",
+          "type": "VARCHAR",
+          "unit": "city identifier"
+        }
+      ],
+      "foreign_keys": {
+        "scenario_key": "dim_scenario.scenario_key",
+        "city_id": "dim_city.city_id"
+      },
+      "unique_constraints": []
+    },
+    {
+      "name": "fact_bin_readings",
+      "grain": "One scheduled bin timestamp in one simulation run or observed stream",
+      "primary_key": [
+        "reading_id"
+      ],
+      "expected_cardinality": "4380000 scheduled readings for baseline design",
+      "columns": [
+        {
+          "name": "reading_id",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "simulation_run_id",
+          "type": "BIGINT",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "bin_key",
+          "type": "BIGINT",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "date_key",
+          "type": "INTEGER",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "timestamp_utc",
+          "type": "TIMESTAMP",
+          "unit": "UTC"
+        },
+        {
+          "name": "received_at_utc",
+          "type": "TIMESTAMP",
+          "unit": "UTC"
+        },
+        {
+          "name": "fill_level_pct",
+          "type": "DOUBLE",
+          "unit": "percent"
+        },
+        {
+          "name": "weight_kg",
+          "type": "DOUBLE",
+          "unit": "kg"
+        },
+        {
+          "name": "temperature_c",
+          "type": "DOUBLE",
+          "unit": "degrees C"
+        },
+        {
+          "name": "battery_pct",
+          "type": "DOUBLE",
+          "unit": "percent"
+        },
+        {
+          "name": "sensor_status",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "collection_status",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "data_origin",
+          "type": "VARCHAR",
+          "unit": "enum"
+        },
+        {
+          "name": "lineage_id",
+          "type": "VARCHAR",
+          "unit": "manifest identifier"
+        },
+        {
+          "name": "city_id",
+          "type": "VARCHAR",
+          "unit": "city identifier"
+        }
+      ],
+      "foreign_keys": {
+        "simulation_run_id": "dim_simulation_run.simulation_run_id",
+        "bin_key": "dim_bin.bin_key",
+        "date_key": "dim_date.date_key",
+        "city_id": "dim_city.city_id"
+      },
+      "unique_constraints": [
+        [
+          "simulation_run_id",
+          "bin_key",
+          "timestamp_utc"
+        ]
+      ]
+    },
+    {
+      "name": "fact_routes",
+      "grain": "One executed or planned vehicle trip in a run",
+      "primary_key": [
+        "route_id"
+      ],
+      "expected_cardinality": "Vehicles x operating days x trips x runs",
+      "columns": [
+        {
+          "name": "route_id",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "operation_id",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "simulation_run_id",
+          "type": "BIGINT",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "vehicle_key",
+          "type": "BIGINT",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "date_key",
+          "type": "INTEGER",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "start_facility_key",
+          "type": "BIGINT",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "end_facility_key",
+          "type": "BIGINT",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "route_status",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "distance_km",
+          "type": "DOUBLE",
+          "unit": "km"
+        },
+        {
+          "name": "duration_min",
+          "type": "DOUBLE",
+          "unit": "minutes"
+        },
+        {
+          "name": "solver_status",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "data_origin",
+          "type": "VARCHAR",
+          "unit": "enum"
+        },
+        {
+          "name": "lineage_id",
+          "type": "VARCHAR",
+          "unit": "manifest identifier"
+        },
+        {
+          "name": "city_id",
+          "type": "VARCHAR",
+          "unit": "city identifier"
+        }
+      ],
+      "foreign_keys": {
+        "simulation_run_id": "dim_simulation_run.simulation_run_id",
+        "vehicle_key": "dim_vehicle.vehicle_key",
+        "date_key": "dim_date.date_key",
+        "start_facility_key": "dim_facility.facility_key",
+        "end_facility_key": "dim_facility.facility_key",
+        "operation_id": "fact_vehicle_operations.operation_id",
+        "city_id": "dim_city.city_id"
+      },
+      "unique_constraints": []
+    },
+    {
+      "name": "fact_route_stops",
+      "grain": "One ordered visit or facility stop on a route",
+      "primary_key": [
+        "stop_id"
+      ],
+      "expected_cardinality": "Visits plus depot/disposal stops",
+      "columns": [
+        {
+          "name": "stop_id",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "route_id",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "stop_sequence",
+          "type": "INTEGER",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "location_key",
+          "type": "BIGINT",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "bin_key",
+          "type": "BIGINT",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "arrival_utc",
+          "type": "TIMESTAMP",
+          "unit": "UTC"
+        },
+        {
+          "name": "departure_utc",
+          "type": "TIMESTAMP",
+          "unit": "UTC"
+        },
+        {
+          "name": "stop_type",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "service_status",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "data_origin",
+          "type": "VARCHAR",
+          "unit": "enum"
+        },
+        {
+          "name": "lineage_id",
+          "type": "VARCHAR",
+          "unit": "manifest identifier"
+        },
+        {
+          "name": "city_id",
+          "type": "VARCHAR",
+          "unit": "city identifier"
+        }
+      ],
+      "foreign_keys": {
+        "route_id": "fact_routes.route_id",
+        "location_key": "dim_location.location_key",
+        "bin_key": "dim_bin.bin_key",
+        "city_id": "dim_city.city_id"
+      },
+      "unique_constraints": [
+        [
+          "route_id",
+          "stop_sequence"
+        ]
+      ]
+    },
+    {
+      "name": "fact_route_legs",
+      "grain": "One directed travel leg between consecutive route stops",
+      "primary_key": [
+        "leg_id"
+      ],
+      "expected_cardinality": "Stops minus one per route",
+      "columns": [
+        {
+          "name": "leg_id",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "route_id",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "from_stop_id",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "to_stop_id",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "distance_km",
+          "type": "DOUBLE",
+          "unit": "km"
+        },
+        {
+          "name": "travel_min",
+          "type": "DOUBLE",
+          "unit": "minutes"
+        },
+        {
+          "name": "path_artifact",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "data_origin",
+          "type": "VARCHAR",
+          "unit": "enum"
+        },
+        {
+          "name": "lineage_id",
+          "type": "VARCHAR",
+          "unit": "manifest identifier"
+        },
+        {
+          "name": "city_id",
+          "type": "VARCHAR",
+          "unit": "city identifier"
+        }
+      ],
+      "foreign_keys": {
+        "route_id": "fact_routes.route_id",
+        "from_stop_id": "fact_route_stops.stop_id",
+        "to_stop_id": "fact_route_stops.stop_id",
+        "city_id": "dim_city.city_id"
+      },
+      "unique_constraints": []
+    },
+    {
+      "name": "fact_collections",
+      "grain": "One service attempt for a bin and waste stream at a route stop",
+      "primary_key": [
+        "collection_id"
+      ],
+      "expected_cardinality": "Policy-dependent; no fixed count assumed",
+      "columns": [
+        {
+          "name": "collection_id",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "stop_id",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "bin_key",
+          "type": "BIGINT",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "waste_type_key",
+          "type": "INTEGER",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "collected_at_utc",
+          "type": "TIMESTAMP",
+          "unit": "UTC"
+        },
+        {
+          "name": "removed_kg",
+          "type": "DOUBLE",
+          "unit": "kg"
+        },
+        {
+          "name": "residual_kg",
+          "type": "DOUBLE",
+          "unit": "kg"
+        },
+        {
+          "name": "service_min",
+          "type": "DOUBLE",
+          "unit": "minutes"
+        },
+        {
+          "name": "attempt_status",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "data_origin",
+          "type": "VARCHAR",
+          "unit": "enum"
+        },
+        {
+          "name": "lineage_id",
+          "type": "VARCHAR",
+          "unit": "manifest identifier"
+        },
+        {
+          "name": "city_id",
+          "type": "VARCHAR",
+          "unit": "city identifier"
+        }
+      ],
+      "foreign_keys": {
+        "stop_id": "fact_route_stops.stop_id",
+        "bin_key": "dim_bin.bin_key",
+        "waste_type_key": "dim_waste_type.waste_type_key",
+        "city_id": "dim_city.city_id"
+      },
+      "unique_constraints": []
+    },
+    {
+      "name": "fact_vehicle_operations",
+      "grain": "One vehicle shift in a simulation run",
+      "primary_key": [
+        "operation_id"
+      ],
+      "expected_cardinality": "Vehicles x shifts x runs",
+      "columns": [
+        {
+          "name": "operation_id",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "simulation_run_id",
+          "type": "BIGINT",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "vehicle_key",
+          "type": "BIGINT",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "date_key",
+          "type": "INTEGER",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "shift_id",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "distance_km",
+          "type": "DOUBLE",
+          "unit": "km"
+        },
+        {
+          "name": "fuel_l",
+          "type": "DOUBLE",
+          "unit": "litres"
+        },
+        {
+          "name": "energy_kwh",
+          "type": "DOUBLE",
+          "unit": "kWh"
+        },
+        {
+          "name": "paid_crew_hours",
+          "type": "DOUBLE",
+          "unit": "person-hours"
+        },
+        {
+          "name": "idle_hours",
+          "type": "DOUBLE",
+          "unit": "vehicle-hours"
+        },
+        {
+          "name": "data_origin",
+          "type": "VARCHAR",
+          "unit": "enum"
+        },
+        {
+          "name": "lineage_id",
+          "type": "VARCHAR",
+          "unit": "manifest identifier"
+        },
+        {
+          "name": "city_id",
+          "type": "VARCHAR",
+          "unit": "city identifier"
+        }
+      ],
+      "foreign_keys": {
+        "simulation_run_id": "dim_simulation_run.simulation_run_id",
+        "vehicle_key": "dim_vehicle.vehicle_key",
+        "date_key": "dim_date.date_key",
+        "city_id": "dim_city.city_id"
+      },
+      "unique_constraints": [
+        [
+          "simulation_run_id",
+          "vehicle_key",
+          "date_key",
+          "shift_id"
+        ]
+      ]
+    },
+    {
+      "name": "fact_weather",
+      "grain": "One grid/station local day and source version",
+      "primary_key": [
+        "weather_id"
+      ],
+      "expected_cardinality": "Locations x days x source versions",
+      "columns": [
+        {
+          "name": "weather_id",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "location_key",
+          "type": "BIGINT",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "date_key",
+          "type": "INTEGER",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "source_id",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "temperature_mean_c",
+          "type": "DOUBLE",
+          "unit": "degrees C"
+        },
+        {
+          "name": "rainfall_mm",
+          "type": "DOUBLE",
+          "unit": "mm"
+        },
+        {
+          "name": "coverage_pct",
+          "type": "DOUBLE",
+          "unit": "percent"
+        },
+        {
+          "name": "data_origin",
+          "type": "VARCHAR",
+          "unit": "enum"
+        },
+        {
+          "name": "lineage_id",
+          "type": "VARCHAR",
+          "unit": "manifest identifier"
+        },
+        {
+          "name": "city_id",
+          "type": "VARCHAR",
+          "unit": "city identifier"
+        }
+      ],
+      "foreign_keys": {
+        "location_key": "dim_location.location_key",
+        "date_key": "dim_date.date_key",
+        "source_id": "dim_source.source_id",
+        "city_id": "dim_city.city_id"
+      },
+      "unique_constraints": [
+        [
+          "location_key",
+          "date_key",
+          "source_id"
+        ]
+      ]
+    },
+    {
+      "name": "fact_costs",
+      "grain": "One cost component for one vehicle operation and valuation version",
+      "primary_key": [
+        "cost_id"
+      ],
+      "expected_cardinality": "Operations x non-overlapping components",
+      "columns": [
+        {
+          "name": "cost_id",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "operation_id",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "cost_component",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "valuation_version",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "quantity",
+          "type": "DOUBLE",
+          "unit": "quantity_unit"
+        },
+        {
+          "name": "quantity_unit",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "unit_rate_inr",
+          "type": "DECIMAL(18,6)",
+          "unit": "INR per quantity unit"
+        },
+        {
+          "name": "amount_inr",
+          "type": "DECIMAL(18,2)",
+          "unit": "INR"
+        },
+        {
+          "name": "price_date",
+          "type": "DATE",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "cost_basis",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "data_origin",
+          "type": "VARCHAR",
+          "unit": "enum"
+        },
+        {
+          "name": "lineage_id",
+          "type": "VARCHAR",
+          "unit": "manifest identifier"
+        },
+        {
+          "name": "city_id",
+          "type": "VARCHAR",
+          "unit": "city identifier"
+        }
+      ],
+      "foreign_keys": {
+        "operation_id": "fact_vehicle_operations.operation_id",
+        "city_id": "dim_city.city_id"
+      },
+      "unique_constraints": [
+        [
+          "operation_id",
+          "cost_component",
+          "valuation_version"
+        ]
+      ]
+    },
+    {
+      "name": "fact_waste_summary",
+      "grain": "One source geography/period/stream/measure and release",
+      "primary_key": [
+        "summary_id"
+      ],
+      "expected_cardinality": "Official records; unknown until acquired",
+      "columns": [
+        {
+          "name": "summary_id",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "zone_key",
+          "type": "BIGINT",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "waste_type_key",
+          "type": "INTEGER",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "source_id",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "period_start",
+          "type": "DATE",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "period_end",
+          "type": "DATE",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "measure_type",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "mass_kg",
+          "type": "DOUBLE",
+          "unit": "kg"
+        },
+        {
+          "name": "source_value",
+          "type": "DOUBLE",
+          "unit": "source_unit"
+        },
+        {
+          "name": "source_unit",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "release_version",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "data_origin",
+          "type": "VARCHAR",
+          "unit": "enum"
+        },
+        {
+          "name": "lineage_id",
+          "type": "VARCHAR",
+          "unit": "manifest identifier"
+        },
+        {
+          "name": "city_id",
+          "type": "VARCHAR",
+          "unit": "city identifier"
+        }
+      ],
+      "foreign_keys": {
+        "zone_key": "dim_zone.zone_key",
+        "waste_type_key": "dim_waste_type.waste_type_key",
+        "source_id": "dim_source.source_id",
+        "city_id": "dim_city.city_id"
+      },
+      "unique_constraints": [
+        [
+          "zone_key",
+          "waste_type_key",
+          "source_id",
+          "period_start",
+          "period_end",
+          "measure_type",
+          "release_version"
+        ]
+      ]
+    },
+    {
+      "name": "fact_population",
+      "grain": "One census geography/reference date/source release",
+      "primary_key": [
+        "population_id"
+      ],
+      "expected_cardinality": "Census units x releases",
+      "columns": [
+        {
+          "name": "population_id",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "zone_key",
+          "type": "BIGINT",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "source_id",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "reference_date",
+          "type": "DATE",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "population",
+          "type": "BIGINT",
+          "unit": "persons"
+        },
+        {
+          "name": "households",
+          "type": "BIGINT",
+          "unit": "households"
+        },
+        {
+          "name": "release_version",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "data_origin",
+          "type": "VARCHAR",
+          "unit": "enum"
+        },
+        {
+          "name": "lineage_id",
+          "type": "VARCHAR",
+          "unit": "manifest identifier"
+        },
+        {
+          "name": "city_id",
+          "type": "VARCHAR",
+          "unit": "city identifier"
+        }
+      ],
+      "foreign_keys": {
+        "zone_key": "dim_zone.zone_key",
+        "source_id": "dim_source.source_id",
+        "city_id": "dim_city.city_id"
+      },
+      "unique_constraints": [
+        [
+          "zone_key",
+          "reference_date",
+          "source_id",
+          "release_version"
+        ]
+      ]
+    },
+    {
+      "name": "bridge_facility_waste",
+      "grain": "One facility and accepted waste stream",
+      "primary_key": [
+        "facility_key",
+        "waste_type_key"
+      ],
+      "expected_cardinality": "Many-to-many facility compatibility",
+      "columns": [
+        {
+          "name": "facility_key",
+          "type": "BIGINT",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "waste_type_key",
+          "type": "INTEGER",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "daily_capacity_kg",
+          "type": "DOUBLE",
+          "unit": "kg per day"
+        },
+        {
+          "name": "open_local_time",
+          "type": "VARCHAR",
+          "unit": "HH MM"
+        },
+        {
+          "name": "close_local_time",
+          "type": "VARCHAR",
+          "unit": "HH MM"
+        },
+        {
+          "name": "data_origin",
+          "type": "VARCHAR",
+          "unit": "enum"
+        },
+        {
+          "name": "lineage_id",
+          "type": "VARCHAR",
+          "unit": "manifest identifier"
+        },
+        {
+          "name": "city_id",
+          "type": "VARCHAR",
+          "unit": "city identifier"
+        }
+      ],
+      "foreign_keys": {
+        "facility_key": "dim_facility.facility_key",
+        "waste_type_key": "dim_waste_type.waste_type_key",
+        "city_id": "dim_city.city_id"
+      },
+      "unique_constraints": []
+    },
+    {
+      "name": "bridge_zone_crosswalk",
+      "grain": "One source-target boundary-version pair and allocation method",
+      "primary_key": [
+        "from_zone_key",
+        "to_zone_key",
+        "method"
+      ],
+      "expected_cardinality": "Many-to-many geographic mappings",
+      "columns": [
+        {
+          "name": "from_zone_key",
+          "type": "BIGINT",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "to_zone_key",
+          "type": "BIGINT",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "method",
+          "type": "VARCHAR",
+          "unit": "identifier/category"
+        },
+        {
+          "name": "allocation_weight",
+          "type": "DOUBLE",
+          "unit": "proportion 0-1"
+        },
+        {
+          "name": "data_origin",
+          "type": "VARCHAR",
+          "unit": "enum"
+        },
+        {
+          "name": "lineage_id",
+          "type": "VARCHAR",
+          "unit": "manifest identifier"
+        },
+        {
+          "name": "city_id",
+          "type": "VARCHAR",
+          "unit": "city identifier"
+        }
+      ],
+      "foreign_keys": {
+        "from_zone_key": "dim_zone.zone_key",
+        "to_zone_key": "dim_zone.zone_key",
+        "city_id": "dim_city.city_id"
+      },
+      "unique_constraints": []
+    }
+  ]
+}

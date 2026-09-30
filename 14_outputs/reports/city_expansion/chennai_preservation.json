@@ -1,0 +1,605 @@
+{
+  "scope": "Existing Chennai data and analytical outputs; metadata/source catalog may be extended",
+  "files": [
+    {
+      "path": "03_data/processed/census_chennai_2011_native.parquet",
+      "bytes": 91726,
+      "sha256": "4775361c993035cbdfc95e892aff8abece0102acc45df574713c18b411c02650"
+    },
+    {
+      "path": "03_data/processed/conversion_report.json",
+      "bytes": 2255,
+      "sha256": "10354e3fa91cce850149e3cf8cd7a636270df5fcc12bf5592c47736fb8ef6e47"
+    },
+    {
+      "path": "03_data/processed/dim_bin.parquet",
+      "bytes": 42174,
+      "sha256": "a8bcc587a6dd607992f28b2f50158015b713edf29ed9c90b139bb0226b03b4e4"
+    },
+    {
+      "path": "03_data/processed/dim_zone_ward.parquet",
+      "bytes": 891257,
+      "sha256": "5c094cef59e44cab1901836ae27ea269c3e733e23c154e5b59bf76b60fd97f07"
+    },
+    {
+      "path": "03_data/processed/osm_poi_nodes_chennai.parquet",
+      "bytes": 37270,
+      "sha256": "7fee233f0ce0497b7e7301520655d2d4e7de99d7cfd845a68d0d8570e2f6deaa"
+    },
+    {
+      "path": "03_data/processed/osm_road_nodes_chennai.parquet",
+      "bytes": 3429983,
+      "sha256": "26e085b1092ec13c426d8077cd58f1fd14ef41d8f7a9b4a71f408b8dc6d97ad4"
+    },
+    {
+      "path": "03_data/processed/osm_road_segments_chennai.parquet",
+      "bytes": 3452120,
+      "sha256": "7b87f6a75dedaa35047f788fb44a73ed1ce61e44382b73fceb5ff3e0367d2067"
+    },
+    {
+      "path": "03_data/processed/waste.duckdb",
+      "bytes": 56635392,
+      "sha256": "765df7c927e6cf8c2cd5444e0c75460563532e9a4d8be8d6f111778cb2de5987"
+    },
+    {
+      "path": "03_data/processed/weather_chennai_grid_2025.parquet",
+      "bytes": 8492,
+      "sha256": "567303e92c2d911a2ed9bdc593f9d6b31e4567f1bec1c218344a088ed8c71364"
+    },
+    {
+      "path": "03_data/processed/fact_bin_readings/year=2026/month=01/part-000.parquet",
+      "bytes": 3847017,
+      "sha256": "00aaa36753b6651a4655f429573a877f0bcad626f2e1868fa165d5ac128056c9"
+    },
+    {
+      "path": "03_data/processed/fact_bin_readings/year=2026/month=02/part-000.parquet",
+      "bytes": 3529892,
+      "sha256": "16a9fcea8054c69e2e2a22c2b934a2880b53548eb3b7de6888a5ba35288fb459"
+    },
+    {
+      "path": "03_data/processed/fact_bin_readings/year=2026/month=03/part-000.parquet",
+      "bytes": 3844613,
+      "sha256": "d395088333421ef64836d206c7b432a4fec332fc71ed89ac7727056e13c3df8f"
+    },
+    {
+      "path": "03_data/processed/fact_bin_readings/year=2026/month=04/part-000.parquet",
+      "bytes": 3736312,
+      "sha256": "50012c20b02e5c87b17c5fa4d358b0e64f898425668a5bc01b12c162813493fe"
+    },
+    {
+      "path": "03_data/processed/fact_bin_readings/year=2026/month=05/part-000.parquet",
+      "bytes": 3842017,
+      "sha256": "816dbddda097e4d335573ac25a9159f83a9bf7f6b59c8c1a7112c27b5a7d5fd1"
+    },
+    {
+      "path": "03_data/processed/fact_bin_readings/year=2026/month=06/part-000.parquet",
+      "bytes": 3740820,
+      "sha256": "3a8efc1a64e4926bb089e80bbc28a813d144fbd9d64806af6e602c08f4d66db8"
+    },
+    {
+      "path": "03_data/processed/fact_bin_readings/year=2026/month=07/part-000.parquet",
+      "bytes": 3852872,
+      "sha256": "bd51be305dfdb5727462301d6dacc0f0f64854aecf5d1bc82257f21f98bd259a"
+    },
+    {
+      "path": "03_data/processed/fact_bin_readings/year=2026/month=08/part-000.parquet",
+      "bytes": 3858019,
+      "sha256": "5931f59b85867e42d1920c18a44162f04b29f061f48ec3a87de51b27441e4d0e"
+    },
+    {
+      "path": "03_data/processed/fact_bin_readings/year=2026/month=09/part-000.parquet",
+      "bytes": 3736241,
+      "sha256": "82dcd8bb3af588c746b29f955a74913491af9fc8b4fba3599d06868ad722f61e"
+    },
+    {
+      "path": "03_data/processed/fact_bin_readings/year=2026/month=10/part-000.parquet",
+      "bytes": 3856853,
+      "sha256": "4e936f8150ee28a4999b497cd6c387b02720d5d3619f91ddf98abb07b90700ce"
+    },
+    {
+      "path": "03_data/processed/fact_bin_readings/year=2026/month=11/part-000.parquet",
+      "bytes": 3747903,
+      "sha256": "c5295b40db02f8aaddb3256bfde3dba7bbcad7ffe8e715af83dcb4c8c9c2cbc3"
+    },
+    {
+      "path": "03_data/processed/fact_bin_readings/year=2026/month=12/part-000.parquet",
+      "bytes": 3858250,
+      "sha256": "8fc8e39bad7f6382fb82ec21caec74c7b40acdb33fe6224f59ca129e2b228d4b"
+    },
+    {
+      "path": "03_data/synthetic/csv/generation_report.json",
+      "bytes": 331,
+      "sha256": "972b52bd465de52552a778eaa311a41967849545e65f6992faf56131091ae6cc"
+    },
+    {
+      "path": "03_data/synthetic/csv/readings_2026_01.csv",
+      "bytes": 45131643,
+      "sha256": "6a0cb36f59aadacb50fb88b858baf634cccf98a0af839401648b3e439b3ce397"
+    },
+    {
+      "path": "03_data/synthetic/csv/readings_2026_02.csv",
+      "bytes": 40849119,
+      "sha256": "077d1c7a442b8d87744e09a529cd5bbb6b0942bfdbfdc38623e8f4fc6b95045e"
+    },
+    {
+      "path": "03_data/synthetic/csv/readings_2026_03.csv",
+      "bytes": 45283508,
+      "sha256": "b1e778b09fe65b9e592327f40db2228e9e20115a5e01c886352e4808fa8a6281"
+    },
+    {
+      "path": "03_data/synthetic/csv/readings_2026_04.csv",
+      "bytes": 44093903,
+      "sha256": "4a959da8688e7fe488b4c07b679dc0af14f96881dd4c7de4072af0c6f462181d"
+    },
+    {
+      "path": "03_data/synthetic/csv/readings_2026_05.csv",
+      "bytes": 45566393,
+      "sha256": "9ec4538008192b969333d2c25e3457dff06f692188f53b5f3f0d3a053aff4580"
+    },
+    {
+      "path": "03_data/synthetic/csv/readings_2026_06.csv",
+      "bytes": 44106490,
+      "sha256": "a7aebfc138f0c6d4721b8f7496c5bcdc9231072420f1877c16e8fa6b4162a448"
+    },
+    {
+      "path": "03_data/synthetic/csv/readings_2026_07.csv",
+      "bytes": 45600228,
+      "sha256": "5cf944d267daa47419149604532b010fbda52bf4302e2f49d3552a9e0f798903"
+    },
+    {
+      "path": "03_data/synthetic/csv/readings_2026_08.csv",
+      "bytes": 45625538,
+      "sha256": "5a803e8e30b47f4a3944cefcb6321f4eab0b30b7e285725e76403641d5d2a7d4"
+    },
+    {
+      "path": "03_data/synthetic/csv/readings_2026_09.csv",
+      "bytes": 44169062,
+      "sha256": "88393c0b03f667fe9327e54d89a2a5c8d2bc752ebe6a494d1378d990f84f5f19"
+    },
+    {
+      "path": "03_data/synthetic/csv/readings_2026_10.csv",
+      "bytes": 45652532,
+      "sha256": "fc91ea51aa3f4692ee07c50768a0944c5041d9262a018def8057ee7366c996e3"
+    },
+    {
+      "path": "03_data/synthetic/csv/readings_2026_11.csv",
+      "bytes": 44180641,
+      "sha256": "56e2c7baa1deefd0e30149ca2f76cf62c10f67e2be2e94831995548f869a4dec"
+    },
+    {
+      "path": "03_data/synthetic/csv/readings_2026_12.csv",
+      "bytes": 45637351,
+      "sha256": "ba08661c3a74cfa5f4dba81da52d470f741ce792bdfc4300be20e922574919cd"
+    },
+    {
+      "path": "03_data/synthetic/truth/year=2026/month=01/part-000.parquet",
+      "bytes": 4772703,
+      "sha256": "ecb1da1d9246c9dcd843f9a3c2e9043299f1883d6e7d6f50caa222ac53ee73a0"
+    },
+    {
+      "path": "03_data/synthetic/truth/year=2026/month=02/part-000.parquet",
+      "bytes": 4424347,
+      "sha256": "f3690a50509190e2711efff130d565703e506176caa69128fc227259cb6ba92c"
+    },
+    {
+      "path": "03_data/synthetic/truth/year=2026/month=03/part-000.parquet",
+      "bytes": 4738190,
+      "sha256": "67a5e3ca47aebf1d48cc517e8456041dfbfd028c12dd41e16e1ad40472936f47"
+    },
+    {
+      "path": "03_data/synthetic/truth/year=2026/month=04/part-000.parquet",
+      "bytes": 4617295,
+      "sha256": "cee1bd665a6e1c2605b500c9d9f7d80e15e6f742bd339d571f32d06ec64e9e8b"
+    },
+    {
+      "path": "03_data/synthetic/truth/year=2026/month=05/part-000.parquet",
+      "bytes": 4729706,
+      "sha256": "5a897048769db7b0d853ac946d436f7d91337ec365a1090b3746e7cefb39bc9e"
+    },
+    {
+      "path": "03_data/synthetic/truth/year=2026/month=06/part-000.parquet",
+      "bytes": 4630144,
+      "sha256": "b9b109844ccc8e6ec49757a4950ba144d32dcb960b710901b465a0e39af1964b"
+    },
+    {
+      "path": "03_data/synthetic/truth/year=2026/month=07/part-000.parquet",
+      "bytes": 4759980,
+      "sha256": "2b1b422ef2c896f002502c240a6944c95044f4b3061f7e837664cb94c3ea8774"
+    },
+    {
+      "path": "03_data/synthetic/truth/year=2026/month=08/part-000.parquet",
+      "bytes": 4776510,
+      "sha256": "c01487ab037ad0cf8a6f9966122aa261527cccf84a25109dc7987747720f105a"
+    },
+    {
+      "path": "03_data/synthetic/truth/year=2026/month=09/part-000.parquet",
+      "bytes": 4674004,
+      "sha256": "f2d1d4f553100dce010a4ed46386b4c8ed2359f5558d739bbdc850ca7793a549"
+    },
+    {
+      "path": "03_data/synthetic/truth/year=2026/month=10/part-000.parquet",
+      "bytes": 4795437,
+      "sha256": "6c8636a4f2e520cf52da49e8dd40d61adfef04bd1aca0cf8419d75794419c354"
+    },
+    {
+      "path": "03_data/synthetic/truth/year=2026/month=11/part-000.parquet",
+      "bytes": 4682500,
+      "sha256": "abe222980ecbd5ab763fc71fe11f3653c4970eb3d7d931f6492e3d98eaa8cecf"
+    },
+    {
+      "path": "03_data/synthetic/truth/year=2026/month=12/part-000.parquet",
+      "bytes": 4782516,
+      "sha256": "656e33c9c2557857fd8a84e96806978f2f3e1f648643f3accbb0785372e56b46"
+    },
+    {
+      "path": "08_geospatial/phase4/bin_spatial_features.csv",
+      "bytes": 234121,
+      "sha256": "5e48ddeac5cb506e6d97a39ae0e3f4d802e37742eb6a1067918ee19a817eaba6"
+    },
+    {
+      "path": "08_geospatial/phase4/bin_spatial_features.parquet",
+      "bytes": 98628,
+      "sha256": "72582e0501fca2678a523f7c33379d615eb59f1129d07d4c1cac1d29d2b0a4a0"
+    },
+    {
+      "path": "08_geospatial/phase4/directed_edges.parquet",
+      "bytes": 16567350,
+      "sha256": "284402eb063f03cad9406117459525c46ffdc239184fa4d93764867827bf6dda"
+    },
+    {
+      "path": "08_geospatial/phase4/geospatial_summary.json",
+      "bytes": 1233,
+      "sha256": "336cd90b11212a9c29a69586cb43322a4337d5e4a864a38275783fb240cd940e"
+    },
+    {
+      "path": "08_geospatial/phase4/landuse_ways.geojson",
+      "bytes": 2831678,
+      "sha256": "67c281ce87b7da497a78cc676b8214d91447bc7731a7e9ca2405f43d7c510234"
+    },
+    {
+      "path": "08_geospatial/phase4/matrix_locations.csv",
+      "bytes": 3112,
+      "sha256": "62991fb3d7f827e06f19b8d90b7ba1de81553bfffc4623bf93c161ee557dade5"
+    },
+    {
+      "path": "08_geospatial/phase4/matrix_paths.json",
+      "bytes": 6755833,
+      "sha256": "05a6ca25f484a485635538b6c463b4e85451e2f002bff05a2309af2e03b7ff78"
+    },
+    {
+      "path": "08_geospatial/phase4/pilot_bins.csv",
+      "bytes": 14148,
+      "sha256": "ec97c0c31759d84e8bb65637cebc833e0c88bbd6175a89fa32e2b7513502605b"
+    },
+    {
+      "path": "08_geospatial/phase4/poi_coverage.csv",
+      "bytes": 238103,
+      "sha256": "5987661bb51a6b9f2df05cd6a13bfceebf9f1cb722636dbad072802517e27e47"
+    },
+    {
+      "path": "08_geospatial/phase4/road_extraction_report.json",
+      "bytes": 807,
+      "sha256": "0d2d5edbf54b65ad948274a6045196acec71546bdfdafb5b8c8abbfcba29296f"
+    },
+    {
+      "path": "08_geospatial/phase4/road_matrix.npz",
+      "bytes": 55017,
+      "sha256": "4ce2033f2cf108449a544a2c82b8994330c14e047ed698ded304910098de3b6a"
+    },
+    {
+      "path": "08_geospatial/phase4/road_nodes.parquet",
+      "bytes": 7070536,
+      "sha256": "7d7ad8a5a0960507636190d574f3f7f0a2af258b1f55dfa60711274b6b2269eb"
+    },
+    {
+      "path": "09_forecasting/phase4/dispatch_forecasts.csv",
+      "bytes": 302912,
+      "sha256": "753d2f047ae19a44125f18e02dbf91cac0ca629d3b07f958bda36a7dbc81e27d"
+    },
+    {
+      "path": "09_forecasting/phase4/dispatch_forecasts.parquet",
+      "bytes": 103115,
+      "sha256": "1c95a4e7e9ee280ba0f5b887222d2c1760b9c45a002ce492a5b7926ff4b2c0b6"
+    },
+    {
+      "path": "09_forecasting/phase4/feature_contract.json",
+      "bytes": 229,
+      "sha256": "5757458027f2197a16d43c720f6f03538e320a365a6abafd80e901552c2a8130"
+    },
+    {
+      "path": "09_forecasting/phase4/forecast_evaluation.csv",
+      "bytes": 1805,
+      "sha256": "01b6f0be34b56363992201d2fe38cb8e15bf5c8558903cd0e36c7499417cc6b0"
+    },
+    {
+      "path": "09_forecasting/phase4/forecast_test_mae.png",
+      "bytes": 48551,
+      "sha256": "e0c453a919a9d5ad553bb69a56a547a15e61e3b89e343a4e9bbe81a6dee4fdb4"
+    },
+    {
+      "path": "09_forecasting/phase4/model_card.json",
+      "bytes": 2016,
+      "sha256": "06235506d16e387db084af60d03958707ee1fdde3e4ce1cb5aedca24333297c1"
+    },
+    {
+      "path": "09_forecasting/phase4/monthly_test_metrics.csv",
+      "bytes": 390,
+      "sha256": "28847dc413a08458e8b2cc2961f6effecc23c8617c254389c8762e1d9d8dc5dd"
+    },
+    {
+      "path": "09_forecasting/phase4/ridge_pipeline.joblib",
+      "bytes": 2561,
+      "sha256": "bb3a5690d358db8701bd57d79d8a8015421d04a542e744c83a4ad86d2a88be17"
+    },
+    {
+      "path": "09_forecasting/phase4/test_predictions.parquet",
+      "bytes": 3335667,
+      "sha256": "4b0b7ba9305cea3678d2aeda8db8ffb1bc6efc46526727fdb3d066e7a816123b"
+    },
+    {
+      "path": "10_optimization/phase4/collection_priority.csv",
+      "bytes": 412366,
+      "sha256": "7a88de7185c43c6039145fa23622b7ad3314419991ae2bc70a2b24939fa880b3"
+    },
+    {
+      "path": "10_optimization/phase4/counterfactual_bin_results.csv",
+      "bytes": 56279,
+      "sha256": "b496ce8c60b96a324f9e24a5f44508b396cf47f57e511349b153787d02dd8cd1"
+    },
+    {
+      "path": "10_optimization/phase4/counterfactual_contract.json",
+      "bytes": 700,
+      "sha256": "7c48ef8d341c1bd0d151a52aaa41d7c7f3817e453c56d807e0eba7dfb9a2ead1"
+    },
+    {
+      "path": "10_optimization/phase4/counterfactual_totals.csv",
+      "bytes": 1040,
+      "sha256": "a77703b2445a8fb3874eb205669fc29a62be1368b6b2ab3a257316b42a85d48e"
+    },
+    {
+      "path": "10_optimization/phase4/fuel_sensitivity.csv",
+      "bytes": 227,
+      "sha256": "0fe3884eb09e4af6b4f29d1f23e36acb2eb480d46bcdc1469cad1631457d2803"
+    },
+    {
+      "path": "10_optimization/phase4/overflow_comparison.csv",
+      "bytes": 678,
+      "sha256": "b042ef1620a68bb369c1b0be0e80b837e2ddc488d372a6a0286a121e78bb8eb4"
+    },
+    {
+      "path": "10_optimization/phase4/priority_sensitivity.csv",
+      "bytes": 1082,
+      "sha256": "0541ea0f4c9f7039c038518b3f227b2711cc5e58f19c6d85c2394b55ae6a2a4b"
+    },
+    {
+      "path": "10_optimization/phase4/route_paths.geojson",
+      "bytes": 306324,
+      "sha256": "5de76f64b14cc7b7193cdae2817bdf8857812fca45307aba919c9a68d684a87a"
+    },
+    {
+      "path": "10_optimization/phase4/route_solutions.json",
+      "bytes": 11844,
+      "sha256": "eb83fddfc45666b8605647ba2b9eed1bd62d87ca2004909e87e6c9b1a013c68e"
+    },
+    {
+      "path": "10_optimization/phase4/route_stops.csv",
+      "bytes": 34640,
+      "sha256": "bf23557abe35dbb7944548446270c006e9530156503c96f757b5c68ed06d22f2"
+    },
+    {
+      "path": "10_optimization/phase4/route_summary.csv",
+      "bytes": 5946,
+      "sha256": "1dae20d2f003fa257422903525d45934e1dc74e0ac5fab08d47802805d77f5d4"
+    },
+    {
+      "path": "10_optimization/phase4/scenario_comparison.csv",
+      "bytes": 3748,
+      "sha256": "9faf88c5616f01133bf947bb0c7f77a912ca23a4d235c4252efb32c46c880485"
+    },
+    {
+      "path": "14_outputs/charts/phase3/01_fill_distribution.png",
+      "bytes": 38962,
+      "sha256": "0eb5b0f775bec834a7c8f9f1405f8349c7367848256c203196f5a7e3b4dcea6c"
+    },
+    {
+      "path": "14_outputs/charts/phase3/02_collection_frequency.png",
+      "bytes": 36651,
+      "sha256": "73392e7ae6901fd5efbeb32395817080aa0268f97a3035e54a57c233ca047465"
+    },
+    {
+      "path": "14_outputs/charts/phase3/03_zone_generation.png",
+      "bytes": 51967,
+      "sha256": "6a772c1f8c9d5b6331c8c0e9f3f429602cd647a0d686822afc24a2e24067e06c"
+    },
+    {
+      "path": "14_outputs/charts/phase3/04_hourly_arrivals.png",
+      "bytes": 49768,
+      "sha256": "8158f0ba2ed9372db7dd07fc6690d3bf83d9e63d22e3f497eef6d1e7aa72054d"
+    },
+    {
+      "path": "14_outputs/charts/phase3/05_daily_generation.png",
+      "bytes": 148620,
+      "sha256": "286ef8cd6b5126b4c175a06ea472d9a89fc34c37c8ba23f8050086874b2144c6"
+    },
+    {
+      "path": "14_outputs/charts/phase3/06_weekend_generation.png",
+      "bytes": 37117,
+      "sha256": "af3be7e9ef6b3dfaefc394aa113facae3b5bca644d8502b0de36688f7ad083c0"
+    },
+    {
+      "path": "14_outputs/charts/phase3/07_monthly_pattern.png",
+      "bytes": 89759,
+      "sha256": "eefac8d3b0b7407f75e6b1a2d28a10fcb3ff1b7adc154f4db85bf88e545f31e7"
+    },
+    {
+      "path": "14_outputs/charts/phase3/08_overflow_bins.png",
+      "bytes": 38101,
+      "sha256": "0717d31381df6e06d368c670be191b1a8229c263525fa88e37fac3c39da6e0e1"
+    },
+    {
+      "path": "14_outputs/charts/phase3/09_geographic_variation.png",
+      "bytes": 212151,
+      "sha256": "11f39db6762ce83d13a6d84bac2133c08bafa36896e6129eba80a7b62c0e8b84"
+    },
+    {
+      "path": "14_outputs/charts/phase3/10_route_proxy.png",
+      "bytes": 56100,
+      "sha256": "421418eaa82b2eba90bbaebe9ecea0179ede92bfe42552e4b2b555b427c33644"
+    },
+    {
+      "path": "14_outputs/charts/phase3/11_bin_associations.png",
+      "bytes": 132699,
+      "sha256": "42c26ca54e0b3891e4e6802d7d814e89a01f4014fe5c8bbc5f8ca6bd51fc64fd"
+    },
+    {
+      "path": "14_outputs/charts/phase4/overflow_tradeoff.png",
+      "bytes": 42123,
+      "sha256": "e8172057416d31dbb524d787924b5bf5b0d816811cacb04d67260ec6f82e2e53"
+    },
+    {
+      "path": "14_outputs/charts/phase4/route_comparison.png",
+      "bytes": 44313,
+      "sha256": "c48da57682ee6659b87dcf32dab5943c064c3eb0c30ee78494b60e9c1e016e02"
+    },
+    {
+      "path": "14_outputs/maps/phase4_geospatial.html",
+      "bytes": 10967896,
+      "sha256": "457d56282c8ec5f37156145a73fa8b7cdedefe9b3e3f7d7accc4de5529192053"
+    },
+    {
+      "path": "14_outputs/maps/phase4_routes.html",
+      "bytes": 201939,
+      "sha256": "572442c50b89149db327d865919a7c5a77a5c7598caffae038ebaaf0217fe80c"
+    },
+    {
+      "path": "14_outputs/tables/phase3_insight_log.csv",
+      "bytes": 1702,
+      "sha256": "6a0c47ce90e98ff9bcfa088d91e288bf82c5e79fe8820eede2535d3f67c72094"
+    },
+    {
+      "path": "14_outputs/tables/phase4_insight_log.csv",
+      "bytes": 1107,
+      "sha256": "5387f3dea564c2b8971d439b755455286bcf705b6cfeac2cb34499c6620ba41f"
+    },
+    {
+      "path": "14_outputs/tables/phase3_eda/bin_annual_summary.csv",
+      "bytes": 182361,
+      "sha256": "ba71298f2af1ee743af18d2e232a9444d6b94ec87606435e468e3df5663b3f0f"
+    },
+    {
+      "path": "14_outputs/tables/phase3_eda/bin_spearman_correlations.csv",
+      "bytes": 416,
+      "sha256": "2510778d273a9d4b17dd4a59f55cb6899550a69dcac91c984812de1222eb9b5c"
+    },
+    {
+      "path": "14_outputs/tables/phase3_eda/city_daily.csv",
+      "bytes": 50248,
+      "sha256": "1f02782f5d8ea224f87b793752f09fb2d89f5d7f0acf2dc0801051fe291dd2ca"
+    },
+    {
+      "path": "14_outputs/tables/phase3_eda/descriptive_statistics.csv",
+      "bytes": 1527,
+      "sha256": "c493b89c45687fdf105e2fd4a52f9f443c28307379e85534dc652cf34afa6ea4"
+    },
+    {
+      "path": "14_outputs/tables/phase3_eda/fill_histogram.csv",
+      "bytes": 493,
+      "sha256": "904f4c00db4797dbb0e20b928f4c43369c5f20d4bb2dc5242155cc6aa5cf6011"
+    },
+    {
+      "path": "14_outputs/tables/phase3_eda/phase3_metrics.json",
+      "bytes": 855,
+      "sha256": "5773f16e5df7ca66f32c29aab1e88516c78827e1e310f4d8a612bf3e97c5adf0"
+    },
+    {
+      "path": "14_outputs/tables/phase3_eda/route_day_summary.csv",
+      "bytes": 1390422,
+      "sha256": "3ec712bbe5c04c7633ef9920d23f8a87e2bececc0971771e98379701e6062d8c"
+    },
+    {
+      "path": "14_outputs/tables/phase3_eda/service_status.csv",
+      "bytes": 245,
+      "sha256": "d138a1d8a34daf3b3ef580c88a4e33eee793b18a8846f650d20f49063a55f525"
+    },
+    {
+      "path": "14_outputs/tables/phase3_eda/zone_annual_summary.csv",
+      "bytes": 18839,
+      "sha256": "e462a5a2e832ccf35e181a43a5184400fcf26ba784d30acc3408a84e4c606b0a"
+    },
+    {
+      "path": "14_outputs/tables/phase3_sql/01_zone_generation.csv",
+      "bytes": 2087,
+      "sha256": "546e8835f313f2da2c404b31ba88224a12d2eed2a41af8f828a3453316c67db4"
+    },
+    {
+      "path": "14_outputs/tables/phase3_sql/02_fastest_bins.csv",
+      "bytes": 2698,
+      "sha256": "644b9d5dda2f6c130a8df86144382eaecfd9eee41ebf54a7165f62cec4ab8dbd"
+    },
+    {
+      "path": "14_outputs/tables/phase3_sql/03_overflow_bins.csv",
+      "bytes": 1572,
+      "sha256": "01c2261ebdd4d50f7791f9ea8106fb1a158e647a00ceb1fbf9b4bd9f01c1078c"
+    },
+    {
+      "path": "14_outputs/tables/phase3_sql/04_collection_timing.csv",
+      "bytes": 1224,
+      "sha256": "64db1f56912d48e59c9d359859dff24ea1a015e29aa7eab96e30790cf087f8dc"
+    },
+    {
+      "path": "14_outputs/tables/phase3_sql/05_hourly_generation.csv",
+      "bytes": 870,
+      "sha256": "bfad7b03376f6cb7070ec093f4ae48f40f4180c005a2f681f6f135af319db4b0"
+    },
+    {
+      "path": "14_outputs/tables/phase3_sql/06_daily_trend.csv",
+      "bytes": 45385,
+      "sha256": "6b544e95bfc406fcededa7be8284be98a0ee490ff37762a0b765a109d0c6bbcb"
+    },
+    {
+      "path": "14_outputs/tables/phase3_sql/07_weekday_pattern.csv",
+      "bytes": 653,
+      "sha256": "4d22869eb84cc90f0b471b46efe2a3d065ee7ab9e8681a6141c56f7772aaaf7d"
+    },
+    {
+      "path": "14_outputs/tables/phase3_sql/08_service_frequency.csv",
+      "bytes": 1850,
+      "sha256": "83b7548381418f514176b3bbb67a663c1c803ce936ebebbbe95e3affaf9b6256"
+    },
+    {
+      "path": "14_outputs/tables/phase3_sql/09_route_proxy.csv",
+      "bytes": 2216,
+      "sha256": "bf42fe3f539f700fd54932a0e38ff5aa5be36f228537612a687aba16c303dc00"
+    },
+    {
+      "path": "14_outputs/tables/phase3_sql/10_local_anomalies.csv",
+      "bytes": 4761,
+      "sha256": "f62b2fab9339b309697bd4d4554fca21dacc1e006981d01e4ce4e07acb5bb5f3"
+    },
+    {
+      "path": "14_outputs/tables/phase3_sql/11_monthly_seasonality.csv",
+      "bytes": 1034,
+      "sha256": "bf24db7a063baf459e11dfb074c88b6f6dcad11563c3c8f927149e7400e9d2a9"
+    },
+    {
+      "path": "14_outputs/tables/phase3_sql/12_reconciliation.csv",
+      "bytes": 310,
+      "sha256": "34db6c44daec149dee231ba6ea7bf65c50cf6e0103745d86710559b6d7c2e46e"
+    },
+    {
+      "path": "14_outputs/tables/phase3_sql/13_early_bins.csv",
+      "bytes": 890,
+      "sha256": "07c834c07dceaf0e8ffc17da5fe9d529c3e7c97e0b720aa78f2a5b66cfccaa55"
+    },
+    {
+      "path": "14_outputs/tables/phase3_sql/14_late_bins.csv",
+      "bytes": 1400,
+      "sha256": "f2138bc320d73953737332783c255d0b9f92688bdbaf1c8641e500640b939b58"
+    },
+    {
+      "path": "14_outputs/tables/phase3_sql/query_manifest.json",
+      "bytes": 6160,
+      "sha256": "beb6ed7afee2747fbb3bea8041d1efc2165e45e1e9b8e80c1cdc8769b12fe786"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "target": "observed fill at next-day 04:00 IST; 20 hours after 08:00 IST issue, before next scheduled service",
+  "training_source": "fact_bin_readings observed-only; dim_bin capacity only; no simulation_truth or generator demand_factor",
+  "features": [
+    "current_fill_pct",
+    "fill06",
+    "fill04",
+    "ma7_04",
+    "seasonal7_04",
+    "ewm7_04",
+    "recent_growth_pct",
+    "history_growth_pct",
+    "hours_since_collection",
+    "sensor_age_hours",
+    "capacity_l",
+    "target_dow_0",
+    "target_dow_1",
+    "target_dow_2",
+    "target_dow_3",
+    "target_dow_4",
+    "target_dow_5",
+    "target_dow_6"
+  ],
+  "train_target_end": "2026-06-30",
+  "validation_target_start": "2026-07-01",
+  "validation_target_end": "2026-08-31",
+  "refit_target_end": "2026-08-31",
+  "test_target_start": "2026-09-01",
+  "test_target_end": "2026-12-31",
+  "bin_holdout": "bin_id % 5 == 0; 200 bins never fitted or used for model selection; not contiguous spatial holdout",
+  "selected_model": "ridge",
+  "selection_rule": "ridge only if validation MAE is at least 2% better than the best simple baseline",
+  "best_simple": "moving_average7",
+  "empirical_interval_halfwidth_pct": {
+    "0.8": 13.055554008159298,
+    "0.9": 17.62233367964727,
+    "0.95": 21.892549338109745
+  },
+  "test_interval_coverage90": 0.8845455000083349,
+  "training_examples": 136058,
+  "refit_examples": 184831,
+  "validation_examples": 48773,
+  "test_examples": 119978,
+  "mape": "not reported: near-zero fills make percentage error unstable",
+  "limitations": [
+    "One synthetic year; metrics do not establish real IoT performance.",
+    "Empirical interval from validation residuals; repeated-bin dependence prevents formal distribution-free coverage claim.",
+    "Baseline collection policy fixed; changed future interventions invalidate a direct reuse of baseline fill forecasts.",
+    "No calibrated overflow probability; priority uses forecast upper bound as a risk flag."
+  ]
+}

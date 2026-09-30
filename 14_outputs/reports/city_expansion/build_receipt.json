@@ -1,0 +1,33 @@
+{
+  "counts": {
+    "bin_daily_metrics": 547500,
+    "city_daily_metrics": 730,
+    "collection_diagnostics": 322675,
+    "collection_events": 322675,
+    "collection_priority": 1500,
+    "dim_bin": 1500,
+    "dim_city": 2,
+    "dim_date": 730,
+    "dim_location": 1500,
+    "dim_vehicle": 106,
+    "dim_zone": 300,
+    "dim_zone_ward": 300,
+    "fact_bin_readings": 6570000,
+    "fact_collections": 322675,
+    "fact_routes": 72,
+    "fact_vehicle_operations": 72,
+    "fact_weather": 730,
+    "forecast_evaluation": 30,
+    "overflow_comparison": 8,
+    "route_daily_metrics": 36393,
+    "route_scenarios": 18,
+    "route_stops": 1028,
+    "simulation_truth": 6570000,
+    "vehicle_daily_metrics": 36393,
+    "zone_daily_metrics": 109135
+  },
+  "city_partitions": 24,
+  "pruning": "CBE January reads1of24 files",
+  "legacy_chennai_db": "unchanged; current combined database is separate",
+  "database": "03_data\\processed\\two_city\\two_city.duckdb"
+}

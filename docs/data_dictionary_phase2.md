@@ -1,0 +1,5 @@
+# Actual Phase 2 data dictionary
+
+`data_dictionary_phase2.csv` enumerates the 246 fields exposed by the 15 implemented DuckDB relations, including grain, DuckDB logical type, inferred unit and observed missing percentage. It is generated from the actual database after the Phase 2 build. The separate Phase 1 `data_dictionary.csv` and `data_model.md` describe a target model, including tables not yet implemented.
+
+The `unit` column is a documentation aid, not an automatic semantic guarantee. Generic entries such as “identifier, category, date or source unit” require field-level review before comparisons. Raw report measures were not extracted from scanned PDFs into analytic facts. Native Census rows retain their source geography; no crosswalk to present wards was performed. The reading fact contains observed simulation outputs; latent variables remain only in `simulation_truth` and selected clearly named QA marts. Route/vehicle distances and fuel use are assumptions. Every operational record is labelled synthetic.

@@ -1,0 +1,44 @@
+{
+  "task": "January 2026: count rows, nonmissing fill values and sum fill percentage; identical month/scope",
+  "results": [
+    {
+      "mode": "pandas_full",
+      "rows": 372000,
+      "observed": 366450,
+      "sum_fill_pct": 18978431.950000003,
+      "worker_seconds": 0.9355,
+      "elapsed_wall_seconds": 1.0715,
+      "peak_rss_bytes_sampled": 99655680
+    },
+    {
+      "mode": "pandas_chunked",
+      "rows": 372000,
+      "observed": 366450,
+      "sum_fill_pct": 18978431.95,
+      "worker_seconds": 0.9986,
+      "elapsed_wall_seconds": 1.1288,
+      "peak_rss_bytes_sampled": 98385920
+    },
+    {
+      "mode": "duckdb_csv",
+      "rows": 372000,
+      "observed": 366450,
+      "sum_fill_pct": 18978431.950000025,
+      "worker_seconds": 0.2804,
+      "elapsed_wall_seconds": 0.4009,
+      "peak_rss_bytes_sampled": 87416832
+    },
+    {
+      "mode": "duckdb_parquet",
+      "rows": 372000,
+      "observed": 366450,
+      "sum_fill_pct": 18978431.95111824,
+      "worker_seconds": 0.1232,
+      "elapsed_wall_seconds": 0.2431,
+      "peak_rss_bytes_sampled": 34664448
+    }
+  ],
+  "csv_bytes": 45131643,
+  "parquet_observed_bytes": 3847017,
+  "caveat": "Parquet excludes latent truth fields present in CSV; file-size ratio is descriptive rather than an identical-schema compression ratio."
+}

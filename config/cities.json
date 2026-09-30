@@ -1,0 +1,16 @@
+{
+  "CHN": {
+    "city_name": "Chennai",
+    "root": ".",
+    "seed": 20260923,
+    "bin_count": 1000
+  },
+  "CBE": {
+    "city_name": "Coimbatore",
+    "root": "cities/CBE",
+    "seed": 20260924,
+    "bin_count": 500,
+    "demand_scale_assumed": 0.9
+  },
+  "comparability": "Same simulator/policy definitions; different seeded draws and an explicit0.9 demand stress scale. No actual city-difference inference."
+}

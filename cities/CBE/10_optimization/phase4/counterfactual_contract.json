@@ -1,0 +1,10 @@
+{
+  "evaluation_only": true,
+  "initial_time_utc": "2026-09-23 02:30:00",
+  "horizon_hours": 24,
+  "population_bins": 60,
+  "arrivals": "same latent future increments for baseline/optimized; uniformly accrued in2h intervals; +20% only stress scenario",
+  "service": "95% removed at end of4min; no misses; no other collections within24h",
+  "policy_scope": "Isolated dispatch intervention, not a replacement weekly municipal policy. All60 pilot bins included, not just served subset.",
+  "limitations": "Early collection can worsen later overflow. No causal real-world effect or annualized avoided overflow claimed. Forecast baseline policy is not a counterfactual post-service forecast."
+}

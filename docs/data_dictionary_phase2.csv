@@ -1,0 +1,247 @@
+﻿table,grain,column,logical_type,unit,missing_pct,data_origin_note
+dim_zone_ward,one current GCC ward polygon,zone_id,VARCHAR,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+dim_zone_ward,one current GCC ward polygon,source_objectid,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+dim_zone_ward,one current GCC ward polygon,area_m2_source,DOUBLE,m2,0.0,official / real / proxy as labelled in row
+dim_zone_ward,one current GCC ward polygon,min_lon,DOUBLE,degrees east,0.0,official / real / proxy as labelled in row
+dim_zone_ward,one current GCC ward polygon,min_lat,DOUBLE,degrees north,0.0,official / real / proxy as labelled in row
+dim_zone_ward,one current GCC ward polygon,max_lon,DOUBLE,degrees east,0.0,official / real / proxy as labelled in row
+dim_zone_ward,one current GCC ward polygon,max_lat,DOUBLE,degrees north,0.0,official / real / proxy as labelled in row
+dim_zone_ward,one current GCC ward polygon,geometry_wkb,BLOB,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+dim_zone_ward,one current GCC ward polygon,data_origin,VARCHAR,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+dim_zone_ward,one current GCC ward polygon,source_id,VARCHAR,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+dim_zone_ward,one current GCC ward polygon,boundary_version,VARCHAR,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,State,VARCHAR,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,District,VARCHAR,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,Subdistt,VARCHAR,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,Town/Village,VARCHAR,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,Ward,VARCHAR,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,EB,VARCHAR,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,Level,VARCHAR,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,Name,VARCHAR,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,TRU,VARCHAR,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,No_HH,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,TOT_P,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,TOT_M,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,TOT_F,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,P_06,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,M_06,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,F_06,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,P_SC,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,M_SC,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,F_SC,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,P_ST,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,M_ST,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,F_ST,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,P_LIT,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,M_LIT,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,F_LIT,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,P_ILL,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,M_ILL,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,F_ILL,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,TOT_WORK_P,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,TOT_WORK_M,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,TOT_WORK_F,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,MAINWORK_P,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,MAINWORK_M,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,MAINWORK_F,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,MAIN_CL_P,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,MAIN_CL_M,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,MAIN_CL_F,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,MAIN_AL_P,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,MAIN_AL_M,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,MAIN_AL_F,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,MAIN_HH_P,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,MAIN_HH_M,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,MAIN_HH_F,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,MAIN_OT_P,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,MAIN_OT_M,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,MAIN_OT_F,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,MARGWORK_P,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,MARGWORK_M,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,MARGWORK_F,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,MARG_CL_P,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,MARG_CL_M,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,MARG_CL_F,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,MARG_AL_P,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,MARG_AL_M,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,MARG_AL_F,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,MARG_HH_P,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,MARG_HH_M,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,MARG_HH_F,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,MARG_OT_P,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,MARG_OT_M,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,MARG_OT_F,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,MARGWORK_3_6_P,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,MARGWORK_3_6_M,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,MARGWORK_3_6_F,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,MARG_CL_3_6_P,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,MARG_CL_3_6_M,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,MARG_CL_3_6_F,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,MARG_AL_3_6_P,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,MARG_AL_3_6_M,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,MARG_AL_3_6_F,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,MARG_HH_3_6_P,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,MARG_HH_3_6_M,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,MARG_HH_3_6_F,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,MARG_OT_3_6_P,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,MARG_OT_3_6_M,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,MARG_OT_3_6_F,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,MARGWORK_0_3_P,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,MARGWORK_0_3_M,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,MARGWORK_0_3_F,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,MARG_CL_0_3_P,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,MARG_CL_0_3_M,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,MARG_CL_0_3_F,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,MARG_AL_0_3_P,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,MARG_AL_0_3_M,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,MARG_AL_0_3_F,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,MARG_HH_0_3_P,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,MARG_HH_0_3_M,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,MARG_HH_0_3_F,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,MARG_OT_0_3_P,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,MARG_OT_0_3_M,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,MARG_OT_0_3_F,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,NON_WORK_P,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,NON_WORK_M,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,NON_WORK_F,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,data_origin,VARCHAR,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,source_id,VARCHAR,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+census_chennai_2011_native,one source workbook geography row,census_year,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+weather_chennai_grid_2025,one Chennai grid point per day,date,DATE,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+weather_chennai_grid_2025,one Chennai grid point per day,temperature_c,DOUBLE,degrees C,0.0,official / real / proxy as labelled in row
+weather_chennai_grid_2025,one Chennai grid point per day,rainfall_mm,DOUBLE,mm,0.0,official / real / proxy as labelled in row
+weather_chennai_grid_2025,one Chennai grid point per day,data_origin,VARCHAR,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+weather_chennai_grid_2025,one Chennai grid point per day,source_id,VARCHAR,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+weather_chennai_grid_2025,one Chennai grid point per day,latitude,DOUBLE,degrees north,0.0,official / real / proxy as labelled in row
+weather_chennai_grid_2025,one Chennai grid point per day,longitude,DOUBLE,degrees east,0.0,official / real / proxy as labelled in row
+osm_road_nodes_chennai,one mapped OSM road node,osm_node_id,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+osm_road_nodes_chennai,one mapped OSM road node,longitude,DOUBLE,degrees east,0.0,official / real / proxy as labelled in row
+osm_road_nodes_chennai,one mapped OSM road node,latitude,DOUBLE,degrees north,0.0,official / real / proxy as labelled in row
+osm_road_nodes_chennai,one mapped OSM road node,zone_id,VARCHAR,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+osm_road_nodes_chennai,one mapped OSM road node,data_origin,VARCHAR,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+osm_road_nodes_chennai,one mapped OSM road node,source_id,VARCHAR,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+osm_road_segments_chennai,one mapped OSM way node-to-node segment,osm_way_id,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+osm_road_segments_chennai,one mapped OSM way node-to-node segment,from_node,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+osm_road_segments_chennai,one mapped OSM way node-to-node segment,to_node,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+osm_road_segments_chennai,one mapped OSM way node-to-node segment,highway,VARCHAR,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+osm_road_segments_chennai,one mapped OSM way node-to-node segment,oneway_tag,VARCHAR,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+osm_road_segments_chennai,one mapped OSM way node-to-node segment,segment_length_m,DOUBLE,metres,0.0,official / real / proxy as labelled in row
+osm_road_segments_chennai,one mapped OSM way node-to-node segment,data_origin,VARCHAR,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+osm_road_segments_chennai,one mapped OSM way node-to-node segment,source_id,VARCHAR,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+osm_poi_nodes_chennai,one mapped OSM POI node,osm_node_id,BIGINT,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+osm_poi_nodes_chennai,one mapped OSM POI node,longitude,DOUBLE,degrees east,0.0,official / real / proxy as labelled in row
+osm_poi_nodes_chennai,one mapped OSM POI node,latitude,DOUBLE,degrees north,0.0,official / real / proxy as labelled in row
+osm_poi_nodes_chennai,one mapped OSM POI node,poi_type,VARCHAR,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+osm_poi_nodes_chennai,one mapped OSM POI node,tag_key,VARCHAR,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+osm_poi_nodes_chennai,one mapped OSM POI node,data_origin,VARCHAR,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+osm_poi_nodes_chennai,one mapped OSM POI node,source_id,VARCHAR,"identifier, category, date or source unit",0.0,official / real / proxy as labelled in row
+dim_bin,one hypothetical bin,bin_id,INTEGER,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+dim_bin,one hypothetical bin,zone_id,VARCHAR,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+dim_bin,one hypothetical bin,latitude,DOUBLE,degrees north,0.0,synthetic operational or assumption
+dim_bin,one hypothetical bin,longitude,DOUBLE,degrees east,0.0,synthetic operational or assumption
+dim_bin,one hypothetical bin,osm_node_id,BIGINT,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+dim_bin,one hypothetical bin,capacity_l,SMALLINT,litres,0.0,synthetic operational or assumption
+dim_bin,one hypothetical bin,demand_factor,DOUBLE,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+dim_bin,one hypothetical bin,coordinate_origin,VARCHAR,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+dim_bin,one hypothetical bin,data_origin,VARCHAR,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+dim_bin,one hypothetical bin,source_id,VARCHAR,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+dim_bin,one hypothetical bin,scenario,VARCHAR,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+fact_bin_readings,one scheduled bin reading slot,reading_id,BIGINT,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+fact_bin_readings,one scheduled bin reading slot,bin_id,INTEGER,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+fact_bin_readings,one scheduled bin reading slot,timestamp_utc,TIMESTAMP_NS,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+fact_bin_readings,one scheduled bin reading slot,service_date_local,TIMESTAMP_NS,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+fact_bin_readings,one scheduled bin reading slot,zone_id,VARCHAR,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+fact_bin_readings,one scheduled bin reading slot,fill_level_pct,FLOAT,percent,1.491,synthetic operational or assumption
+fact_bin_readings,one scheduled bin reading slot,weight_kg,FLOAT,kg,1.491,synthetic operational or assumption
+fact_bin_readings,one scheduled bin reading slot,temperature_c,FLOAT,degrees C,1.491,synthetic operational or assumption
+fact_bin_readings,one scheduled bin reading slot,battery_pct,FLOAT,percent,0.0,synthetic operational or assumption
+fact_bin_readings,one scheduled bin reading slot,sensor_status,VARCHAR,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+fact_bin_readings,one scheduled bin reading slot,collection_status,VARCHAR,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+fact_bin_readings,one scheduled bin reading slot,data_origin,VARCHAR,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+fact_bin_readings,one scheduled bin reading slot,month,VARCHAR,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+fact_bin_readings,one scheduled bin reading slot,year,BIGINT,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+simulation_truth,one latent bin state slot,reading_id,BIGINT,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+simulation_truth,one latent bin state slot,bin_id,INTEGER,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+simulation_truth,one latent bin state slot,timestamp_utc,TIMESTAMP_NS,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+simulation_truth,one latent bin state slot,service_date_local,TIMESTAMP_NS,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+simulation_truth,one latent bin state slot,arrivals_l_true,FLOAT,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+simulation_truth,one latent bin state slot,inventory_l_true,FLOAT,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+simulation_truth,one latent bin state slot,overflow_l_true,FLOAT,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+simulation_truth,one latent bin state slot,removed_l_true,FLOAT,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+simulation_truth,one latent bin state slot,capacity_l,SMALLINT,litres,0.0,synthetic operational or assumption
+simulation_truth,one latent bin state slot,data_origin,VARCHAR,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+simulation_truth,one latent bin state slot,month,VARCHAR,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+simulation_truth,one latent bin state slot,year,BIGINT,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+interim_readings,one full source bin slot,reading_id,BIGINT,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+interim_readings,one full source bin slot,bin_id,INTEGER,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+interim_readings,one full source bin slot,timestamp_utc,TIMESTAMP_NS,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+interim_readings,one full source bin slot,service_date_local,TIMESTAMP_NS,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+interim_readings,one full source bin slot,zone_id,VARCHAR,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+interim_readings,one full source bin slot,fill_level_pct,FLOAT,percent,1.491,synthetic operational or assumption
+interim_readings,one full source bin slot,weight_kg,FLOAT,kg,1.491,synthetic operational or assumption
+interim_readings,one full source bin slot,temperature_c,FLOAT,degrees C,1.491,synthetic operational or assumption
+interim_readings,one full source bin slot,battery_pct,FLOAT,percent,0.0,synthetic operational or assumption
+interim_readings,one full source bin slot,sensor_status,VARCHAR,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+interim_readings,one full source bin slot,collection_status,VARCHAR,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+interim_readings,one full source bin slot,arrivals_l_true,FLOAT,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+interim_readings,one full source bin slot,inventory_l_true,FLOAT,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+interim_readings,one full source bin slot,overflow_l_true,FLOAT,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+interim_readings,one full source bin slot,removed_l_true,FLOAT,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+interim_readings,one full source bin slot,capacity_l,SMALLINT,litres,0.0,synthetic operational or assumption
+interim_readings,one full source bin slot,data_origin,VARCHAR,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+interim_readings,one full source bin slot,month,VARCHAR,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+interim_readings,one full source bin slot,year,BIGINT,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+collection_events,one collection attempt,collection_id,BIGINT,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+collection_events,one collection attempt,bin_id,INTEGER,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+collection_events,one collection attempt,zone_id,VARCHAR,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+collection_events,one collection attempt,service_date_local,DATE,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+collection_events,one collection attempt,attempted_at_utc,TIMESTAMP_NS,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+collection_events,one collection attempt,collection_status,VARCHAR,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+collection_events,one collection attempt,collected_kg,FLOAT,kg,0.0,synthetic operational or assumption
+collection_events,one collection attempt,residual_kg,FLOAT,kg,0.0,synthetic operational or assumption
+collection_events,one collection attempt,data_origin,VARCHAR,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+bin_daily_metrics,one bin and local date,bin_id,INTEGER,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+bin_daily_metrics,one bin and local date,service_date_local,DATE,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+bin_daily_metrics,one bin and local date,zone_id,VARCHAR,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+bin_daily_metrics,one bin and local date,scheduled_readings,BIGINT,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+bin_daily_metrics,one bin and local date,received_readings,BIGINT,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+bin_daily_metrics,one bin and local date,missing_readings,BIGINT,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+bin_daily_metrics,one bin and local date,mean_observed_fill_pct,DOUBLE,percent,0.0,synthetic operational or assumption
+bin_daily_metrics,one bin and local date,max_observed_fill_pct,FLOAT,percent,0.0,synthetic operational or assumption
+bin_daily_metrics,one bin and local date,arrivals_l_simulated,DOUBLE,litres,0.0,synthetic operational or assumption
+bin_daily_metrics,one bin and local date,overflow_l_simulated,DOUBLE,litres,0.0,synthetic operational or assumption
+bin_daily_metrics,one bin and local date,collected_kg_simulated,DOUBLE,kg,0.0,synthetic operational or assumption
+bin_daily_metrics,one bin and local date,successful_collections,BIGINT,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+bin_daily_metrics,one bin and local date,missed_collections,BIGINT,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+bin_daily_metrics,one bin and local date,data_origin,VARCHAR,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+zone_daily_metrics,one ward and local date,zone_id,VARCHAR,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+zone_daily_metrics,one ward and local date,service_date_local,DATE,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+zone_daily_metrics,one ward and local date,bins,BIGINT,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+zone_daily_metrics,one ward and local date,scheduled_readings,HUGEINT,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+zone_daily_metrics,one ward and local date,received_readings,HUGEINT,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+zone_daily_metrics,one ward and local date,missing_readings,HUGEINT,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+zone_daily_metrics,one ward and local date,arrivals_l_simulated,DOUBLE,litres,0.0,synthetic operational or assumption
+zone_daily_metrics,one ward and local date,overflow_l_simulated,DOUBLE,litres,0.0,synthetic operational or assumption
+zone_daily_metrics,one ward and local date,collected_kg_simulated,DOUBLE,kg,0.0,synthetic operational or assumption
+zone_daily_metrics,one ward and local date,successful_collections,HUGEINT,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+zone_daily_metrics,one ward and local date,missed_collections,HUGEINT,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+zone_daily_metrics,one ward and local date,data_origin,VARCHAR,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+route_daily_metrics,one hypothetical vehicle route and local date,service_date_local,DATE,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+route_daily_metrics,one hypothetical vehicle route and local date,vehicle_id,INTEGER,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+route_daily_metrics,one hypothetical vehicle route and local date,route_id,VARCHAR,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+route_daily_metrics,one hypothetical vehicle route and local date,service_attempts,BIGINT,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+route_daily_metrics,one hypothetical vehicle route and local date,successful_stops,BIGINT,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+route_daily_metrics,one hypothetical vehicle route and local date,missed_stops,BIGINT,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+route_daily_metrics,one hypothetical vehicle route and local date,collected_kg_simulated,DOUBLE,kg,0.0,synthetic operational or assumption
+route_daily_metrics,one hypothetical vehicle route and local date,distance_km_assumed,"DECIMAL(23,2)",km,0.0,synthetic operational or assumption
+route_daily_metrics,one hypothetical vehicle route and local date,distance_origin,VARCHAR,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+route_daily_metrics,one hypothetical vehicle route and local date,data_origin,VARCHAR,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+vehicle_daily_metrics,one hypothetical vehicle and local date,service_date_local,DATE,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+vehicle_daily_metrics,one hypothetical vehicle and local date,vehicle_id,INTEGER,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+vehicle_daily_metrics,one hypothetical vehicle and local date,routes,BIGINT,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+vehicle_daily_metrics,one hypothetical vehicle and local date,service_attempts,HUGEINT,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+vehicle_daily_metrics,one hypothetical vehicle and local date,successful_stops,HUGEINT,"identifier, category, date or source unit",0.0,synthetic operational or assumption
+vehicle_daily_metrics,one hypothetical vehicle and local date,collected_kg_simulated,DOUBLE,kg,0.0,synthetic operational or assumption
+vehicle_daily_metrics,one hypothetical vehicle and local date,distance_km_assumed,"DECIMAL(38,2)",km,0.0,synthetic operational or assumption
+vehicle_daily_metrics,one hypothetical vehicle and local date,diesel_l_assumed,DOUBLE,litres,0.0,synthetic operational or assumption
+vehicle_daily_metrics,one hypothetical vehicle and local date,data_origin,VARCHAR,"identifier, category, date or source unit",0.0,synthetic operational or assumption

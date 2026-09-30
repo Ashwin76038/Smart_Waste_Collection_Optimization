@@ -1,0 +1,145 @@
+// Power BI Desktop: create each named measure below in a dedicated empty Measures table.
+// All operating measures use synthetic 2026 data. Route cards describe one frozen
+// 23 Sep 2026 pilot per city. Keep Route page city and scenario slicers single-select.
+// Format percentage-point results as Decimal Number + % in the title, not PBI % format.
+
+Bin Count =
+DISTINCTCOUNT ( dim_bin[bin_key] )
+
+// Collected mass from one row per simulated collection attempt. Incomplete/missed
+// attempts contribute their recorded mass, which is often zero.
+Total Waste Collected (t) =
+DIVIDE ( SUM ( fact_collection_attempt[collected_kg] ), 1000 )
+
+Simulated Waste Generated (t) =
+DIVIDE ( SUM ( fact_city_day[generated_l] ) * 0.12, 1000 )
+
+Generated L per Bin-Day =
+DIVIDE ( SUM ( fact_city_day[generated_l] ), SUM ( fact_city_day[bins] ) )
+
+// Ward/bin filterable rate for pages 2–3. Each fact row is one bin-day.
+Bin Generated L per Bin-Day =
+DIVIDE ( SUM ( fact_bin_day[generated_l] ), COUNTROWS ( fact_bin_day ) )
+
+Overflow L per Bin-Day =
+DIVIDE ( SUM ( fact_bin_day[overflow_l] ), COUNTROWS ( fact_bin_day ) )
+
+Bin-Day Count =
+COUNTROWS ( fact_bin_day )
+
+// Bin-day numerator supports city, date, ward-label and bin filtering.
+Average Bin Fill % =
+DIVIDE ( SUM ( fact_bin_day[fill_sum_pct] ), SUM ( fact_bin_day[received_readings] ) )
+
+// Slot denominator is all scheduled readings, including sensor misses. Truth-derived
+// overflow comes from the simulation evaluator; no sensor can measure this directly.
+Overflow Slot % =
+100 * DIVIDE ( SUM ( fact_city_day[overflow_slots] ), SUM ( fact_city_day[scheduled_readings] ) )
+
+Overflow Bin-Days =
+SUM ( fact_bin_day[overflow_day_count] )
+
+Overflow Bin-Day % =
+100 * DIVIDE ( [Overflow Bin-Days], COUNTROWS ( fact_bin_day ) )
+
+Collection Attempts =
+COUNTROWS ( fact_collection_attempt )
+
+Collections Completed =
+SUM ( fact_collection_attempt[successful_attempt_count] )
+
+Collection Completion % =
+100 * DIVIDE ( [Collections Completed], [Collection Attempts] )
+
+Collections per Bin-Day =
+DIVIDE ( SUM ( fact_city_day[successful_collections] ), SUM ( fact_city_day[bins] ) )
+
+// Exploratory retrospective flag only; <35% pre-service fill is a threshold, not
+// proof the collection was unnecessary (hygiene and special services are unknown).
+Early Collection % (simulated <35%) =
+100 * DIVIDE ( SUM ( fact_collection_attempt[early_success_count] ), [Collections Completed] )
+
+Late Risk Attempt % =
+100 * DIVIDE ( SUM ( fact_collection_attempt[late_risk_attempt_count] ), [Collection Attempts] )
+
+// Fixed dispatch snapshot as of 23 Sep 2026 08:00 IST. This fact intentionally has
+// no date relationship: the 2026 historical date slicer must not reinterpret it.
+Bins Requiring Collection =
+CALCULATE ( COUNTROWS ( fact_dispatch_snapshot ), fact_dispatch_snapshot[required] = TRUE () )
+
+High Priority Bins =
+CALCULATE ( COUNTROWS ( fact_dispatch_snapshot ), fact_dispatch_snapshot[required] = TRUE (), fact_dispatch_snapshot[tier] = 1 )
+
+Forecast-Triggered Bins =
+CALCULATE ( COUNTROWS ( fact_dispatch_snapshot ), fact_dispatch_snapshot[forecast_trigger] = TRUE () )
+
+Access Review Bins =
+CALCULATE ( COUNTROWS ( fact_dispatch_snapshot ), fact_dispatch_snapshot[network_accessible] = FALSE () )
+
+// Pilot-only route scenario measures. Both slicers must identify one city and one
+// scenario; multi-selection returns BLANK rather than double-counting alternatives.
+Baseline Route Km =
+IF (
+    HASONEVALUE ( dim_city[city_id] ) && HASONEVALUE ( dim_scenario[scenario_key] ),
+    CALCULATE ( SUM ( fact_route_scenario[baseline_km] ), dim_scenario[status] = "feasible" )
+)
+
+Optimized Route Km =
+IF (
+    HASONEVALUE ( dim_city[city_id] ) && HASONEVALUE ( dim_scenario[scenario_key] ),
+    CALCULATE ( SUM ( fact_route_scenario[optimized_km] ), dim_scenario[status] = "feasible" )
+)
+
+Distance Saved Km =
+IF ( NOT ISBLANK ( [Baseline Route Km] ) && NOT ISBLANK ( [Optimized Route Km] ),
+     [Baseline Route Km] - [Optimized Route Km] )
+
+Distance Reduction % =
+100 * DIVIDE ( [Distance Saved Km], [Baseline Route Km] )
+
+Fuel Saved L (assumed) =
+IF ( NOT ISBLANK ( [Distance Saved Km] ), SUM ( fact_route_scenario[fuel_l_saved_assumed] ) )
+
+Fuel Cost Saved INR (proxy) =
+IF ( NOT ISBLANK ( [Distance Saved Km] ), SUM ( fact_route_scenario[fuel_cost_inr_saved_historical_proxy] ) )
+
+Travel Minutes Saved =
+IF ( NOT ISBLANK ( [Distance Saved Km] ), 60 * SUM ( fact_route_scenario[travel_hours_saved] ) )
+
+Pilot Bins Serviced =
+IF ( NOT ISBLANK ( [Distance Saved Km] ), SUM ( fact_route_scenario[bins_serviced] ) )
+
+// Reserved full-bin volume / configured 12,000 L truck capacity. Method=optimized
+// prevents baseline and optimized routes from appearing as six physical trucks.
+Reserved Truck Capacity % =
+IF (
+    HASONEVALUE ( dim_city[city_id] ) && HASONEVALUE ( dim_scenario[scenario_key] ),
+    100 * DIVIDE (
+        CALCULATE ( SUM ( fact_truck_route[load_l] ), fact_truck_route[method] = "optimized" ),
+        12000 * CALCULATE ( COUNTROWS ( fact_truck_route ), fact_truck_route[method] = "optimized" )
+    )
+)
+
+// Truth-based, isolated 24-hour replay, one scenario at a time. Negative values
+// mean the optimized order increased modeled spill.
+Modeled Spill Avoided L (24h) =
+IF (
+    HASONEVALUE ( dim_city[city_id] ) && HASONEVALUE ( dim_scenario[scenario_key] ),
+    SUM ( fact_counterfactual[overflow_l_avoided_modelled] )
+)
+
+// Each city trains its own model. Select split=test, evaluation_group=known_bins.
+// A single city+model is required; do not average MAE across cities or groups.
+Forecast MAE (pp) =
+IF (
+    HASONEVALUE ( dim_city[city_id] ) && HASONEVALUE ( fact_forecast_score[model] ) &&
+    HASONEVALUE ( fact_forecast_score[split] ) && HASONEVALUE ( fact_forecast_score[evaluation_group] ),
+    MAX ( fact_forecast_score[mae_pct_points] )
+)
+
+Forecast Near-Full Recall % =
+IF (
+    HASONEVALUE ( dim_city[city_id] ) && HASONEVALUE ( fact_forecast_score[model] ) &&
+    HASONEVALUE ( fact_forecast_score[split] ) && HASONEVALUE ( fact_forecast_score[evaluation_group] ),
+    100 * MAX ( fact_forecast_score[near_full_recall] )
+)

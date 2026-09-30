@@ -1,0 +1,244 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "a201b0fd60645caebf15",
+  "position": {
+    "x": 24,
+    "y": 540,
+    "z": 15000,
+    "width": 1232,
+    "height": 158,
+    "tabOrder": 15000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Collection queue · review tier, reason and access'"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Segoe UI'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#162B36'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "objects": {
+      "grid": [
+        {
+          "properties": {
+            "textSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_bin"
+                    }
+                  },
+                  "Property": "bin_key"
+                }
+              },
+              "queryRef": "dim_bin.bin_key",
+              "nativeQueryRef": "bin_key"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_bin"
+                    }
+                  },
+                  "Property": "ward_label"
+                }
+              },
+              "queryRef": "dim_bin.ward_label",
+              "nativeQueryRef": "ward_label"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_dispatch_snapshot"
+                    }
+                  },
+                  "Property": "current_fill_pct"
+                }
+              },
+              "queryRef": "fact_dispatch_snapshot.current_fill_pct",
+              "nativeQueryRef": "current_fill_pct"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_dispatch_snapshot"
+                    }
+                  },
+                  "Property": "prediction_pct"
+                }
+              },
+              "queryRef": "fact_dispatch_snapshot.prediction_pct",
+              "nativeQueryRef": "prediction_pct"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_dispatch_snapshot"
+                    }
+                  },
+                  "Property": "tier"
+                }
+              },
+              "queryRef": "fact_dispatch_snapshot.tier",
+              "nativeQueryRef": "tier"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_dispatch_snapshot"
+                    }
+                  },
+                  "Property": "reasons"
+                }
+              },
+              "queryRef": "fact_dispatch_snapshot.reasons",
+              "nativeQueryRef": "reasons"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_dispatch_snapshot"
+                    }
+                  },
+                  "Property": "network_accessible"
+                }
+              },
+              "queryRef": "fact_dispatch_snapshot.network_accessible",
+              "nativeQueryRef": "network_accessible"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "fact_dispatch_snapshot"
+                  }
+                },
+                "Property": "tier"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    }
+  }
+}

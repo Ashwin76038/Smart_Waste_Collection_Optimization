@@ -1,0 +1,4 @@
+km_per_l_assumed,fuel_l_saved,historical_cost_inr_saved,data_origin,city_id,city_name
+3.0,3.49423950236296,322.8327876233139,assumption,CBE,Coimbatore
+4.5,2.3294930015753064,215.22185841554256,assumption,CBE,Coimbatore
+6.0,1.74711975118148,161.41639381165697,assumption,CBE,Coimbatore

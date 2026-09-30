@@ -1,0 +1,29 @@
+{
+  "project": "Smart_Waste_Collection_Optimization",
+  "phase": "phase4_complete",
+  "region": "Tamil Nadu",
+  "proposed_pilot": "Chennai",
+  "timezone": "Asia/Kolkata",
+  "storage_timezone": "UTC",
+  "currency": "INR",
+  "map_crs": "EPSG:4326",
+  "analysis_crs": "EPSG:32644",
+  "data_origins": [
+    "real",
+    "official",
+    "derived",
+    "proxy",
+    "synthetic",
+    "assumption"
+  ],
+  "scenario_design": {
+    "bin_count": 500,
+    "days": 365,
+    "readings_per_day": 12,
+    "expected_scheduled_rows": 2190000,
+    "seed": 20260924,
+    "date_range": "2026-01-01 to 2026-12-31; hypothetical simulation, not observed history"
+  },
+  "generation_enabled": true,
+  "billing_allowed": false
+}

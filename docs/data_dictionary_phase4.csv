@@ -1,0 +1,174 @@
+table,field,dtype,unit,source_file,operational_origin
+dispatch_forecasts,bin_id,int64,identifier/category/boolean,09_forecasting/phase4/dispatch_forecasts.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+dispatch_forecasts,issue_date,object,identifier/category/boolean,09_forecasting/phase4/dispatch_forecasts.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+dispatch_forecasts,current_fill_pct,float64,percentage points or percent as field name indicates,09_forecasting/phase4/dispatch_forecasts.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+dispatch_forecasts,last_sensor_utc,object,UTC timestamp,09_forecasting/phase4/dispatch_forecasts.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+dispatch_forecasts,fill04,float64,identifier/category/boolean,09_forecasting/phase4/dispatch_forecasts.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+dispatch_forecasts,fill06,float64,identifier/category/boolean,09_forecasting/phase4/dispatch_forecasts.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+dispatch_forecasts,last_service_utc,object,UTC timestamp,09_forecasting/phase4/dispatch_forecasts.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+dispatch_forecasts,zone_id,int64,identifier/category/boolean,09_forecasting/phase4/dispatch_forecasts.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+dispatch_forecasts,capacity_l,int64,litres,09_forecasting/phase4/dispatch_forecasts.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+dispatch_forecasts,issue_time_utc,object,UTC timestamp,09_forecasting/phase4/dispatch_forecasts.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+dispatch_forecasts,target_time_utc,object,UTC timestamp,09_forecasting/phase4/dispatch_forecasts.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+dispatch_forecasts,target_date,object,identifier/category/boolean,09_forecasting/phase4/dispatch_forecasts.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+dispatch_forecasts,ma7_04,float64,identifier/category/boolean,09_forecasting/phase4/dispatch_forecasts.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+dispatch_forecasts,ewm7_04,float64,identifier/category/boolean,09_forecasting/phase4/dispatch_forecasts.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+dispatch_forecasts,seasonal7_04,float64,identifier/category/boolean,09_forecasting/phase4/dispatch_forecasts.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+dispatch_forecasts,history_growth_pct,float64,percentage points or percent as field name indicates,09_forecasting/phase4/dispatch_forecasts.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+dispatch_forecasts,recent_growth_pct,float64,percentage points or percent as field name indicates,09_forecasting/phase4/dispatch_forecasts.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+dispatch_forecasts,hours_since_collection,float64,hours,09_forecasting/phase4/dispatch_forecasts.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+dispatch_forecasts,sensor_age_hours,float64,hours,09_forecasting/phase4/dispatch_forecasts.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+dispatch_forecasts,target_dow_0,int64,identifier/category/boolean,09_forecasting/phase4/dispatch_forecasts.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+dispatch_forecasts,target_dow_1,int64,identifier/category/boolean,09_forecasting/phase4/dispatch_forecasts.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+dispatch_forecasts,target_dow_2,int64,identifier/category/boolean,09_forecasting/phase4/dispatch_forecasts.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+dispatch_forecasts,target_dow_3,int64,identifier/category/boolean,09_forecasting/phase4/dispatch_forecasts.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+dispatch_forecasts,target_dow_4,int64,identifier/category/boolean,09_forecasting/phase4/dispatch_forecasts.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+dispatch_forecasts,target_dow_5,int64,identifier/category/boolean,09_forecasting/phase4/dispatch_forecasts.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+dispatch_forecasts,target_dow_6,int64,identifier/category/boolean,09_forecasting/phase4/dispatch_forecasts.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+dispatch_forecasts,bin_holdout,bool,identifier/category/boolean,09_forecasting/phase4/dispatch_forecasts.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+dispatch_forecasts,data_origin,object,identifier/category/boolean,09_forecasting/phase4/dispatch_forecasts.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+dispatch_forecasts,prediction_pct,float64,percentage points or percent as field name indicates,09_forecasting/phase4/dispatch_forecasts.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+dispatch_forecasts,upper80_pct,float64,percentage points or percent as field name indicates,09_forecasting/phase4/dispatch_forecasts.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+dispatch_forecasts,upper90_pct,float64,percentage points or percent as field name indicates,09_forecasting/phase4/dispatch_forecasts.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+dispatch_forecasts,upper95_pct,float64,percentage points or percent as field name indicates,09_forecasting/phase4/dispatch_forecasts.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+dispatch_forecasts,model,object,identifier/category/boolean,09_forecasting/phase4/dispatch_forecasts.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+forecast_evaluation,split,object,identifier/category/boolean,09_forecasting/phase4/forecast_evaluation.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+forecast_evaluation,group,object,identifier/category/boolean,09_forecasting/phase4/forecast_evaluation.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+forecast_evaluation,model,object,identifier/category/boolean,09_forecasting/phase4/forecast_evaluation.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+forecast_evaluation,n,int64,identifier/category/boolean,09_forecasting/phase4/forecast_evaluation.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+forecast_evaluation,mae_pct_points,float64,percentage points or percent as field name indicates,09_forecasting/phase4/forecast_evaluation.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+forecast_evaluation,rmse_pct_points,float64,percentage points or percent as field name indicates,09_forecasting/phase4/forecast_evaluation.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+forecast_evaluation,wape_pct,float64,percentage points or percent as field name indicates,09_forecasting/phase4/forecast_evaluation.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+forecast_evaluation,near_full_recall,float64,identifier/category/boolean,09_forecasting/phase4/forecast_evaluation.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+bin_spatial_features,bin_id,int64,identifier/category/boolean,08_geospatial/phase4/bin_spatial_features.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+bin_spatial_features,zone_id,int64,identifier/category/boolean,08_geospatial/phase4/bin_spatial_features.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+bin_spatial_features,latitude,float64,WGS84 decimal degrees,08_geospatial/phase4/bin_spatial_features.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+bin_spatial_features,longitude,float64,WGS84 decimal degrees,08_geospatial/phase4/bin_spatial_features.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+bin_spatial_features,osm_node_id,int64,identifier/category/boolean,08_geospatial/phase4/bin_spatial_features.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+bin_spatial_features,capacity_l,int64,litres,08_geospatial/phase4/bin_spatial_features.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+bin_spatial_features,demand_factor,float64,identifier/category/boolean,08_geospatial/phase4/bin_spatial_features.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+bin_spatial_features,coordinate_origin,object,identifier/category/boolean,08_geospatial/phase4/bin_spatial_features.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+bin_spatial_features,data_origin,object,identifier/category/boolean,08_geospatial/phase4/bin_spatial_features.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+bin_spatial_features,source_id,object,identifier/category/boolean,08_geospatial/phase4/bin_spatial_features.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+bin_spatial_features,scenario,object,identifier/category/boolean,08_geospatial/phase4/bin_spatial_features.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+bin_spatial_features,snap_m,float64,metres,08_geospatial/phase4/bin_spatial_features.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+bin_spatial_features,routing_node_id,int64,identifier/category/boolean,08_geospatial/phase4/bin_spatial_features.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+bin_spatial_features,network_accessible,bool,identifier/category/boolean,08_geospatial/phase4/bin_spatial_features.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+bin_spatial_features,center_distance_m,float64,metres,08_geospatial/phase4/bin_spatial_features.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+bin_spatial_features,nearest_other_hypothetical_bin_m,float64,metres,08_geospatial/phase4/bin_spatial_features.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+bin_spatial_features,nearest_mapped_commercial_poi_m,float64,metres,08_geospatial/phase4/bin_spatial_features.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+bin_spatial_features,mapped_commercial_pois_within500m,int64,identifier/category/boolean,08_geospatial/phase4/bin_spatial_features.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+bin_spatial_features,nearest_mapped_residential_landuse_m,float64,metres,08_geospatial/phase4/bin_spatial_features.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+bin_spatial_features,ward_match_count,int64,identifier/category/boolean,08_geospatial/phase4/bin_spatial_features.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+bin_spatial_features,assigned_ward_matches_polygon,bool,identifier/category/boolean,08_geospatial/phase4/bin_spatial_features.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+bin_spatial_features,in_routing_pilot,bool,identifier/category/boolean,08_geospatial/phase4/bin_spatial_features.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+collection_priority,bin_id,int64,identifier/category/boolean,10_optimization/phase4/collection_priority.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+collection_priority,issue_date,object,identifier/category/boolean,10_optimization/phase4/collection_priority.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+collection_priority,current_fill_pct,float64,percentage points or percent as field name indicates,10_optimization/phase4/collection_priority.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+collection_priority,last_sensor_utc,object,UTC timestamp,10_optimization/phase4/collection_priority.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+collection_priority,fill04,float64,identifier/category/boolean,10_optimization/phase4/collection_priority.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+collection_priority,fill06,float64,identifier/category/boolean,10_optimization/phase4/collection_priority.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+collection_priority,last_service_utc,object,UTC timestamp,10_optimization/phase4/collection_priority.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+collection_priority,zone_id,int64,identifier/category/boolean,10_optimization/phase4/collection_priority.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+collection_priority,capacity_l,int64,litres,10_optimization/phase4/collection_priority.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+collection_priority,issue_time_utc,object,UTC timestamp,10_optimization/phase4/collection_priority.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+collection_priority,target_time_utc,object,UTC timestamp,10_optimization/phase4/collection_priority.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+collection_priority,target_date,object,identifier/category/boolean,10_optimization/phase4/collection_priority.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+collection_priority,ma7_04,float64,identifier/category/boolean,10_optimization/phase4/collection_priority.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+collection_priority,ewm7_04,float64,identifier/category/boolean,10_optimization/phase4/collection_priority.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+collection_priority,seasonal7_04,float64,identifier/category/boolean,10_optimization/phase4/collection_priority.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+collection_priority,history_growth_pct,float64,percentage points or percent as field name indicates,10_optimization/phase4/collection_priority.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+collection_priority,recent_growth_pct,float64,percentage points or percent as field name indicates,10_optimization/phase4/collection_priority.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+collection_priority,hours_since_collection,float64,hours,10_optimization/phase4/collection_priority.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+collection_priority,sensor_age_hours,float64,hours,10_optimization/phase4/collection_priority.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+collection_priority,target_dow_0,int64,identifier/category/boolean,10_optimization/phase4/collection_priority.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+collection_priority,target_dow_1,int64,identifier/category/boolean,10_optimization/phase4/collection_priority.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+collection_priority,target_dow_2,int64,identifier/category/boolean,10_optimization/phase4/collection_priority.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+collection_priority,target_dow_3,int64,identifier/category/boolean,10_optimization/phase4/collection_priority.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+collection_priority,target_dow_4,int64,identifier/category/boolean,10_optimization/phase4/collection_priority.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+collection_priority,target_dow_5,int64,identifier/category/boolean,10_optimization/phase4/collection_priority.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+collection_priority,target_dow_6,int64,identifier/category/boolean,10_optimization/phase4/collection_priority.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+collection_priority,bin_holdout,bool,identifier/category/boolean,10_optimization/phase4/collection_priority.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+collection_priority,data_origin,object,identifier/category/boolean,10_optimization/phase4/collection_priority.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+collection_priority,prediction_pct,float64,percentage points or percent as field name indicates,10_optimization/phase4/collection_priority.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+collection_priority,upper80_pct,float64,percentage points or percent as field name indicates,10_optimization/phase4/collection_priority.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+collection_priority,upper90_pct,float64,percentage points or percent as field name indicates,10_optimization/phase4/collection_priority.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+collection_priority,upper95_pct,float64,percentage points or percent as field name indicates,10_optimization/phase4/collection_priority.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+collection_priority,model,object,identifier/category/boolean,10_optimization/phase4/collection_priority.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+collection_priority,network_accessible,bool,identifier/category/boolean,10_optimization/phase4/collection_priority.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+collection_priority,in_routing_pilot,bool,identifier/category/boolean,10_optimization/phase4/collection_priority.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+collection_priority,snap_m,float64,metres,10_optimization/phase4/collection_priority.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+collection_priority,risk_upper_pct,float64,percentage points or percent as field name indicates,10_optimization/phase4/collection_priority.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+collection_priority,current_trigger,bool,identifier/category/boolean,10_optimization/phase4/collection_priority.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+collection_priority,forecast_trigger,bool,identifier/category/boolean,10_optimization/phase4/collection_priority.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+collection_priority,gap_trigger,bool,identifier/category/boolean,10_optimization/phase4/collection_priority.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+collection_priority,telemetry_trigger,bool,identifier/category/boolean,10_optimization/phase4/collection_priority.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+collection_priority,required,bool,identifier/category/boolean,10_optimization/phase4/collection_priority.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+collection_priority,tier,int64,identifier/category/boolean,10_optimization/phase4/collection_priority.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+collection_priority,reasons,object,identifier/category/boolean,10_optimization/phase4/collection_priority.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+collection_priority,dispatch_status,object,identifier/category/boolean,10_optimization/phase4/collection_priority.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+collection_priority,priority_rank,int64,identifier/category/boolean,10_optimization/phase4/collection_priority.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+collection_priority,trigger_pct,int64,percentage points or percent as field name indicates,10_optimization/phase4/collection_priority.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+collection_priority,interval_level,int64,identifier/category/boolean,10_optimization/phase4/collection_priority.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+collection_priority,max_gap_hours,int64,hours,10_optimization/phase4/collection_priority.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+collection_priority,demand_multiplier,float64,identifier/category/boolean,10_optimization/phase4/collection_priority.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+scenario_comparison,scenario,object,identifier/category/boolean,10_optimization/phase4/scenario_comparison.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+scenario_comparison,vehicles_available,int64,identifier/category/boolean,10_optimization/phase4/scenario_comparison.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+scenario_comparison,trigger_pct,int64,percentage points or percent as field name indicates,10_optimization/phase4/scenario_comparison.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+scenario_comparison,demand_multiplier,float64,identifier/category/boolean,10_optimization/phase4/scenario_comparison.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+scenario_comparison,fuel_price_multiplier,float64,identifier/category/boolean,10_optimization/phase4/scenario_comparison.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+scenario_comparison,required_bins,int64,identifier/category/boolean,10_optimization/phase4/scenario_comparison.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+scenario_comparison,full_capacity_l_required,int64,litres,10_optimization/phase4/scenario_comparison.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+scenario_comparison,data_origin,object,identifier/category/boolean,10_optimization/phase4/scenario_comparison.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+scenario_comparison,distance_origin,object,identifier/category/boolean,10_optimization/phase4/scenario_comparison.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+scenario_comparison,solver_status,float64,identifier/category/boolean,10_optimization/phase4/scenario_comparison.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+scenario_comparison,runtime_seconds,float64,seconds,10_optimization/phase4/scenario_comparison.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+scenario_comparison,optimality,object,identifier/category/boolean,10_optimization/phase4/scenario_comparison.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+scenario_comparison,status,object,identifier/category/boolean,10_optimization/phase4/scenario_comparison.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+scenario_comparison,bins_serviced,int64,identifier/category/boolean,10_optimization/phase4/scenario_comparison.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+scenario_comparison,baseline_complete,object,identifier/category/boolean,10_optimization/phase4/scenario_comparison.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+scenario_comparison,baseline_km,float64,kilometres,10_optimization/phase4/scenario_comparison.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+scenario_comparison,baseline_vehicle_hours,float64,hours,10_optimization/phase4/scenario_comparison.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+scenario_comparison,baseline_travel_hours,float64,hours,10_optimization/phase4/scenario_comparison.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+scenario_comparison,optimized_km,float64,kilometres,10_optimization/phase4/scenario_comparison.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+scenario_comparison,optimized_vehicle_hours,float64,hours,10_optimization/phase4/scenario_comparison.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+scenario_comparison,optimized_travel_hours,float64,hours,10_optimization/phase4/scenario_comparison.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+scenario_comparison,km_saved,float64,identifier/category/boolean,10_optimization/phase4/scenario_comparison.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+scenario_comparison,distance_reduction_pct,float64,percentage points or percent as field name indicates,10_optimization/phase4/scenario_comparison.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+scenario_comparison,travel_hours_saved,float64,hours,10_optimization/phase4/scenario_comparison.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+scenario_comparison,vehicle_hours_saved,float64,hours,10_optimization/phase4/scenario_comparison.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+scenario_comparison,fuel_l_saved_assumed,float64,litres,10_optimization/phase4/scenario_comparison.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+scenario_comparison,fuel_cost_inr_saved_historical_proxy,float64,"Indian rupees, historical proxy",10_optimization/phase4/scenario_comparison.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+scenario_comparison,tailpipe_co2_kg_saved_proxy,float64,kilograms,10_optimization/phase4/scenario_comparison.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+scenario_comparison,reason,object,identifier/category/boolean,10_optimization/phase4/scenario_comparison.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+route_summary,scenario,object,identifier/category/boolean,10_optimization/phase4/route_summary.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+route_summary,method,object,identifier/category/boolean,10_optimization/phase4/route_summary.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+route_summary,vehicle,int64,identifier/category/boolean,10_optimization/phase4/route_summary.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+route_summary,bins,int64,identifier/category/boolean,10_optimization/phase4/route_summary.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+route_summary,distance_m,float64,metres,10_optimization/phase4/route_summary.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+route_summary,travel_seconds,float64,seconds,10_optimization/phase4/route_summary.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+route_summary,load_l,int64,litres,10_optimization/phase4/route_summary.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+route_summary,duration_seconds,float64,seconds,10_optimization/phase4/route_summary.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+route_summary,load_kg_assumed,float64,kilograms,10_optimization/phase4/route_summary.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+route_summary,matrix_indices,object,identifier/category/boolean,10_optimization/phase4/route_summary.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+route_summary,data_origin,object,identifier/category/boolean,10_optimization/phase4/route_summary.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+route_stops,scenario,object,identifier/category/boolean,10_optimization/phase4/route_stops.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+route_stops,method,object,identifier/category/boolean,10_optimization/phase4/route_stops.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+route_stops,vehicle,int64,identifier/category/boolean,10_optimization/phase4/route_stops.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+route_stops,stop_sequence,int64,identifier/category/boolean,10_optimization/phase4/route_stops.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+route_stops,matrix_index,int64,identifier/category/boolean,10_optimization/phase4/route_stops.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+route_stops,bin_id,int64,identifier/category/boolean,10_optimization/phase4/route_stops.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+route_stops,arrival_minutes_after_0800,float64,minutes,10_optimization/phase4/route_stops.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+route_stops,planned_capacity_l,int64,litres,10_optimization/phase4/route_stops.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+route_stops,data_origin,object,identifier/category/boolean,10_optimization/phase4/route_stops.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+counterfactual_bin_results,scenario,object,identifier/category/boolean,10_optimization/phase4/counterfactual_bin_results.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+counterfactual_bin_results,method,object,identifier/category/boolean,10_optimization/phase4/counterfactual_bin_results.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+counterfactual_bin_results,bin_id,int64,identifier/category/boolean,10_optimization/phase4/counterfactual_bin_results.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+counterfactual_bin_results,initial_l,float64,litres,10_optimization/phase4/counterfactual_bin_results.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+counterfactual_bin_results,arrivals_l,float64,litres,10_optimization/phase4/counterfactual_bin_results.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+counterfactual_bin_results,terminal_l,float64,litres,10_optimization/phase4/counterfactual_bin_results.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+counterfactual_bin_results,overflow_l,float64,litres,10_optimization/phase4/counterfactual_bin_results.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+counterfactual_bin_results,collected_l,float64,litres,10_optimization/phase4/counterfactual_bin_results.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+counterfactual_bin_results,collection_count,int64,identifier/category/boolean,10_optimization/phase4/counterfactual_bin_results.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+counterfactual_bin_results,capacity_l,float64,litres,10_optimization/phase4/counterfactual_bin_results.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies
+counterfactual_bin_results,data_origin,object,identifier/category/boolean,10_optimization/phase4/counterfactual_bin_results.csv,synthetic; geographic features derived from S08/S09; factors explicit proxies

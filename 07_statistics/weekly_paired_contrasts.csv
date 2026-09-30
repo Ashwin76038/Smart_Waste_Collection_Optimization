@@ -1,0 +1,103 @@
+week_start,weekday_mean,weekend_mean,weekend_minus_weekday,test_id,unit,data_origin
+2026-01-05,50400.4581675054,55769.074674121584,5368.616506616185,weekend_generated_mass,kg per city-day,synthetic
+2026-01-12,49365.641510285765,55226.446624227756,5860.805113941991,weekend_generated_mass,kg per city-day,synthetic
+2026-01-19,48960.391491913135,54118.15347332395,5157.761981410818,weekend_generated_mass,kg per city-day,synthetic
+2026-01-26,48487.38829640816,53525.889306882615,5038.501010474458,weekend_generated_mass,kg per city-day,synthetic
+2026-02-02,47496.80716252246,53401.156170543734,5904.349008021272,weekend_generated_mass,kg per city-day,synthetic
+2026-02-09,46775.53154269141,52771.143843861224,5995.612301169815,weekend_generated_mass,kg per city-day,synthetic
+2026-02-16,46127.785212305185,51195.09403424799,5067.308821942803,weekend_generated_mass,kg per city-day,synthetic
+2026-02-23,45643.67139250874,50812.29708993896,5168.625697430223,weekend_generated_mass,kg per city-day,synthetic
+2026-03-02,44986.48945303461,50218.83057692349,5232.34112388888,weekend_generated_mass,kg per city-day,synthetic
+2026-03-09,44543.59566349178,49221.23003574014,4677.634372248358,weekend_generated_mass,kg per city-day,synthetic
+2026-03-16,43834.29833034378,48639.721319457734,4805.422989113955,weekend_generated_mass,kg per city-day,synthetic
+2026-03-23,43650.98817539468,48639.88427083611,4988.896095441429,weekend_generated_mass,kg per city-day,synthetic
+2026-03-30,43044.28565036756,47964.287799598125,4920.002149230568,weekend_generated_mass,kg per city-day,synthetic
+2026-04-06,42751.937394973036,48129.26354602665,5377.32615105361,weekend_generated_mass,kg per city-day,synthetic
+2026-04-13,42943.00756199616,47516.08695193559,4573.079389939434,weekend_generated_mass,kg per city-day,synthetic
+2026-04-20,42566.1708696666,47569.24984523356,5003.078975566954,weekend_generated_mass,kg per city-day,synthetic
+2026-04-27,42268.570421662334,47806.09732083097,5537.526899168639,weekend_generated_mass,kg per city-day,synthetic
+2026-05-04,42699.276766659736,47796.20623920679,5096.929472547054,weekend_generated_mass,kg per city-day,synthetic
+2026-05-11,42545.49993730125,48006.6536421901,5461.1537048888495,weekend_generated_mass,kg per city-day,synthetic
+2026-05-18,42829.62347749758,48039.79510687083,5210.171629373246,weekend_generated_mass,kg per city-day,synthetic
+2026-05-25,43456.157648661465,48363.02377890206,4906.866130240596,weekend_generated_mass,kg per city-day,synthetic
+2026-06-01,43292.9053134023,49196.20853937193,5903.303225969634,weekend_generated_mass,kg per city-day,synthetic
+2026-06-08,44067.98504481411,49573.46400499117,5505.478960177061,weekend_generated_mass,kg per city-day,synthetic
+2026-06-15,44637.94019726935,49837.479452831445,5199.539255562093,weekend_generated_mass,kg per city-day,synthetic
+2026-06-22,45236.16557178649,50789.21707733441,5553.051505547919,weekend_generated_mass,kg per city-day,synthetic
+2026-06-29,45819.68081608647,51489.71410487473,5670.033288788261,weekend_generated_mass,kg per city-day,synthetic
+2026-07-06,46314.06476175481,51938.99410288788,5624.929341133073,weekend_generated_mass,kg per city-day,synthetic
+2026-07-13,47015.73443606829,53362.135359044376,6346.400922976085,weekend_generated_mass,kg per city-day,synthetic
+2026-07-20,47948.90620313019,53433.31139585048,5484.405192720289,weekend_generated_mass,kg per city-day,synthetic
+2026-07-27,48089.62520920033,54500.4241365163,6410.7989273159765,weekend_generated_mass,kg per city-day,synthetic
+2026-08-03,48990.85040189561,55150.92800690621,6160.0776050106,weekend_generated_mass,kg per city-day,synthetic
+2026-08-10,49645.60524460727,56040.54664652869,6394.941401921416,weekend_generated_mass,kg per city-day,synthetic
+2026-08-17,50193.681397531625,56712.38619719625,6518.7047996646215,weekend_generated_mass,kg per city-day,synthetic
+2026-08-24,50927.47003255463,57618.239193177666,6690.769160623036,weekend_generated_mass,kg per city-day,synthetic
+2026-08-31,51587.450391865525,58012.30281181902,6424.852419953495,weekend_generated_mass,kg per city-day,synthetic
+2026-09-07,51977.64788758474,58736.91235664941,6759.26446906467,weekend_generated_mass,kg per city-day,synthetic
+2026-09-14,52666.41076651435,59582.46752413809,6916.056757623737,weekend_generated_mass,kg per city-day,synthetic
+2026-09-21,53066.947395185256,59719.435589113535,6652.488193928279,weekend_generated_mass,kg per city-day,synthetic
+2026-09-28,53303.97470904341,59876.19813476666,6572.2234257232485,weekend_generated_mass,kg per city-day,synthetic
+2026-10-05,53728.06013546527,60297.233728293475,6569.173592828207,weekend_generated_mass,kg per city-day,synthetic
+2026-10-12,53667.02046364858,59959.21798118502,6292.197517536442,weekend_generated_mass,kg per city-day,synthetic
+2026-10-19,54025.74358392513,60552.36956257894,6526.625978653814,weekend_generated_mass,kg per city-day,synthetic
+2026-10-26,54103.187184519855,60385.12917056411,6281.941986044258,weekend_generated_mass,kg per city-day,synthetic
+2026-11-02,54236.088295214926,60453.72369978725,6217.635404572327,weekend_generated_mass,kg per city-day,synthetic
+2026-11-09,54077.11068050445,60366.0530599755,6288.942379471053,weekend_generated_mass,kg per city-day,synthetic
+2026-11-16,53762.47356041265,59967.092324766214,6204.618764353567,weekend_generated_mass,kg per city-day,synthetic
+2026-11-23,53286.69674479414,59758.55699824333,6471.860253449187,weekend_generated_mass,kg per city-day,synthetic
+2026-11-30,52771.097687772264,59077.67387274295,6306.576184970683,weekend_generated_mass,kg per city-day,synthetic
+2026-12-07,52549.00787383246,58796.367329094704,6247.359455262245,weekend_generated_mass,kg per city-day,synthetic
+2026-12-14,52072.5764251053,57892.09888317067,5819.522458065374,weekend_generated_mass,kg per city-day,synthetic
+2026-12-21,51922.44944149304,57179.457027280034,5257.007585786996,weekend_generated_mass,kg per city-day,synthetic
+2026-01-05,11.785,13.470833333333333,1.685833333333333,weekend_overflow_slot_share,percentage points of scheduled bin-slots,synthetic
+2026-01-12,11.473333333333333,13.708333333333334,2.235000000000001,weekend_overflow_slot_share,percentage points of scheduled bin-slots,synthetic
+2026-01-19,11.465,12.599999999999998,1.134999999999998,weekend_overflow_slot_share,percentage points of scheduled bin-slots,synthetic
+2026-01-26,11.184999999999999,12.583333333333332,1.3983333333333334,weekend_overflow_slot_share,percentage points of scheduled bin-slots,synthetic
+2026-02-02,10.64,12.341666666666667,1.7016666666666662,weekend_overflow_slot_share,percentage points of scheduled bin-slots,synthetic
+2026-02-09,11.038333333333332,12.375,1.3366666666666678,weekend_overflow_slot_share,percentage points of scheduled bin-slots,synthetic
+2026-02-16,10.095,11.804166666666667,1.7091666666666665,weekend_overflow_slot_share,percentage points of scheduled bin-slots,synthetic
+2026-02-23,9.781666666666666,11.7375,1.9558333333333344,weekend_overflow_slot_share,percentage points of scheduled bin-slots,synthetic
+2026-03-02,9.608333333333334,11.025000000000002,1.4166666666666679,weekend_overflow_slot_share,percentage points of scheduled bin-slots,synthetic
+2026-03-09,9.653333333333332,10.029166666666669,0.37583333333333613,weekend_overflow_slot_share,percentage points of scheduled bin-slots,synthetic
+2026-03-16,9.066666666666666,9.75,0.6833333333333336,weekend_overflow_slot_share,percentage points of scheduled bin-slots,synthetic
+2026-03-23,8.676666666666666,10.841666666666669,2.1650000000000027,weekend_overflow_slot_share,percentage points of scheduled bin-slots,synthetic
+2026-03-30,8.875,10.070833333333333,1.1958333333333329,weekend_overflow_slot_share,percentage points of scheduled bin-slots,synthetic
+2026-04-06,8.73,10.149999999999999,1.4199999999999982,weekend_overflow_slot_share,percentage points of scheduled bin-slots,synthetic
+2026-04-13,8.89,9.916666666666668,1.0266666666666673,weekend_overflow_slot_share,percentage points of scheduled bin-slots,synthetic
+2026-04-20,8.254999999999999,9.545833333333334,1.2908333333333353,weekend_overflow_slot_share,percentage points of scheduled bin-slots,synthetic
+2026-04-27,8.468333333333334,10.141666666666667,1.6733333333333338,weekend_overflow_slot_share,percentage points of scheduled bin-slots,synthetic
+2026-05-04,8.459999999999999,10.2375,1.7775000000000016,weekend_overflow_slot_share,percentage points of scheduled bin-slots,synthetic
+2026-05-11,8.559999999999999,9.795833333333334,1.2358333333333356,weekend_overflow_slot_share,percentage points of scheduled bin-slots,synthetic
+2026-05-18,8.848333333333333,10.325,1.4766666666666666,weekend_overflow_slot_share,percentage points of scheduled bin-slots,synthetic
+2026-05-25,9.073333333333334,9.775,0.7016666666666662,weekend_overflow_slot_share,percentage points of scheduled bin-slots,synthetic
+2026-06-01,8.528333333333332,10.262500000000001,1.7341666666666686,weekend_overflow_slot_share,percentage points of scheduled bin-slots,synthetic
+2026-06-08,9.393333333333334,11.191666666666666,1.798333333333332,weekend_overflow_slot_share,percentage points of scheduled bin-slots,synthetic
+2026-06-15,9.17,10.600000000000001,1.4300000000000015,weekend_overflow_slot_share,percentage points of scheduled bin-slots,synthetic
+2026-06-22,9.658333333333333,10.970833333333335,1.3125000000000018,weekend_overflow_slot_share,percentage points of scheduled bin-slots,synthetic
+2026-06-29,10.035,11.795833333333334,1.7608333333333341,weekend_overflow_slot_share,percentage points of scheduled bin-slots,synthetic
+2026-07-06,10.403333333333332,11.566666666666666,1.163333333333334,weekend_overflow_slot_share,percentage points of scheduled bin-slots,synthetic
+2026-07-13,10.865,11.945833333333333,1.0808333333333326,weekend_overflow_slot_share,percentage points of scheduled bin-slots,synthetic
+2026-07-20,10.955,12.145833333333334,1.1908333333333339,weekend_overflow_slot_share,percentage points of scheduled bin-slots,synthetic
+2026-07-27,10.959999999999999,12.662499999999998,1.7024999999999988,weekend_overflow_slot_share,percentage points of scheduled bin-slots,synthetic
+2026-08-03,10.913333333333332,13.370833333333334,2.4575000000000014,weekend_overflow_slot_share,percentage points of scheduled bin-slots,synthetic
+2026-08-10,11.745,13.591666666666667,1.8466666666666676,weekend_overflow_slot_share,percentage points of scheduled bin-slots,synthetic
+2026-08-17,12.275,13.020833333333332,0.7458333333333318,weekend_overflow_slot_share,percentage points of scheduled bin-slots,synthetic
+2026-08-24,11.875000000000002,14.158333333333333,2.2833333333333314,weekend_overflow_slot_share,percentage points of scheduled bin-slots,synthetic
+2026-08-31,12.513333333333332,13.9875,1.4741666666666688,weekend_overflow_slot_share,percentage points of scheduled bin-slots,synthetic
+2026-09-07,12.645,14.029166666666665,1.3841666666666654,weekend_overflow_slot_share,percentage points of scheduled bin-slots,synthetic
+2026-09-14,12.896666666666667,14.879166666666666,1.9825,weekend_overflow_slot_share,percentage points of scheduled bin-slots,synthetic
+2026-09-21,12.635,14.445833333333333,1.810833333333333,weekend_overflow_slot_share,percentage points of scheduled bin-slots,synthetic
+2026-09-28,13.633333333333335,14.358333333333334,0.7249999999999996,weekend_overflow_slot_share,percentage points of scheduled bin-slots,synthetic
+2026-10-05,13.471666666666668,15.329166666666667,1.8575,weekend_overflow_slot_share,percentage points of scheduled bin-slots,synthetic
+2026-10-12,13.543333333333333,15.070833333333333,1.5274999999999999,weekend_overflow_slot_share,percentage points of scheduled bin-slots,synthetic
+2026-10-19,13.515,15.020833333333334,1.5058333333333334,weekend_overflow_slot_share,percentage points of scheduled bin-slots,synthetic
+2026-10-26,13.363333333333333,14.754166666666666,1.3908333333333331,weekend_overflow_slot_share,percentage points of scheduled bin-slots,synthetic
+2026-11-02,13.370000000000001,14.5,1.129999999999999,weekend_overflow_slot_share,percentage points of scheduled bin-slots,synthetic
+2026-11-09,13.778333333333332,14.8875,1.1091666666666669,weekend_overflow_slot_share,percentage points of scheduled bin-slots,synthetic
+2026-11-16,13.246666666666666,14.725,1.4783333333333335,weekend_overflow_slot_share,percentage points of scheduled bin-slots,synthetic
+2026-11-23,13.908333333333335,14.912500000000001,1.0041666666666664,weekend_overflow_slot_share,percentage points of scheduled bin-slots,synthetic
+2026-11-30,12.968333333333334,14.791666666666668,1.8233333333333341,weekend_overflow_slot_share,percentage points of scheduled bin-slots,synthetic
+2026-12-07,12.998333333333335,14.733333333333334,1.7349999999999994,weekend_overflow_slot_share,percentage points of scheduled bin-slots,synthetic
+2026-12-14,12.688333333333334,13.308333333333334,0.6199999999999992,weekend_overflow_slot_share,percentage points of scheduled bin-slots,synthetic
+2026-12-21,12.646666666666667,13.920833333333334,1.2741666666666678,weekend_overflow_slot_share,percentage points of scheduled bin-slots,synthetic

@@ -1,0 +1,7 @@
+# Statistical scope: Chennai versus Coimbatore
+
+Decision: do not run an inferential city-difference test. The user explicitly ruled out tests that merely recover generator assumptions. Both cities have 365 simulated days, but unequal bin counts (1,000/500), different fixed seeds, geographically distinct bin placements and a Coimbatore demand multiplier of 0.9. Repeated bin slots are autocorrelated and nested in one fixed parameterized scenario. Nominal millions of rows are not millions of independent city replications.
+
+The companion CSV reports per-city daily means, median, SD, quartiles, skewness and lag-one autocorrelation for compatible normalized metrics. These are descriptive distribution/dependence checks. No p-value, city-effect confidence interval or causal claim is attached. A normal-looking histogram would not solve the identification problem. Forecast metrics describe separate synthetic model evaluations, not observed city predictability. One-date route reductions are paired deterministic scenario arithmetic, not a statistical sample of service days.
+
+For later justified inference: acquire comparable real histories with aligned bin capacity/service policy, dates and geographic coverage; predeclare the estimand; account for clustering/serial dependence and confounders. Alternatively, run multiple independent demand-seed replications within the simulator and label conclusions as simulation-policy effects, never empirical city effects. No such replication study was performed in this expansion.

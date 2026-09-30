@@ -3,7 +3,7 @@
 Last updated: 2026-09-30. Read before continuing. `docs/two_city_state_snapshot.md` preserves the prior handoff. All files stay in this project root.
 
 ## Current Phase
-**PROJECT COMPLETE — audited local portfolio scope.** Final audit passed43 pytest tests,13 foundation checks,52 SQL/Python KPI checks and raw/PBIX integrity checks. Public GitHub repository created at https://github.com/Ashwin76038/Smart_Waste_Collection_Optimization; source publication is being finalized. This status does not claim production deployment, clean-machine replay, executed cloud work or exhaustive UI acceptance.
+**PROJECT COMPLETE — audited local portfolio scope.** Final audit passed43 pytest tests,13 foundation checks,52 SQL/Python KPI checks and raw/PBIX integrity checks. Public GitHub repository created at https://github.com/Ashwin76038/Smart_Waste_Collection_Optimization; audited sources published (initial audit commit42c0c60a033d5beec75ef067345c43ccd4e2bb98). Local .git metadata writes are blocked by Windows ACLs despite requested access; publication used the authenticated GitHub connector. The local checkout is not synchronized to a remote branch. This status does not claim production deployment, clean-machine replay, executed cloud work or exhaustive UI acceptance.
 
 ## GEOGRAPHIC COVERAGE
 - **Chennai â€” COMPLETE for synthetic Phases 1â€“5 model/preparation; PARTIAL for real operations.** 1,000 hypothetical bins, 4,380,000 synthetic two-hour readings, 200 real GCC ward polygons. Original Phase 1â€“4 artifacts and 120 protected hashes preserved. Actual sensors, truck GPS, depot/receiving access, fleet and current ward demographics remain missing.
@@ -38,7 +38,7 @@ Keep a real star schema, not a giant joined flat table. City filters cascade thr
 ## Known Limitations
 Desktop DAX and five-page rendering were verified. Exhaustive manual filter/scenario combinations and 100%/narrow-window acceptance are not claimed. Refresh uses absolute local CSV paths; online maps require connectivity. Different random seeds, bin counts, geometry vintages and Coimbatore's assumed 0.9 demand multiplier preclude empirical city-effect claims. Forecast bands undercover and near-full recall is limited. Hypothetical depot, capacities, speeds and isolated 24-hour counterfactual limit route decisions. Early collection threshold is a diagnostic, not proof service was unnecessary. No relocation/purchase or annualized savings claim is justified.
 
-## Verification
+## Verification (prior-phase evidence)
 `12_powerbi/phase5_model/qa_receipt.json` records 16 valid links and 52/52 SQL/Python KPI checks. `kpi_reconciliation.csv` includes each exact city-level value and tolerance. **Final regression: 39 pytest checks passed; 13/13 offline foundation checks passed.** Theme and QA JSON parse successfully. Desktop DAX: 52/52 checks passed, zero maximum difference. Saved PBIX archive, five pages, embedded model and query verified; SHA256 recorded in `12_powerbi/desktop_validation_receipt.json`. Earlier pytest/foundation results are preserved prior-phase checks, not newly rerun tests.
 
 ## Next Phase

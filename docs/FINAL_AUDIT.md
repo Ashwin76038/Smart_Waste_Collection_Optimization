@@ -5,7 +5,7 @@
 ## Checks and corrections
 - Canonical6,570,000 readings independently counted by city; unique global reading keys, synthetic labels and bin foreign keys checked. All26 raw assets matched manifest hashes. CBE January reads one Parquet partition.
 -14 Chennai business SQL queries and24 city/filter executions rerun.52 SQL/Python KPI checks and16 BI links rerun. Tolerance output now states absolute plus relative tolerance explicitly; float32 mass differences are retained, not hidden.
--Original39 pytest tests plus4 new offline acquisition regressions form the final43-test suite. The new tests exercise corruption refusal, raw overwrite refusal, work-directory creation, TLS default and historical metadata preservation.
+-Original39 pytest tests plus4 new offline acquisition regressions form the final43-test suite; **43 passed in17.13 seconds**. The new tests exercise corruption refusal, raw overwrite refusal, work-directory creation, TLS default and historical metadata preservation.
 -Independent statistics reproduced both HAC standard errors, CIs and p-values; Holm correction verified. Independent counterfactual reconstruction matched960 records within1.14e-13L. No consequential forecasting leakage or routing arithmetic defect found.
 -PBIX archive integrity, five pages and unchanged SHA256 rechecked.52 historical Desktop DAX checks and prior five-page visual review reused; no new exhaustive UI acceptance claimed.
 -Fixed acquisition work-directory failure, silent corrupted-snapshot handling and TLS default. Historical acquisition exception records remain truthful.
@@ -57,3 +57,6 @@ Totals below are scoped major question/component counts, not percentages of code
 
 ## Remaining limitations and proposed work
 Clean-environment replay is the principal engineering gap. Restore exact licensed snapshots and run the full dependency order in a new checkout before claiming portability. Add a small deterministic CI dataset, then validate multiple dates/seeds and measured municipal routes. Forecast undercoverage and limited near-full recall require operational monitoring. BigQuery receives no execution credit. Publication status is tracked in PROJECT_STATE.md.
+
+## GitHub publication
+Public source repository: https://github.com/Ashwin76038/Smart_Waste_Collection_Optimization . Initial audited source commit42c0c60a033d5beec75ef067345c43ccd4e2bb98. The connector published328 reviewed files (approximately4.7MB), excluding local datasets/PBIX/caches. Git metadata writes in the original directory are denied by Windows ACLs; no local remote/commit synchronization is claimed. Clone the public repository to a new permitted location for normal Git work.

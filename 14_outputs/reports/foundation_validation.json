@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-09-30T14:18:19.396059+00:00",
+  "checked_at_utc": "2026-09-30T14:21:54.272290+00:00",
   "scope": "Foundation structure, provenance metadata and design consistency only",
   "passed": true,
   "checks": [
@@ -68,7 +68,7 @@
       "passed": true,
       "detail": {
         "linked_files": 26,
-        "phase": "final_audit"
+        "phase": "project_complete_audited_portfolio"
       }
     },
     {
@@ -114,7 +114,7 @@
       "passed": true,
       "detail": {
         "data_files": 130,
-        "phase": "final_audit"
+        "phase": "project_complete_audited_portfolio"
       }
     },
     {

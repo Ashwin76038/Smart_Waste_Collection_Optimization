@@ -1,0 +1,10 @@
+{
+  "date": "2026-09-30",
+  "pytest": "43 passed in17.13 seconds",
+  "foundation": "13 passed",
+  "sql_executions": 38,
+  "bi_kpi_checks": 52,
+  "relationships": 16,
+  "desktop_dax": "52 historical passes; not rerun",
+  "secret_scan": "Targeted credential patterns; no findings; not security certification"
+}

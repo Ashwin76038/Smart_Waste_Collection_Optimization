@@ -56,13 +56,13 @@ A recorded **372,000-row January benchmark** measured worker times of 0.936 s Pa
 Descriptive distribution, IQR/outlier and correlation analysis distinguishes sensor observations from latent generated waste. [Phase 3 report](14_outputs/reports/phase3_statistical_report.md) is a historical Chennai scope, not a city comparison or experiment on municipal residents.
 
 ## Hypothesis Testing
-Two pre-specified weekend contrasts use 51 complete weekly blocks, HAC standard errors and Holm adjustment. Simulated weekend generated mass is 5,776.92 kg/day higher (95% CI 5,428.34â€“6,125.49); overflow-slot share is 1.450 percentage points higher (CI 1.355â€“1.544). Tiny p-values verify a programmed mechanism; they do **not** establish a real municipal weekend effect. Dependence, lag sensitivity and standardized effect sizes are recorded in [test results](07_statistics/hypothesis_tests.csv).
+Two pre-specified weekend contrasts use 51 complete weekly blocks, HAC standard errors and Holm adjustment. Simulated weekend generated mass is 5,776.92 kg/day higher (95% CI 5,428.34–6,125.49); overflow-slot share is 1.450 percentage points higher (CI 1.355–1.544). Tiny p-values verify a programmed mechanism; they do **not** establish a real municipal weekend effect. Dependence, lag sensitivity and standardized effect sizes are recorded in [test results](07_statistics/hypothesis_tests.csv).
 
 ## Geospatial Analysis
 Real ward polygons and OSM roads support bin placement, proximity proxies, access exceptions and directed road paths. Maps distinguish hypothetical bins from real geography. POI completeness, boundary vintage, omitted restrictions and last-metre access require field verification. No population-weighted access or real bin coverage claim is made.
 
 ## Forecasting
-Predict next-day 04:00 fill from an 08:00 issue time (20-hour horizon). Train Januaryâ€“June, select Julyâ€“August, test Septemberâ€“December. Compare persistence, seasonal naive, moving average, exponential smoothing and Ridge. Fit imputation inside the training pipeline; exclude future labels and latent truth.
+Predict next-day 04:00 fill from an 08:00 issue time (20-hour horizon). Train January–June, select July–August, test September–December. Compare persistence, seasonal naive, moving average, exponential smoothing and Ridge. Fit imputation inside the training pipeline; exclude future labels and latent truth.
 
 Known-bin test MAE: **8.17 pp CHN / 7.69 pp CBE**, versus seven-day moving-average **19.65 / 20.57 pp**. Near-full recall is only **56.18% / 57.97%**. Nominal 90% interval coverage is **88.45% / 88.22%**; uncertainty bands are empirical, not calibrated overflow probabilities. [Methodology](docs/phase4_methodology.md).
 

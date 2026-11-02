@@ -12,6 +12,27 @@ MODEL = OUT / 'Smart_Waste.SemanticModel'
 DATA = ROOT / '12_powerbi' / 'phase5_model'
 BASE = 'https://developer.microsoft.com/json-schemas/fabric/'
 
+# Validate excluded inputs before touching any authored Desktop definitions.
+EXPECTED_TABLES = (
+    'dim_city', 'dim_date', 'dim_zone', 'dim_bin', 'dim_scenario',
+    'fact_city_day', 'fact_bin_day', 'fact_zone_day',
+    'fact_collection_attempt', 'fact_dispatch_snapshot',
+    'fact_route_scenario', 'fact_truck_route', 'fact_forecast_score',
+    'fact_counterfactual',
+)
+missing = [name + '.csv' for name in EXPECTED_TABLES
+           if not (DATA / (name + '.csv')).is_file()]
+if missing:
+    raise SystemExit('Missing Power BI exports: ' + ', '.join(missing)
+                     + '. Run build_phase5_bi.py first. No project files changed.')
+for name in EXPECTED_TABLES:
+    with (DATA / (name + '.csv')).open(encoding='utf-8-sig', newline='') as source:
+        header = next(csv.reader(source), [])
+    if not header or any(not column.strip() for column in header) or len(header) != len(set(header)):
+        raise SystemExit('Invalid CSV header: ' + name
+                         + '. No project files changed.')
+
+
 def save(p, obj):
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(obj, indent=2, ensure_ascii=False), encoding='utf-8')

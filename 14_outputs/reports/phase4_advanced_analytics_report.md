@@ -23,21 +23,21 @@ The derived network has 309,559 nodes and 651,742 directed edges. 992 of 1,000 b
 
 Among 1,507 mapped POIs, 51.8% lie within 250 m and 90.8% within 500 m of a hypothetical bin. These are straight-line OSM-POI proxies, not resident access or a municipal service-coverage estimate. Commercial proximity uses 827 mapped restaurant/market/shop nodes; residential proximity uses 1,025 closed OSM land-use ways. Missing mapped activity is not evidence of absent activity. Census 2011 ward numbers remain unjoined to current wards.
 
-Interactive maps: [geospatial context](../maps/phase4_geospatial.html) and [baseline/optimized routes](../maps/phase4_routes.html). Toggle layers and inspect tooltips. Basemaps/CDN scripts require internet. The hotspot map is a retrospective full-year simulation and is not a dispatch feature.
+Interactive maps: `phase4_geospatial.html` (local output of [phase4_geospatial.py](../../06_python/scripts/phase4_geospatial.py)) and `phase4_routes.html` (local output of [phase4_routing.py](../../06_python/scripts/phase4_routing.py)). Toggle layers and inspect tooltips. Basemaps/CDN scripts require internet. The hotspot map is a retrospective full-year simulation and is not a dispatch feature.
 
 ## Priority and scenario tradeoffs
 No weighted composite is used. Current-fill risk, missing/stale telemetry, long service gap and upper-forecast risk form documented lexicographic tiers. A bin meeting any rule is mandatory for this scenario; ranking never silently removes it from the VRP. Threshold 80%, gap 48 hours and stale 6 hours are policy assumptions, not empirically optimal or municipal mandates. A27-combination sensitivity grid covers 70/80/90% triggers,80/90/95% uncertainty bands and 36/48/72-hour gaps.
 
 The base required load reserves each selected bin's full capacity:25,160 L. Thus one 12,000 L truck or two 24,000 L trucks cannot serve it in a single trip. This is conservative planning infeasibility, not proof that actual waste volume exceeds two trucks. Truck-unavailable inherits this constraint. Multi-trip unloading and smaller-risk-reserve policies are future extensions. At 70% the pilot requires 46 bins; at 90%,27; the+20% demand stress requires 48. Higher thresholds reduce work but leave more bins unserved; they are not a free efficiency gain.
 
-![Route comparison](../charts/phase4/route_comparison.png)
+`route_comparison.png` (local output of [phase4_document.py](../../06_python/scripts/phase4_document.py))
 
 ## Overflow counterfactual
 The isolated evaluator replays the same latent arrivals and initial inventories for all 60 pilot bins over 24 hours. Arrivals accrue uniformly within each two-hour interval; a visit removes 95% after four minutes. There are no other collections in the horizon. It recomputes inventory/spill and checks mass balance; it never reuses the unchanged baseline fill trace after an intervention.
 
 Base optimized order reduces modelled spill by **11.06 L**. But the 70% trigger and+20% demand scenarios increase spill relative to their matched baseline order. Distance is the solver objective, not overflow or collected tonnes. Report terminal stock and collected volume alongside spill; earlier collection may remove less waste and allow later overflow. These outcomes do not establish avoided real overflow, comparative policy superiority or a sustainable daily schedule.
 
-![Overflow tradeoff](../charts/phase4/overflow_tradeoff.png)
+`overflow_tradeoff.png` (local output of [phase4_document.py](../../06_python/scripts/phase4_document.py))
 
 ## Validation and readiness
 All 31 pytest checks passed after implementing Phase 4, including every saved matrix path, exact required-bin coverage, no duplicate visits, depot returns, volume/payload/shift constraints, forecast availability, metric recomputation, factor equations and counterfactual mass balance. Original asset hashes remain checked. The final verification receipt records the rerun status.

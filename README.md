@@ -4,7 +4,7 @@ An auditable analytics portfolio for **Chennai and Coimbatore, Tamil Nadu**: rea
 
 ## Dashboard Preview
 
-Fresh Desktop captures of the existing Smart_Waste_Chennai_Coimbatore.pbix, saved on 29 September 2026. Filters are visible in each screenshot. Executive Overview and Waste & Bin Analysis show All cities, while Route Optimization and Forecasting show Chennai. The Geographic Intelligence page is held from the proposed public gallery because the organisation currently disables its map visual.
+These previews were rendered at 3,200 pixels wide from a native Power BI Desktop PDF export of the existing Smart_Waste_Chennai_Coimbatore.pbix on 25 November 2026. Click an image to inspect its full resolution. Filters are visible in each screenshot. Executive Overview and Waste & Bin Analysis show All cities, while Route Optimization and Forecasting show Chennai. The Geographic Intelligence page is held from the proposed public gallery because the organisation currently disables its map visual.
 
 ### Executive Overview
 

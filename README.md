@@ -2,6 +2,27 @@
 
 An auditable analytics portfolio for **Chennai and Coimbatore, Tamil Nadu**: real geographic context, **6,570,000 explicitly synthetic sensor records**, SQL, statistics, forecasting, constrained routing and a five-page Power BI dashboard.
 
+## Dashboard Preview
+
+These previews were rendered at 3,200 pixels wide from a native Power BI Desktop PDF export of the existing Smart_Waste_Chennai_Coimbatore.pbix on 25 November 2026. Click an image to inspect its full resolution. Filters are visible in each screenshot. Executive Overview and Waste & Bin Analysis show All cities, while Route Optimization and Forecasting show Chennai. The Geographic Intelligence page is held from the proposed public gallery because the organisation currently disables its map visual.
+
+### Executive Overview
+
+![Smart Waste Executive Overview](assets/waste-executive-overview.png)
+
+### Waste & Bin Analysis
+
+![Smart Waste Waste & Bin Analysis](assets/waste-waste-bin-analysis.png)
+
+### Route Optimization
+
+![Smart Waste Route Optimization](assets/waste-route-optimization.png)
+
+### Forecasting & Planning
+
+![Smart Waste Forecasting & Planning](assets/waste-forecasting-planning.png)
+
+
 **Evidence boundary:** Synthetic operational data generated for scalability, analytics and optimization demonstration. No municipal sensor deployment, realized cost saving, production routing or executed cloud deployment is claimed. The hypothetical 2026 year includes future simulation dates. Start with [the 60-second recruiter summary](docs/RECRUITER_SUMMARY.md) or [the final report](FINAL_PROJECT_REPORT.md).
 
 ## Business Problem
@@ -106,3 +127,8 @@ Follow [the ordered reproduction guide](docs/REPRODUCTION.md). Existing-data aud
 
 ## Repository Structure
 Numbered folders separate business/research, local data, Excel, SQL/Python, statistics, geography, forecasting, optimization, cloud instructions, Power BI, testing and evidence. `cities/CBE` holds the isolated second-city workspace. `config` records assumptions. `docs` contains contracts, methodology, audit, recruiter/interview material and reproducibility notes. Large data, caches, installers and binaries remain ignored locally.
+
+
+## Author
+
+[Aswin S](https://github.com/Ashwin76038)

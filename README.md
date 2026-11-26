@@ -1,6 +1,16 @@
-# Smart Waste Collection Intelligence & Route Optimization
+# Smart Waste Collection & Route Optimization
 
 An auditable analytics portfolio for **Chennai and Coimbatore, Tamil Nadu**: real geographic context, **6,570,000 explicitly synthetic sensor records**, SQL, statistics, forecasting, constrained routing and a five-page Power BI dashboard.
+
+## Project at a glance
+
+**Problem:** prioritize waste collection and route a constrained fleet while accounting for missed overflows and uncertain road access.
+
+**Implemented:** source acquisition and hash checks, synthetic operations generation, partitioned Parquet, DuckDB marts, business SQL, time-split forecasting, OR-Tools routing and a five-page Power BI report.
+
+**Verified scenario result:** matched one-day route pilots reduced distance from 57.34 to 45.50 km in Chennai and from 38.46 to 27.97 km in Coimbatore. The 20.66% / 27.26% reductions are modeled comparisons, not realized municipal savings.
+
+**Review path:** [SQL questions](05_sql/phase3_business_questions.sql) Â· [Forecasting and routing methods](docs/phase4_methodology.md) Â· [Power BI delivery](12_powerbi/DESKTOP_DELIVERY.md) Â· [Reproduction guide](docs/REPRODUCTION.md).
 
 ## Dashboard Preview
 
@@ -77,13 +87,13 @@ A recorded **372,000-row January benchmark** measured worker times of 0.936 s Pa
 Descriptive distribution, IQR/outlier and correlation analysis distinguishes sensor observations from latent generated waste. [Phase 3 report](14_outputs/reports/phase3_statistical_report.md) is a historical Chennai scope, not a city comparison or experiment on municipal residents.
 
 ## Hypothesis Testing
-Two pre-specified weekend contrasts use 51 complete weekly blocks, HAC standard errors and Holm adjustment. Simulated weekend generated mass is 5,776.92 kg/day higher (95% CI 5,428.34–6,125.49); overflow-slot share is 1.450 percentage points higher (CI 1.355–1.544). Tiny p-values verify a programmed mechanism; they do **not** establish a real municipal weekend effect. Dependence, lag sensitivity and standardized effect sizes are recorded in [test results](07_statistics/hypothesis_tests.csv).
+Two pre-specified weekend contrasts use 51 complete weekly blocks, HAC standard errors and Holm adjustment. Simulated weekend generated mass is 5,776.92 kg/day higher (95% CI 5,428.34â€“6,125.49); overflow-slot share is 1.450 percentage points higher (CI 1.355â€“1.544). Tiny p-values verify a programmed mechanism; they do **not** establish a real municipal weekend effect. Dependence, lag sensitivity and standardized effect sizes are recorded in [test results](07_statistics/hypothesis_tests.csv).
 
 ## Geospatial Analysis
 Real ward polygons and OSM roads support bin placement, proximity proxies, access exceptions and directed road paths. Maps distinguish hypothetical bins from real geography. POI completeness, boundary vintage, omitted restrictions and last-metre access require field verification. No population-weighted access or real bin coverage claim is made.
 
 ## Forecasting
-Predict next-day 04:00 fill from an 08:00 issue time (20-hour horizon). Train January–June, select July–August, test September–December. Compare persistence, seasonal naive, moving average, exponential smoothing and Ridge. Fit imputation inside the training pipeline; exclude future labels and latent truth.
+Predict next-day 04:00 fill from an 08:00 issue time (20-hour horizon). Train Januaryâ€“June, select Julyâ€“August, test Septemberâ€“December. Compare persistence, seasonal naive, moving average, exponential smoothing and Ridge. Fit imputation inside the training pipeline; exclude future labels and latent truth.
 
 Known-bin test MAE: **8.17 pp CHN / 7.69 pp CBE**, versus seven-day moving-average **19.65 / 20.57 pp**. Near-full recall is only **56.18% / 57.97%**. Nominal 90% interval coverage is **88.45% / 88.22%**; uncertainty bands are empirical, not calibrated overflow probabilities. [Methodology](docs/phase4_methodology.md).
 
@@ -101,7 +111,7 @@ The PBIX and data extracts are excluded from source Git history. [PBIP report/mo
 - Shorter routes do not universally reduce spill: negative counterfactual outcomes are retained.
 - Raw city totals are not an efficiency ranking: bin counts, seeds, boundaries and Coimbatore's assumed 0.9 demand multiplier differ.
 
-## Business Impact
+## Modeled route results and decision value
 | Matched synthetic pilot | Chennai | Coimbatore |
 |---|---:|---:|
 | Baseline km | 57.34 | 38.46 |
@@ -117,12 +127,22 @@ Fuel uses assumed 4.5 km/L; both cities use historical Chennai INR92.39/L as a c
 Actually executed: Python, Pandas, NumPy, PyArrow/Parquet, DuckDB/SQL, SciPy, scikit-learn, Shapely, PyProj, NetworkX, osmium, Folium, Matplotlib, OR-Tools, pytest, Excel QA workbook and Power BI Desktop/DAX. Git packages the sources. BigQuery is documentation only. GeoPandas/OSMnx are not claimed merely because early plans listed them.
 
 ## Testing
-Final suite: **43 tests passed**, including four new acquisition safety regressions. [Final audit evidence](14_outputs/reports/final_audit/audit_receipt.json) records exact row counts, origins, keys, raw hashes, partition pruning and PBIX integrity. Foundation: 13 checks. SQL: 14 + 24 city/filter executions. BI: 52 SQL/Python checks and 16 relationships. Historical Desktop: 52/52 DAX checks. Final test count is recorded in [audit report](docs/FINAL_AUDIT.md).
+Historical final-suite receipt: **43 tests passed**, including four new acquisition safety regressions. [Final audit evidence](14_outputs/reports/final_audit/audit_receipt.json) records exact row counts, origins, keys, raw hashes, partition pruning and PBIX integrity. Foundation: 13 checks. SQL: 14 + 24 city/filter executions. BI: 52 SQL/Python checks and 16 relationships. Historical Desktop: 52/52 DAX checks. The historical test count is recorded in [audit report](docs/FINAL_AUDIT.md). It is not a fresh full-suite run for this README update. Four source-only acquisition tests passed on 26 November 2026 using the existing local dependency environment. They can be run with `python -m pytest 13_testing/test_acquisition_safety.py -q`; integration tests require the excluded local data and outputs.
 
 ## Limitations
 This is a portfolio simulation, not a production municipal system. Real telemetry, GPS, depot/fleet constraints, current comparable demographics and contracted costs are unavailable. Statistics assess one synthetic realization. Forecast bands undercover. Road access is provisional; routing reserves full bin volume and allows one trip. Counterfactuals isolate 24 hours without other routine collections. Clean-machine regeneration and live cloud execution remain unverified. Notebooks have runnable script companions but no saved executed cell outputs.
 
 ## Reproduction Instructions
+
+For a source-only first check, create a Python virtual environment and run:
+
+```bash
+python -m pip install -r requirements.txt
+python -m pytest 13_testing/test_acquisition_safety.py -q
+```
+
+Large sensor tables, raw source snapshots, Parquet, DuckDB, PBIX and Excel binaries are excluded from this repository. Generate those outputs in the documented order before attempting full integration checks or refreshing the Power BI model. The current report builder overwrites definitions; use a disposable copy and preserve Desktop edits. The builder-preflight improvement remains in a separate PR and is not implied by this README.
+
 Follow [the ordered reproduction guide](docs/REPRODUCTION.md). Existing-data audit avoids regeneration. A fresh clone requires acquiring licensed source snapshots and generating local data before integration tests; downloads may change or become unavailable. Do not run historical documentation finalizers over the final handover.
 
 ## Repository Structure

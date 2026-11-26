@@ -16,7 +16,7 @@ Completed 2026-09-25. **All operational comparisons are synthetic scenarios, not
 
 The combined canonical fact has **6,570,000 readings**, 1,500 hypothetical bins and 300 ward identifiers qualified by city. Both use 365 days and 12 scheduled readings/day. Compare normalized rates; annual total generated waste is not a fair ranking with twice as many Chennai bins. Physical overflow uses latent simulation truth, not fill clipped at 100%. Early service means successful collection below 35% true pre-service fill, an exploratory diagnostic.
 
-![Normalized scenario trends](../../charts/city_comparison/normalized_city_trends.png)
+`normalized_city_trends.png` (local output of [report_two_city.py](../../../06_python/scripts/report_two_city.py))
 
 ## Independent forecasts and routes
 
@@ -28,7 +28,7 @@ Coimbatore's base estimates save 33.08 vehicle-minutes and 2.33 L at assumed 4.5
 
 Coimbatore's isolated 24-hour replay reduces base spill by 6.10 L, but terminal stock and removed volume also change. This evaluator has no other collections within 24 hours, so it is not a recurring policy result. Chennai's stress-scenario spill tradeoffs remain unchanged and must remain visible.
 
-![Route and forecast comparisons](../../charts/city_comparison/routes_forecasts.png)
+`routes_forecasts.png` (local output of [report_two_city.py](../../../06_python/scripts/report_two_city.py))
 
 ## Sources and geographic limits
 
